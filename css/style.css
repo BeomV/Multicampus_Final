@@ -28,8 +28,20 @@ ul{
 .logo {
 
 }
+
+
 .logo img{
     width: 120px;
+
+}
+
+.img_banner{
+   overflow: hidden; 
+}
+.img_banner img{
+    width: 100%;
+    margin-top: -500px;
+    background-size: cover;
 }
 
 nav{
@@ -360,4 +372,145 @@ nav > ul > li{
     
 }
 
+}
+
+
+/* login.html 로그인 영역*/
+
+.login_section{
+    width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 수평 정렐 */
+    align-items: center; /* 수직 정렬 */
+    height: 700px;
+    
+
+}
+
+form{
+    text-align: left;
+    font-weight: 500;
+}
+
+.sub_login{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.sub_login label{
+    color: rgb(167, 167, 167);
+}
+
+.sub_login span a{
+    color: rgb(167, 167, 167);
+    padding-left: 10px;
+}
+
+.login_section #user_id, .login_section #user_pw{
+    margin: 5px 0px;
+    width: 400px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid 1px #d6d6d6;
+    outline: none;
+}
+
+.login_section #user_id:hover, .login_section #user_pw:hover{
+    border: #1785F2 1px solid;
+}
+
+.login_section #user_id{
+    margin-bottom: 20px;
+}
+
+.login_section #login_btn{
+    margin-top: 20px;
+    width: 422px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #1785F2;
+    border: none;
+    padding: 5px 0px;
+}
+
+.login_section #auto_login{
+    margin-right: 10px;
+    
+}
+
+/*register.html 회원가입 영역*/
+
+.register_section{
+    width: 1440px;
+    margin: 0 auto;
+    height: 850px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 수평 정렐 */
+    align-items: center; /* 수직 정렬 */
+
+}
+
+form{
+    width: auto;
+
+}
+.birth_gender{
+    display: flex;
+    justify-content: space-between;
+}
+
+.register_section input{
+    outline: none;
+    width: 400px;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid 1px #d6d6d6;
+}
+
+.register_section #user_email,
+.register_section #email_token{
+    width: 290px;
+}
+
+.register_section button{
+    width: 100px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: white;
+    outline: none;
+    border: solid 1px #d6d6d6;
+}
+
+.birth_gender{
+    margin: 10px 0px;
+}
+
+.birth_gender select{
+    width: 90px;
+    border-radius: 5px;
+    margin: 5px 0px;
+    border: solid 1px #d6d6d6;
+    padding: 3px 10px;
+    
+}
+
+#register{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 422px;
+    margin-top: 50px;
+    background-color: #1785F2;
+    color: white;
+    padding: 5px;
 }

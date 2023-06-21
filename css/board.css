@@ -1,0 +1,24 @@
+.board_section{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.board_category{
+    display: flex;
+    justify-content: center;
+}
+
+.board_grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .board_grid li {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
