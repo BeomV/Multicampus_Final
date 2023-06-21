@@ -1,4 +1,5 @@
 .board_section{
+
     width: 1440px;
     margin: 0 auto;
 }
@@ -14,11 +15,446 @@
     grid-gap: 10px;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 30px 0 0 0;
   }
   
-  .board_grid li {
-    background-color: #f2f2f2;
-    padding: 10px;
+  .board_grid li input{
+    width: 90px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 2px 16px;
     text-align: center;
   }
+
+  .category_more{
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .category_more a{
+    color: rgb(165, 165, 165);
+  }
+
+  .category_active{
+    color: #1785F2;
+    font-weight: 600;
+  }
+
+  .rec_list{
+    margin-top: 100px;
+  }
+
+  .rec_list .rec_list_top{
+    
+    width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .rec_list_top button{
+    background-color: #1785F2;
+    outline: none;
+    border:none;
+    color: white;
+    padding: 0px 25px;
+    border-radius: 5px;
+  }
+
+  .rec_list h1{
+    font-size: 24px;
+  }
+
+  .rec_list_grid{
+    display: flex;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .rec_list_grid .moim_img{
+    margin: 10px;
+    width: 420px;
+    height: 150px;
+    display: flex;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+
+  }
+
+  .img_box{
+    width: 130px;
+    height: 130px;
+    margin-left: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    overflow: hidden;
+    background-color: white;
+
+  }
+
+  .img_box img{
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .moim_img span{
+    text-align: left;
+    margin: 10px;
+  }
+
+  .moim_img .hashtag {
+    width: 80px;
+    border-radius: 10px;
+    background-color: #d1d1d1;
+    text-align: center;
+}
+
+  .moim_img h1{
+  padding-top: 20px;
+  font-size: 18px;
+
+}
+
+  .moim_img .sub_tit{
+  font-size: 12px;
+  color: #666;
+}
+
+
+
+
+.board_list span button {
+  width: 80px;
+  border: 1px solid #e6e6e6;
+  background-color: white;
+  border-radius: 7px;
+  margin-right: 20px;
+  padding: 3px 0px;
+}
+
+.board_list span button.list_active {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+}
+
+#board_search{
+  border-radius: 5px;
+  padding: 2px 10px;
+  border: solid 1px #c9c9c9;
+  outline: none;
+  
+}
+
+.list_grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.list_box{
+  margin: 12px;
+  
+  display: flex;
+}
+
+.list_box img{
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.list_box span h1{
+  font-size: 20px;
+}
+.list_box span{
+  padding: 5px;
+}
+
+.list_box span p{
+  font-size: 14px;
+}
+
+.list_grid{
+  margin-top: 20px;
+} 
+
+
+/* board_insert 모임 만들기*/
+
+.moim_insert{
+
+  margin: 50px auto;
+  width: 820px;
+  height: auto;  
+}
+
+.moim_insert h1{
+  margin: 15px 0px;
+  font-size: 18px;
+
+}
+
+.moim_insert input{
+  text-align: center;
+  width: 800px;
+  padding: 5px 12px;
+  border: solid 1px #c9c9c9;
+  border-radius: 5px;
+}
+
+#moim_content{
+  height: 500px;
+}
+
+#moim_max, #moim_profile{
+  width: 300px;
+}
+
+#moim_btn{
+  margin: 100px 0px 100px 0px;
+  width: 820px;
+  border: none;
+  background-color: #1785F2;
+  color: white;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#moim_location{
+  width: 220px;
+  border: none;
+  background-color: #1785F2;
+  color: white;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#moim_location i{
+  color: white;
+  margin-right: 10px;
+}
+
+/*selectOne.html*/
+
+.join_section{
+  width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  margin-top: 100px;
+  height: auto;
+  margin-bottom: 200px;
+}
+
+.join_gnb{
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.img_info{
+  margin-top: 10px;
+  width: 100%;
+  height: 300px;
+  background-color: red;
+}
+
+.som_tit{
+  text-align: left;
+}
+
+.som_tit h1{
+  font-size: 24px;
+  
+}
+
+.som_tit p{
+  padding: 20px;
+}
+.join_member{
+  margin-top: 100px;
+  text-align: left;
+  
+}
+
+.join_member h1{
+  font-size: 24px;
+}
+
+.join_member ul{
+  display: flex;
+  margin: 10px 0px;
+}
+
+.join_member li{
+  margin: 0px 10px;
+}
+
+
+.round_box{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(189, 189, 189);
+}
+
+.round_box i{
+  font-size: 24px;
+  color: white;
+
+}
+
+.join_cal{
+  text-align: left;
+  margin-top: 200px;
+  
+  
+}
+
+.join_cal h1{
+  font-size: 24px;
+}
+
+.cal_detail{
+  width: 50%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: solid 1px #e6e6e6;
+  padding: 30px
+  
+
+  
+}
+
+.cal_detail h1{
+  font-size: 22px;
+  
+}
+
+
+.detail_member ul{
+  display: flex;
+}
+
+.detail_member ul li{
+  margin: 10px 10px 10px 0px;
+}
+
+.detail_member .round_box{
+  width: 30px;
+  height: 30px;
+
+}
+
+.detail_member .round_box i{
+  font-size: 14px;
+}
+
+.detail_status button{
+  border: none;
+  background-color: #1785F2;
+  color: white;
+  font-weight: 600;
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+
+/*selectOne_join.html 게시판*/
+
+.top_func{
+  text-align: right;
+  padding: 10px;
+}
+
+.top_func button{
+  border: none;
+  border-radius: 5px;
+  padding: 2px 20px;
+  background-color: #1785F2;
+  color: white;
+  font-weight: 600;
+}
+
+.view_content{
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.view_content ul{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+}
+
+.view_content ul li{
+  padding: 20px;
+  width: 1000px;
+  margin: 0 auto;
+  border: solid 1px #c9c9c9;
+  border-radius: 10px;
+}
+
+.user_info{
+  display: flex;
+}
+
+.profile{
+  width: 40px;
+  height: 40px;
+  background-color: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.profile i{
+  font-size: 20px;
+}
+
+.user_info span{
+  margin-left: 20px;
+}
+
+.content_text{
+  margin: 20px 0px 20px 60px;
+}
+
+.content_text p{
+  margin-top: 20px;
+}
+
+.user_info span p{
+  font-size: 12px;
+  color: #666;
+}
+
+.join_top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bbs_func button{
+  border: none;
+  background: none;
+}
+.bbs_func button i {
+  font-size: 16px;
+  color: #1785F2;
+  font-weight: 600;
+}
