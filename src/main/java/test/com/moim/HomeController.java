@@ -33,7 +33,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 
-		System.out.println("ddd");
+		System.out.println("내가 작성함 -김선아");
 		return "home";
 	}
 	
