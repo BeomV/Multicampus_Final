@@ -435,8 +435,12 @@
   margin: 20px 0px 20px 60px;
 }
 
+
+
 .content_text p{
   margin-top: 20px;
+  
+  
 }
 
 .user_info span p{
@@ -457,4 +461,112 @@
   font-size: 16px;
   color: #1785F2;
   font-weight: 600;
+}
+
+/*join_insert.html*/
+
+.insert_func{
+  margin: 40px;
+  text-align: left;
+  border-bottom: #ccc solid 1px;
+}
+
+.insert_func i{
+  font-size: 18px;
+  padding: 20px;
+  color: #1785F2;
+}
+
+.insert_func span a{
+  padding: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.insert_sec{
+
+  margin: 0 auto;
+  width: 900px;
+  text-align: center;
+  padding: 50px;
+}
+
+.insert_sec span{
+  text-align: left;
+}
+
+.insert_sec span input{
+  width: 100%;
+  margin: 10px 0px 20px 10px;
+  padding: 10px;
+  border: #ccc solid 1px;
+  border-radius: 5px;
+  outline: none;
+}
+
+#insert_content{
+  height: 600px;
+  text-align: center;
+  
+}
+
+.insert_sec button{
+  width: 150px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #1785F2;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.comments_sec{
+  text-align: left;
+  padding: 20px;
+  
+}
+
+.comments_sec h3{
+  margin-bottom: 50px;
+}
+
+#join_comments{
+  margin-top: 30px;
+  padding: 10px 12px;
+  width: 1200px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+
+#com_insert{
+  width: 100px;
+  padding: 5px 10px;
+  margin-left: 12px;
+  color: white;
+  background-color: #1785F2;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.com_top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.com_top button{
+  border: none;
+  background-color: none;
+}
+
+.com_top button i{
+  font-size: 16px;
+  color: #1785F2;
+}
+
+.com_grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
 }
