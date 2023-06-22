@@ -35,7 +35,6 @@ public class HomeController {
 
 		///병합 1.
 
-		// 병합 전 2
 
 		return "home";
 	}
