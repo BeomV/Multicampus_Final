@@ -32,7 +32,7 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		dgdgdgdg
+		logger.info("합치기 전");
 		return "home";
 	}
 	
