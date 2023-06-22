@@ -32,7 +32,7 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		dgawegaweg
+		// 병합 전 2
 		return "home";
 	}
 	
