@@ -169,7 +169,7 @@ nav > ul > li{
     margin: 0 auto;
     height: 850px;
     padding-top: 20px;
-    background-color: #dadada;
+    background-color: #f8f8f8;
     text-align: center;
 }
 
@@ -204,7 +204,7 @@ nav > ul > li{
     width: 200px;
     height: 200px;
     border-radius: 10px;
-    background-color: #81a9ff;
+    background-color: #9ab8ff;
 
 }
 
@@ -250,7 +250,7 @@ nav > ul > li{
     margin: 0 auto;
     height: 850px;
     padding-top: 20px;
-    background-color: #cfdeff;
+    background-color: #f4f7fd;
     text-align: center;
 }
 

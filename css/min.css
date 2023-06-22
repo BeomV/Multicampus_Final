@@ -45,8 +45,14 @@
         margin: 0 auto;
     }
     .img_banner {
+        display: flex;
+        justify-content: center;
+        overflow: hidden; 
         height: 300px;
-        background-color: #999;
+
+    }
+    .img_banner img{
+        width: 100%;
     }
     .main_pictogram {
         width: 100%;
@@ -92,7 +98,7 @@
         width: auto;
         margin: 0 auto;
         height: 800px;
-        background-color: #dadada;
+        background-color: #f8f8f8;
         text-align: center;
     }
 
@@ -163,7 +169,7 @@
         width: auto;
         margin: 0 auto;
         height: 800px;
-        background-color: #cfdeff;
+        background-color: #f4f7fd;
         text-align: center;
     }
 
