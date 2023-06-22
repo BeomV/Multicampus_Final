@@ -33,6 +33,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		// 병합 전 2
+		dgasdgasdgsdg
 		return "home";
 	}
 	
