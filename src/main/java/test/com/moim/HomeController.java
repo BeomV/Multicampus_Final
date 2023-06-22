@@ -35,7 +35,7 @@ public class HomeController {
 
 		System.out.println("hi, its me!");
 		///병합 1.
-		System.out.println("어쩌라는거지..?");
+		System.out.println("어쩌라는거지..?!");
 
 		return "home";
 	}
