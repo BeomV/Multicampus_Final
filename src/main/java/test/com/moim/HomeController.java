@@ -34,7 +34,11 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		//합치기전입니다.
 		
+
 		logger.info("124124125125125125125125125");
+
+		System.out.println("111ddd1");
+
 		return "home";
 	}
 	
