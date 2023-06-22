@@ -32,7 +32,11 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
+<<<<<<< HEAD
 		logger.info("22");
+=======
+		dgdgdgdg
+>>>>>>> refs/remotes/origin/master
 		return "home";
 	}
 	
