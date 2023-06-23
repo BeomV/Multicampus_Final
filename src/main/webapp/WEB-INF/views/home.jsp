@@ -12,31 +12,7 @@
     <script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
-        <div class="gnb">
-            <div class="logo">
-                <img src="resources/img/logo.png">
-            </div>
-            <nav>
-                <ul>
-                    <li><a>원데이</a></li>
-                    <li><a>소모임</a></li>
-                    <li><a>이벤트</a></li>
-                    <li><a>커뮤니티</a></li>
-                    <li><a>고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="main_search">
-                <input type="search" placeholder="검색">
-            </div>
-            <div class="login">
-                <a href="login.do">로그인</a>
-                <a>로그아웃</a>
-            </div>
-
-        </div>
-
-    </div>
+    <jsp:include page="top_menu.jsp"></jsp:include>
 
     <div class="main_container">
         <div class="img_banner">
