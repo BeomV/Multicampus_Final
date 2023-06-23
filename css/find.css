@@ -1,0 +1,79 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #3c3c3c;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+h3 {
+    display: block;
+    font-size: 1em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+}
+
+
+.find_sec{
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 50px;
+}
+
+.find_sec span {
+    text-align: left;
+}
+.find_title{
+    text-align:  left;
+}
+
+.find_sec h3{
+    margin-right: 0px;
+    text-align: left;
+    margin-left: 23%;
+}
+.find_sec h5{
+    margin-right: 0px;
+    text-align: left;
+}
+
+.find_sec button {
+    width: 56%;
+    margin-left: 10px;
+    padding: 4px;
+    border: none;
+    background-color: #1785F2;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#find_password {
+    width: 55%;
+    margin: 10px 0px 20px 10px;
+    padding: 10px;
+    border: #ccc solid 1px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.pass_title{
+    float: right;
+}
+
