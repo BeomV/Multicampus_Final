@@ -30,7 +30,7 @@
                 <input type="search" placeholder="검색">
             </div>
             <div class="login">
-                <a href="/login.html">로그인</a>
+                <a href="login.do">로그인</a>
                 <a>로그아웃</a>
             </div>
 
