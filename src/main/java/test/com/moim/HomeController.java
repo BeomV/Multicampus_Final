@@ -1,5 +1,6 @@
 package test.com.moim;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -9,7 +10,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Handles requests for the application home page.
  */
+
+@Slf4j
 @Controller
+
+
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -20,7 +25,7 @@ public class HomeController {
 	@RequestMapping(value = {"/","home.do"}, method = RequestMethod.GET)
 	public String home() {
 		
-		
+		log.info("123");
 		return "home";
 	}
 	
