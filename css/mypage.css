@@ -83,22 +83,20 @@ h3 {
 
 
   .mypage_footer_insert{
-    background-color: red;
-    margin-top: 40px;
-    width: 1300px;
+    width: 800px;
     height: 400px;
-    display: inline-block;
-    text-align: left;
+    margin: 0 auto
+    text-align: center;
   }
 
   .footer_head{
     margin-bottom: 10px;
+    text-align: left;
   }
 
 .footer_head h2{
     display: inline; 
     width: 500px;
-    margin-left: 100px;
 }
 .footer_head h5{
     color: gray;
@@ -107,12 +105,18 @@ h3 {
     font-size: 0.7em;
 }
 
-
+.mypage_insert_sec01 {
+  width: 990px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: right;
+}
 
   .mypage_footer_insert input{
     background-color: gray;
     width: 80%;
-    margin: 10px 0px 20px 100px;
+    margin: 10px 0px 20px 0px;
     padding: 10px;
     border: #ccc solid 1px;
     border-radius: 5px;
@@ -120,10 +124,15 @@ h3 {
     
 }
 
+
+.footer_insert{
+  text-align: left;
+}
+
 .footer_insert input{
     background-color: white;
     text-align: left; 
-    width: 50%;
+    width: 80%;
 }
 .footer_blank{
     background-color: white;
@@ -140,7 +149,7 @@ h3 {
 }
 
 .mypage_footer_insert button{
-    width: 150px;
+    width: 100%;
     padding: 5px 10px;
     border: none;
     background-color: #1785F2;
@@ -151,8 +160,9 @@ h3 {
   }
   .footer_blank h2{
     width: 500px;
-    margin-left: 100px;
 }
+
+
 
 
 .profile {
