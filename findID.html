@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="kr">
+    <script>
+        function showMessage() {
+         var alertMessage = "[알림] 네이버가 발송한 메일이 스팸 메일로 분류된 것은 아닌지 확인해 주세요. 스팸 메일함에도 메일이 없다면, 다시 한 번 '인증번호 받기'를 눌러주세요.";
+        alert(alertMessage);
+        }
+    </script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +14,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/min.css">
     <link rel="stylesheet" href="/css/find.css">
+
     
     
 
@@ -39,49 +47,43 @@
 
     </div>
     
-    <div class="find_sec">
+    <div class="find_sec" >
     
+        <div class="insert_sec" >
 
-        <div class="find_title">
-          <h2 id="title" style="display: inline;">아이디 찾기 </h2>
-          <h5 style="display: inline; margin-left: 450px;">- 
-           
+        <div class="find_title" >
+          <h2>아이디 찾기 </h2>           
         </div>
-        <div class="1213" style="text-align: center; width: 90%">
 
-            <h3 class="id">이름</h3>
-                    <div style="text-align: left; margin-left:200px ;">  
-                    <input type="text"  placeholder="아이디를 입력하세요" id="find_password" > <br>       
-                </div>
-            <div class="email" style="text-align: left;">
-            <h3  style="display: inline; width: 500px;" class="passfont">이메일</h3>
-            <h5 style="display: inline; font-size: 0.7em; ">본인확인 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</h5>
-            </div>
-            
-                <div style="text-align: left; margin-left:200px; ">
-                    <input type="text" placeholder="아이디를 입력하세요" style="width:420px" id="find_password">     
-                    <button type="button" style=" width: 130px; background-color: gray; ">인증 번호 전송</button>
-                </div>
-    
-    
-                <div style="text-align: left; margin:0px 0px 0px 200px; ">  
-                <input type="text" placeholder="인증 번호 6자리를 입력해주세요" style=" width: 420px;" id="find_password">                 
-                </div>
-                <div class="test" style="margin: 0 auto; width: 400px; display: flex; justify-content: flex-end;">
-                    <button type="button" style="width: 200px; background-color: transparent;  color: gray; padding-bottom: 20px;" onclick="showMessage()">인증번호가 오지 않았나요?</button>
-                </div>
-                <button type="button" style="margin-left: 50px; width: 150px;">비밀번호 찾기</button>
-    
+
+            <div class="total" >
+                    <h3 style="height: 4px;">아이디</h3>
+                            <input type="text"  placeholder="아이디를 입력하세요" id="find_password" style="width: 50%;" > <br>       
+                    <div class="email" >
+                            <h3  class="passfont">이메일</h3>
+                            <h5 >본인확인 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</h5>
+                        
+                        <div class="inser_email">
+                            <input type="text" placeholder="이메일을 입력하세요" id="find_password">     
+                            <button type="button" >인증 번호 전송</button>
+                        </div>
+                    </div>    
                 
+                    <div class="insert_certi" >  
+                            <input type="text" placeholder="인증 번호 6자리를 입력해주세요"  id="find_password">                 
+                            <br>
+                            <div class="injarea">
+                            <button id="inj" type="button" onclick="showMessage()">인증번호가 오지 않았나요?</button> <br>
+                            </div>
+                        <button type="button" id="submitpass">비밀번호 찾기</button>
+                    </div>
+                </div>    
+        </div>
+    </div>
                 
         
     
-          
-          </div>
-      </div>
-      
-            
-        
+
    
 
     <div class="footer">
