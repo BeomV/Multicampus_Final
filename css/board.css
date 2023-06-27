@@ -569,4 +569,112 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
+<<<<<<< HEAD
+=======
+}
+
+.join_imgbox .img_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 1250px;
+    margin: 40px auto;
+
+    
+}
+
+.img_grid li{
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4d4d4;
+}
+
+/*join_schedule.html*/
+
+.sch_grid{
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+
+}
+
+.sch_grid li{
+  border-radius: 5px;
+  height: auto;
+  border: solid 1px #ccc;
+}
+
+
+.sch_func{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.sch_content{
+  padding: 15px 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sch_member{
+  text-align: left;
+}
+
+.schm_grid{
+  
+  display: flex;
+
+}
+
+.schm_grid li{
+  margin: 3px 5px 10px 0px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border-radius: 15px;
+  background-color: #c9c9c9;
+  justify-content: center;
+  align-items: center;
+}
+.sch_info{
+  margin-top: 10px;
+}
+
+.sch_info h2{
+  margin-bottom: 20px;
+}
+
+.sch_info h2,
+.sch_info strong,
+.sch_info p{
+  padding: 10px 0px;
+}
+
+.sch_func span:last-child button{
+  border: none;
+  background-color: transparent;
+}
+
+.sch_func span:last-child button i{
+  font-size: 16px;
+  color: #1785F2;
+}
+
+.sch_func span:first-child button{
+  width: 50px;
+  padding: 3px 0px;
+  border-radius: 5px;
+  background-color: #1785F2;
+  color: white;
+  font-weight: 400;
+  border: none;
+>>>>>>> Front_Backup
 }
