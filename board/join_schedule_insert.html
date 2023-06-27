@@ -36,7 +36,7 @@
 
     </div>
 
-    <div class="join_section">
+    <div class="join_section" style="margin-bottom: 50px;">
         <div class="join_gnb">
             <li><a>홈</a></li>
             <li>게시판</li>
@@ -48,17 +48,28 @@
         <div class="img_info">
             이미지
         </div>
-        <div class="top_func">
-            <button type="button" style="padding: 5px 12px;">이미지 업로드</button>
-        </div> 
     
     </div>
 
     <div class="schedule_insert_section">
-        <h2>제목</h2>
-        <input type="text" placeholder="제목을 입력하세요.">
-        <h2>제목</h2>
-        <input type="text" placeholder="제목을 입력하세요.">
+        <div class="schedule_insert_section_box">
+            <h2>제목</h2>
+            <input type="text" placeholder="제목을 입력하세요.">
+            <h2>날짜</h2>
+            <input type="datetime-local" placeholder="제목을 입력하세요.">
+            <h2>장소</h2>
+            <input type="text" placeholder="제목을 입력하세요.">
+            <h2>참여 인원</h2>
+            <input type="range" value="150" min="1" max="300">
+            <span>
+                <p>0명</p>
+                <p>150명</p>
+                <p>300명</p>
+            </span>
+            
+        </div>
+        <button type="button" id="btn_shcedule_insert">완료</button>
+
     </div>
 
 
