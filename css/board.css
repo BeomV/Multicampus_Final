@@ -569,8 +569,6 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
-<<<<<<< HEAD
-=======
 }
 
 .join_imgbox .img_grid{
@@ -676,5 +674,11 @@
   color: white;
   font-weight: 400;
   border: none;
->>>>>>> Front_Backup
+}
+
+.schedule_insert_section{
+  margin: 0 auto;
+  width: 1440px;
+  border: 1px #ccc solid;
+  padding: 10px;
 }
