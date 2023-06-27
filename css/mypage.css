@@ -86,7 +86,7 @@ h3 {
     width: 800px;
     height: 400px;
     margin: 0 auto
-    text-align center;
+    text-align: center;
   }
 
   .footer_head{
@@ -186,6 +186,4 @@ h3 {
     max-width: 100%;
     max-height: 100%;
   }
-  
-
   
