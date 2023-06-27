@@ -73,57 +73,70 @@ h3 {
 
 .insert_sec{
     background-color: white; 
-    text-align: center;
     width: 100%;
     
 }
 
-.total{
-    width: 80%;
+.total{ 
+    width: 100%;
     background-color: white;
-    margin-left: 8%;
-    text-align: left;
+    text-align: center;
     
 }
 
+
+#find_password{
+    width: 50%;
+}
 .email{
-    text-align: left;
+    text-align: center;
     background-color:white;
     width: 100%;
 }
 .email  h3{
     display: inline;
-    width: 70%;
+    width: 100%;
 }
 .email h5{
     display: inline; font-size: 0.7em;
 }
 
-.inser_email{
-    background-color: white; 
-    width:100%;
+.inser_email {
+    background-color: white;
+    width: 100%;
+    text-align: center; 
+    padding-right: 10%; 
 }
-.inser_email input{
+
+.inser_email input {
     width: 40%;
+    margin-left: 20%;
+    margin-right: 0; 
 }
 
-.inser_email button{
-    width: 18%; background-color: gray;
+.inser_email button {
+    width: 18%;
+    background-color: gray;
+    margin-left: 2%; 
 }
 
-
-.insert_certi input{
+.insert_certi{
+    text-align: center;
+}
+.insert_certi input {
     width: 40%;
     margin-bottom: 0px;
-    text-align: left;
-
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto;
 }
 
-.injarea{
-    background-color: white; 
-    width: 50%;
+.injarea {
+    background-color: white;
+    width: 30%;
     text-align: right;
-
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 #inj{
@@ -133,31 +146,40 @@ h3 {
     color: gray; padding-bottom: 20px;
     font-size:  0.6rem; ;
 }
-#submitpass{
-    margin:20px 0px 0px 200px;
-     width: 150px;
+#submitpass {
+    display: block;
+    margin: 20px auto 0; 
+    width: 150px;
+}
+.emailtitle{
+    background-color: white; text-align: left; margin-left: 23%;
 }
 
 
 
 
-
-.test1{
+.test1 {
     background-color: white;
-    text-align: left;
+    text-align: center; 
 }
 
-.img_certi{
-    background-color: red;
-     width: 450px; height: 200px;;
+.img_certi {
+    background-color: white;
+    width: 450px;
+    height: 200px;
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
-.test1 button{
+.test1 button {
     width: 5%;
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
-.test1 input{
-    margin-left: 10%;
+.test1 input {
+    margin-left: auto; 
+    margin-right: auto; 
     height: 10%;
     width: 20%;
 }
