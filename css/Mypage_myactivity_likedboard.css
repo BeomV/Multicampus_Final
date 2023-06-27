@@ -117,9 +117,15 @@
   width: 100%;
 }
 .liked_board .board_profile_info .info_item3 {
-  background-color: blue;
-  width: 7%;
+  background-color: white;
+  margin: 10px;
+  width: 14%;
   height: 10%;
+}
+.info_item3 a{
+  
+  margin-right: 2px;
+  border: 1px solid black;
 }
 
 
@@ -144,4 +150,5 @@
   height: 50px;
   object-fit: cover;
   border-radius: 0%;
+  margin-bottom: 10%;
 }
