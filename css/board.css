@@ -492,9 +492,15 @@
   justify-content: space-between;
 }
 
+.bbs_func{
+  
+  text-align: right;
+  width: 40%;
+}
+
 .bbs_func button{
   border: none;
-  background: none;
+  background: transparent;
 }
 .bbs_func button i {
   font-size: 16px;
@@ -590,7 +596,7 @@
   justify-content: space-between;
 }
 .com_func input{
-  width: 90%;
+  width: 100%;
   padding: 5px;
   border: none;
   outline: none;
@@ -614,7 +620,7 @@
 
 .com_top button{
   border: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 .com_top button i{
@@ -646,6 +652,43 @@
     margin: 40px auto;
 
     
+}
+
+.join_commnets_insert_section{
+  width: 75%;
+  margin: 50px auto 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments_user_profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.commnets_user_profile_img{
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join_commnets_insert_section input{
+  width: 80%;
+  padding: 8px 12px;
+  
+}
+
+.join_commnets_insert_section button{
+  padding: 8px 24px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1785F2;
+  color: white;
 }
 
 .img_grid li{
