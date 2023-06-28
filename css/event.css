@@ -1,0 +1,50 @@
+.thumbnail_banner {
+    text-align: center;
+}
+
+.thumbnail_banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.event_list{
+    margin-top: 100px;
+  }
+
+  .event_list .event_list_top {
+    width: 1440PX;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ececec;
+    
+}
+
+  .event_list h1{
+    font-size: 24px;
+
+  }
+
+  .event_list_grid {
+    width: 1440PX;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ececec;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    list-style: none;
+    text-align: center; /* 가운데 정렬을 위해 text-align 속성을 center로 수정 */
+  }
+
+  .event_list_grid .event_img {
+  margin: 10px auto; /* 가로 여백을 자동으로 조정하여 가운데 정렬 */
+  width: 420px;
+  height: 150px;
+  display: flex;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+}
