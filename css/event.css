@@ -36,6 +36,12 @@
     text-align: left; /* 왼쪽 정렬 속성 추가 */
   }
 
+  .event .event_content p span {
+    font-weight: bold; /* 진하게 표시할 부분에 span 태그로 감싸고, 폰트 두께를 bold로 설정 */
+  }
+
+  
+
   .event h1{
     font-size: 24px;
 
