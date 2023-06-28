@@ -1,17 +1,27 @@
-.thumbnail_banner {
-    text-align: center;
-}
-
-.thumbnail_banner img {
-    max-width: 100%;
-    height: auto;
-}
-
-.event_list{
+.event{
     margin-top: 100px;
   }
 
-  .event_list .event_list_top {
+  .event .event_top {
+    width: 1440PX;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ececec;
+    
+}
+
+  .event h1{
+    font-size: 24px;
+
+  }
+
+.event{
+    margin-top: 100px;
+  }
+
+  .event .event_top {
     width: 1440PX;
     margin: 0 auto;
     display: flex;
