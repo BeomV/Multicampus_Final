@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="kr">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+          $('.datepicker').datepicker();
+        });
+      </script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +41,7 @@
             </div>
 
         </div>
-
+      
     </div>
 <hr style="margin-bottom: 10px;">
     <div class="total_area" >
@@ -119,9 +128,9 @@
                         </div>
                         
                         <div class="input_with_button">
-                            <input type="text" placeholder="인증번호 6자리를 입력하세요" id="find_password">     
-                            <button type="button" > 확 인</button>
-                        </div>
+                            <input type="text" placeholder="생년월일 6자리" id="find_password" class="datepicker">
+                            <button type="button">인증 번호 전송</button>
+                          </div>
                         <!-- 생년월일 -->
                         <div class="email_footer_head">
                             <h2>생년월일</h2>

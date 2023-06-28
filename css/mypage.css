@@ -49,8 +49,8 @@ input {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 수직 가운데 정렬 */
-  align-items: center; /* 수평 가운데 정렬 */
+  justify-content: center; 
+  align-items: center; 
 }
 
 .profile_img_sec {
@@ -97,15 +97,15 @@ input {
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 왼쪽 정렬 */
+  align-items: flex-start; 
   justify-content: center;
-  padding: 10px; /* 내용과의 간격을 위한 패딩 추가 */
+  padding: 10px; 
 }
 
 .mypage_id_insert_sec h2 {
-  margin: 0px 0px; /* h2 태그의 위아래 여백 조정 */
+  margin: 0px 0px; 
   margin-right: 45%;
-  align-items: flex-start; /* 왼쪽 정렬 */
+  align-items: flex-start;
 
 }
 .insert_area_id{
@@ -124,7 +124,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* 내용을 세로로 정렬하기 위해 추가 */
+  flex-direction: column; 
   background-color: white;
   height: 500px;
 }
