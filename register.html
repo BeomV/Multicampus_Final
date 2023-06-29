@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=  , initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_min.css">
     <link rel="stylesheet" href="/css/min.css">
 </head>
 <body>
@@ -87,11 +88,15 @@
                 <br>
                 <label for="user_email">이메일</label>
                 <br>
-                <input type="email" placeholder="이메일을 입력하세요" id="user_email">
-                <button>인증번호</button>
+                <div class="register_input_flex">
+                    <input type="email" placeholder="이메일을 입력하세요" id="user_email">
+                <button type="button">인증번호</button>
+                </div>
                 <br>
-                <input type="text" placeholder="인증번호 입력" id="email_token">
-                <button>확인</button>
+                <div class="register_input_flex">
+                    <input type="text" placeholder="인증번호 입력" id="email_token">
+                    <button>확인</button>
+                </div>
                 <br>
                 <label for="user_tel">휴대폰 번호</label>
                 <br>
