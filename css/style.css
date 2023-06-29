@@ -36,11 +36,13 @@ ul{
 }
 
 .img_banner{
-   overflow: hidden; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .img_banner img{
     width: 100%;
-    margin-top: -500px;
     background-size: cover;
 }
 
@@ -167,7 +169,7 @@ nav > ul > li{
 .moim_list01{
     width: 1440px;
     margin: 0 auto;
-    background-color: #f8f8f8;
+    background-color: rgb(240, 183, 183);
     height: 850px;
     padding-top: 20px;
     text-align: center;
@@ -198,11 +200,11 @@ nav > ul > li{
 
 }
 
-.moim_list01 ul div:first-child{
+.moimst_list_01_img_box{
     width: 200px;
     border-radius: 10px;
     background-color: #9ab8ff;
-    
+    justify-content: center;
     float: left;
     height: 200px;
 
@@ -241,8 +243,12 @@ nav > ul > li{
     color: #666;
 }
 
-.moim_list01 ul div:first-child img{
-    width: 100%;
+.moimst_list_01_img_box img{
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    
+    background-size: cover;
     border-radius: 15px;
 
 }
@@ -427,7 +433,7 @@ form{
 }
 
 .login_section #user_id:hover, .login_section #user_pw:hover{
-    border: #1785F2 1px solid;
+    border: rgb(23, 133, 242) 1px solid;
 }
 
 .login_section #user_id{
