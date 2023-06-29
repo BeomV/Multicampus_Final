@@ -22,14 +22,14 @@ ADD CONSTRAINT USERINFO_UK1 UNIQUE
 ENABLE;
 
 COMMENT ON COLUMN USERINFO.NUM IS 'pk'; 
-COMMENT ON COLUMN USERINFO.USER_ID IS '¾ÆÀÌµð'; 
-COMMENT ON COLUMN USERINFO.PW IS 'ºñ¹Ð¹øÈ£'; 
-COMMENT ON COLUMN USERINFO.NAME IS 'ÀÌ¸§'; 
-COMMENT ON COLUMN USERINFO.EMAIL IS 'ÀÌ¸ÞÀÏ'; 
-COMMENT ON COLUMN USERINFO.SAVE_NAME IS 'ÇÁ·ÎÇÊ»çÁø¸í'; 
-COMMENT ON COLUMN USERINFO.MSG IS 'ÂÊÁö'; 
-COMMENT ON COLUMN USERINFO.ALERT IS '¾Ë¸²'; 
-COMMENT ON COLUMN USERINFO.POINT IS 'Æ÷ÀÎÆ®';  
+COMMENT ON COLUMN USERINFO.USER_ID IS 'ì•„ì´ë””'; 
+COMMENT ON COLUMN USERINFO.PW IS 'ë¹„ë°€ë²ˆí˜¸'; 
+COMMENT ON COLUMN USERINFO.NAME IS 'ì´ë¦„'; 
+COMMENT ON COLUMN USERINFO.EMAIL IS 'ì´ë©”ì¼'; 
+COMMENT ON COLUMN USERINFO.SAVE_NAME IS 'í”„ë¡œí•„ì‚¬ì§„ëª…'; 
+COMMENT ON COLUMN USERINFO.MSG IS 'ìª½ì§€'; 
+COMMENT ON COLUMN USERINFO.ALERT IS 'ì•Œë¦¼'; 
+COMMENT ON COLUMN USERINFO.POINT IS 'í¬ì¸íŠ¸';  
 --drop table userinfo; 
 
 create sequence seq_userinfo;
@@ -56,10 +56,10 @@ CONSTRAINT MYFEED_PK PRIMARY KEY  (NUM)  ENABLE );
 ALTER TABLE MYFEED ADD CONSTRAINT MYFEED_FK1 FOREIGN KEY (USER_ID) REFERENCES USERINFO (USER_ID) ENABLE; 
 
 COMMENT ON COLUMN MYFEED.NUM IS 'pk'; 
-COMMENT ON COLUMN MYFEED.USER_ID IS '¾ÆÀÌµð'; 
-COMMENT ON COLUMN MYFEED.SAVE_NAME IS 'ÇÁ·ÎÇÊ»çÁø'; 
-COMMENT ON COLUMN MYFEED.GOOD_COUNT IS 'ÁÁ¾Æ¿ä'; 
-COMMENT ON COLUMN MYFEED.HATE_COUNT IS '½Å°í'; 
+COMMENT ON COLUMN MYFEED.USER_ID IS 'ì•„ì´ë””'; 
+COMMENT ON COLUMN MYFEED.SAVE_NAME IS 'í”„ë¡œí•„ì‚¬ì§„'; 
+COMMENT ON COLUMN MYFEED.GOOD_COUNT IS 'ì¢‹ì•„ìš”'; 
+COMMENT ON COLUMN MYFEED.HATE_COUNT IS 'ì‹ ê³ '; 
 
 --drop table myfeed; 
 
@@ -81,8 +81,8 @@ CONSTRAINT SOMOIM_PK PRIMARY KEY  (NUM)  ENABLE );
 ALTER TABLE SOMOIM ADD CONSTRAINT SOMOIM_UK1 UNIQUE (SOM_TITLE) ENABLE; 
 
 COMMENT ON COLUMN SOMOIM.NUM IS 'pk'; 
-COMMENT ON COLUMN SOMOIM.SOM_TITLE IS '¼Ò¸ðÀÓÀÌ¸§'; 
-COMMENT ON COLUMN SOMOIM.CATEGORY IS '¼Ò¸ðÀÓ Ä«Å×°í¸®'; 
+COMMENT ON COLUMN SOMOIM.SOM_TITLE IS 'ì†Œëª¨ìž„ì´ë¦„'; 
+COMMENT ON COLUMN SOMOIM.CATEGORY IS 'ì†Œëª¨ìž„ ì¹´í…Œê³ ë¦¬'; 
 
 --drop table somoim; 
 
@@ -90,10 +90,10 @@ create sequence seq_somoim;
 --drop sequence seq_somoim; 
 
 insert into somoim (num, som_title, category) 
-values (seq_somoim.nextval, '¿À´ÃÈ«´ë¿¡¼­³î»ç¶÷±Þ±¸', '»ç±³/ÀÎ¸Æ');
+values (seq_somoim.nextval, 'ì˜¤ëŠ˜í™ëŒ€ì—ì„œë†€ì‚¬ëžŒê¸‰êµ¬', 'ì‚¬êµ/ì¸ë§¥');
 
 insert into somoim (num, som_title, category) 
-values (seq_somoim.nextval, '³ë´Â°ÔÁ¦ÀÏÁ¶¾Æ', '»ç±³/ÀÎ¸Æ');
+values (seq_somoim.nextval, 'ë…¸ëŠ”ê²Œì œì¼ì¡°ì•„', 'ì‚¬êµ/ì¸ë§¥');
 
 select * from somoim;
 
@@ -104,7 +104,7 @@ CREATE TABLE SOMOIM_MEMBER
   NUM NUMBER NOT NULL 
 , USER_ID VARCHAR2(100) NOT NULL 
 , JOIN_DATE DATE DEFAULT SYSDATE NOT NULL 
-, POSITION VARCHAR2(100) DEFAULT '¸ðÀÓ¿ø' NOT NULL 
+, POSITION VARCHAR2(100) DEFAULT 'ëª¨ìž„ì›' NOT NULL 
 , SOM_TITLE VARCHAR2(200) NOT NULL 
 , SAVE_NAME VARCHAR2(200) DEFAULT 'default.png' NOT NULL
 , CONSTRAINT SOMOIM_MEMBER_PK PRIMARY KEY 
@@ -137,11 +137,11 @@ REFERENCES SOMOIM
 ENABLE;
 
 COMMENT ON COLUMN SOMOIM_MEMBER.NUM IS 'pk';
-COMMENT ON COLUMN SOMOIM_MEMBER.USER_ID IS '¾ÆÀÌµð';
-COMMENT ON COLUMN SOMOIM_MEMBER.JOIN_DATE IS '°¡ÀÔ³¯Â¥';
-COMMENT ON COLUMN SOMOIM_MEMBER.POSITION IS 'Á÷±Þ';
-COMMENT ON COLUMN SOMOIM_MEMBER.SOM_TITLE IS '¼Ò¸ðÀÓÀÌ¸§';
-COMMENT ON COLUMN SOMOIM_MEMBER.SAVE_NAME IS 'ÀÌ¹ÌÆÄÀÏ¸í';
+COMMENT ON COLUMN SOMOIM_MEMBER.USER_ID IS 'ì•„ì´ë””';
+COMMENT ON COLUMN SOMOIM_MEMBER.JOIN_DATE IS 'ê°€ìž…ë‚ ì§œ';
+COMMENT ON COLUMN SOMOIM_MEMBER.POSITION IS 'ì§ê¸‰';
+COMMENT ON COLUMN SOMOIM_MEMBER.SOM_TITLE IS 'ì†Œëª¨ìž„ì´ë¦„';
+COMMENT ON COLUMN SOMOIM_MEMBER.SAVE_NAME IS 'ì´ë¯¸íŒŒì¼ëª…';
 
 --drop table somoim_member;
 
@@ -149,10 +149,10 @@ create sequence seq_somoim_member;
 --drop sequence seq_somoim_member;
 
 insert into somoim_member (num, user_id, som_title) 
-values (seq_somoim_member.nextval, 'tester', '¿À´ÃÈ«´ë¿¡¼­³î»ç¶÷±Þ±¸');
+values (seq_somoim_member.nextval, 'tester', 'ì˜¤ëŠ˜í™ëŒ€ì—ì„œë†€ì‚¬ëžŒê¸‰êµ¬');
 
 insert into somoim_member (num, user_id, som_title) 
-values (seq_somoim_member.nextval, 'tester1', '³ë´Â°ÔÁ¦ÀÏÁ¶¾Æ');
+values (seq_somoim_member.nextval, 'tester1', 'ë…¸ëŠ”ê²Œì œì¼ì¡°ì•„');
 
 select * from somoim_member;
 
@@ -176,8 +176,8 @@ REFERENCES SOMOIM_MEMBER
 ENABLE;
 
 COMMENT ON COLUMN SOMOIM_QUESTION_VOTE.NUM IS 'pk'; 
-COMMENT ON COLUMN SOMOIM_QUESTION_VOTE.SOM_MEMBER_NUM IS 'ÅõÇ¥ »ý¼ºÀÚ °íÀ¯¹øÈ£'; 
-COMMENT ON COLUMN SOMOIM_QUESTION_VOTE.QUESTION IS 'ÅõÇ¥ Á¦¸ñ'; 
+COMMENT ON COLUMN SOMOIM_QUESTION_VOTE.SOM_MEMBER_NUM IS 'íˆ¬í‘œ ìƒì„±ìž ê³ ìœ ë²ˆí˜¸'; 
+COMMENT ON COLUMN SOMOIM_QUESTION_VOTE.QUESTION IS 'íˆ¬í‘œ ì œëª©'; 
 
 --drop table somoim_question_vote; 
 
@@ -185,7 +185,7 @@ create sequence seq_somoim_question_vote;
 --drop sequence seq_somoim_question_vote; 
 
 insert into somoim_question_vote (num, som_member_num, question) 
-values (seq_somoim_question_vote.nextval, 1, '7¿ù Á¤±â¸ðÀÓ ½Ä»ç ¸Þ´º ¼±Á¤');
+values (seq_somoim_question_vote.nextval, 1, '7ì›” ì •ê¸°ëª¨ìž„ ì‹ì‚¬ ë©”ë‰´ ì„ ì •');
 
 select * from somoim_question_vote;
 
@@ -210,9 +210,9 @@ REFERENCES SOMOIM_QUESTION_VOTE
 ENABLE;
 
 COMMENT ON COLUMN SOMOIM_CHOICE_VOTE.NUM IS 'pk'; 
-COMMENT ON COLUMN SOMOIM_CHOICE_VOTE.SOM_QVOTE_NUM IS 'ÅõÇ¥ Á¦¸ñ'; 
-COMMENT ON COLUMN SOMOIM_CHOICE_VOTE.CHOICE IS 'ÅõÇ¥ Ç×¸ñ'; 
-COMMENT ON COLUMN SOMOIM_CHOICE_VOTE.COUNT IS 'ÅõÇ¥¼ö'; 
+COMMENT ON COLUMN SOMOIM_CHOICE_VOTE.SOM_QVOTE_NUM IS 'íˆ¬í‘œ ì œëª©'; 
+COMMENT ON COLUMN SOMOIM_CHOICE_VOTE.CHOICE IS 'íˆ¬í‘œ í•­ëª©'; 
+COMMENT ON COLUMN SOMOIM_CHOICE_VOTE.COUNT IS 'íˆ¬í‘œìˆ˜'; 
 
 --drop table somoim_choice_vote; 
 
@@ -220,9 +220,9 @@ create sequence seq_somoim_choice_vote;
 --drop sequence seq_somoim_choice_vote; 
 
 insert into somoim_choice_vote (num, som_qvote_num, choice) 
-values (seq_somoim_choice_vote.nextval, 1, 'ÇÑ½Ä');
+values (seq_somoim_choice_vote.nextval, 1, 'í•œì‹');
 insert into somoim_choice_vote (num, som_qvote_num, choice) 
-values (seq_somoim_choice_vote.nextval, 1, 'ÀÏ½Ä');
+values (seq_somoim_choice_vote.nextval, 1, 'ì¼ì‹');
 
 select * from somoim_choice_vote;
 
@@ -258,14 +258,14 @@ REFERENCES SOMOIM_MEMBER
 ENABLE;
 
 COMMENT ON COLUMN SOMOIM_BOARD.NUM IS 'pk';
-COMMENT ON COLUMN SOMOIM_BOARD.TITLE IS '±ÛÁ¦¸ñ';
-COMMENT ON COLUMN SOMOIM_BOARD.CONTENT IS '±Û³»¿ë';
-COMMENT ON COLUMN SOMOIM_BOARD.SAVE_NAME IS '»çÁøÀÌ¸§';
-COMMENT ON COLUMN SOMOIM_BOARD.WRITE_DATE IS 'ÀÛ¼º½Ã°£';
-COMMENT ON COLUMN SOMOIM_BOARD.VIEW_COUNT IS 'Á¶È¸¼ö';
-COMMENT ON COLUMN SOMOIM_BOARD.GOOD_COUNT IS 'ÁÁ¾Æ¿ä';
-COMMENT ON COLUMN SOMOIM_BOARD.VOTE_NUM IS 'ÅõÇ¥Å×ÀÌºí¹øÈ£';
-COMMENT ON COLUMN SOMOIM_BOARD.SOM_MEMBER_NUM IS '°Ô½Ã±Û ÀÛ¼ºÀÚ °íÀ¯¹øÈ£';
+COMMENT ON COLUMN SOMOIM_BOARD.TITLE IS 'ê¸€ì œëª©';
+COMMENT ON COLUMN SOMOIM_BOARD.CONTENT IS 'ê¸€ë‚´ìš©';
+COMMENT ON COLUMN SOMOIM_BOARD.SAVE_NAME IS 'ì‚¬ì§„ì´ë¦„';
+COMMENT ON COLUMN SOMOIM_BOARD.WRITE_DATE IS 'ìž‘ì„±ì‹œê°„';
+COMMENT ON COLUMN SOMOIM_BOARD.VIEW_COUNT IS 'ì¡°íšŒìˆ˜';
+COMMENT ON COLUMN SOMOIM_BOARD.GOOD_COUNT IS 'ì¢‹ì•„ìš”';
+COMMENT ON COLUMN SOMOIM_BOARD.VOTE_NUM IS 'íˆ¬í‘œí…Œì´ë¸”ë²ˆí˜¸';
+COMMENT ON COLUMN SOMOIM_BOARD.SOM_MEMBER_NUM IS 'ê²Œì‹œê¸€ ìž‘ì„±ìž ê³ ìœ ë²ˆí˜¸';
 
 --drop table somoim_board;
 
@@ -273,10 +273,10 @@ create sequence seq_somoim_board;
 --drop sequence seq_somoim_board;
 
 insert into somoim_board (num, title, content, som_member_num) 
-values (seq_somoim_board.nextval, 'Å×½ºÆ®°Ô½Ã±ÛÀÔ´Ï´Ù.', 'Å×½ºÆ® ¾Æ¾Æ ¸¶ÀÌÅ©Å×½ºÆ®', 1);
+values (seq_somoim_board.nextval, 'í…ŒìŠ¤íŠ¸ê²Œì‹œê¸€ìž…ë‹ˆë‹¤.', 'í…ŒìŠ¤íŠ¸ ì•„ì•„ ë§ˆì´í¬í…ŒìŠ¤íŠ¸', 1);
 
 insert into somoim_board (num, title, content, som_member_num, save_name) 
-values (seq_somoim_board.nextval, '´õ¹Ìµ¥ÀÌÅÍ', 'Å×½ºÆ®¿ë ´õ¹Ì µ¥ÀÌÅÍÀÔ´Ï´Ù.', 2, 'boardimg.png');
+values (seq_somoim_board.nextval, 'ë”ë¯¸ë°ì´í„°', 'í…ŒìŠ¤íŠ¸ìš© ë”ë¯¸ ë°ì´í„°ìž…ë‹ˆë‹¤.', 2, 'boardimg.png');
 
 select * from somoim_board;
 
@@ -312,11 +312,11 @@ REFERENCES SOMOIM_MEMBER
 ENABLE; 
 
 COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.NUM IS 'PK'; 
-COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.SOM_MEMBER_NUM IS '´ñ±Û ÀÛ¼ºÀÚ °íÀ¯¹øÈ£'; 
-COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.CONTENT IS '´ñ±Û ³»¿ë'; 
-COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.WRITE_DATE IS '´ñ±Û ÀÛ¼º ³¯Â¥'; 
-COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.GOOD_COUNT IS 'ÁÁ¾Æ¿ä'; 
-COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.SOM_BOARD_NUM IS '°Ô½Ã±Û ¹øÈ£';
+COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.SOM_MEMBER_NUM IS 'ëŒ“ê¸€ ìž‘ì„±ìž ê³ ìœ ë²ˆí˜¸'; 
+COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.CONTENT IS 'ëŒ“ê¸€ ë‚´ìš©'; 
+COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.WRITE_DATE IS 'ëŒ“ê¸€ ìž‘ì„± ë‚ ì§œ'; 
+COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.GOOD_COUNT IS 'ì¢‹ì•„ìš”'; 
+COMMENT ON COLUMN SOMOIM_BOARD_COMMENTS.SOM_BOARD_NUM IS 'ê²Œì‹œê¸€ ë²ˆí˜¸';
 
 --drop table somoim_board_comments; 
 
@@ -324,7 +324,7 @@ create sequence seq_somoim_board_comments;
 --drop sequence seq_somoim_board_comments; 
 
 insert into somoim_board_comments (num, som_member_num, content, good_count, som_board_num) 
-values (SEQ_SOMOIM_BOARD_COMMENTS.nextval, 1, 'ÁÁÀº ±Û °¨»çÇÕ´Ï´Ù',33,1); 
+values (SEQ_SOMOIM_BOARD_COMMENTS.nextval, 1, 'ì¢‹ì€ ê¸€ ê°ì‚¬í•©ë‹ˆë‹¤',33,1); 
 
 select * from somoim_board_comments;
 
@@ -357,11 +357,11 @@ REFERENCES USERINFO
 ENABLE;
 
 COMMENT ON COLUMN NOTICE.NUM IS 'pk';
-COMMENT ON COLUMN NOTICE.USER_ID IS '¾ÆÀÌµð';
-COMMENT ON COLUMN NOTICE.TITLE IS '±ÛÁ¦¸ñ';
-COMMENT ON COLUMN NOTICE.CONTENT IS '±Û³»¿ë';
-COMMENT ON COLUMN NOTICE.WRITE_DATE IS '±ÛÀÛ¼º½Ã°£';
-COMMENT ON COLUMN NOTICE.SAVE_NAME IS 'ÀÌÁö¹ÌÆÄÀÏ¸í';
+COMMENT ON COLUMN NOTICE.USER_ID IS 'ì•„ì´ë””';
+COMMENT ON COLUMN NOTICE.TITLE IS 'ê¸€ì œëª©';
+COMMENT ON COLUMN NOTICE.CONTENT IS 'ê¸€ë‚´ìš©';
+COMMENT ON COLUMN NOTICE.WRITE_DATE IS 'ê¸€ìž‘ì„±ì‹œê°„';
+COMMENT ON COLUMN NOTICE.SAVE_NAME IS 'ì´ì§€ë¯¸íŒŒì¼ëª…';
 
 --drop table notice;
 
@@ -369,15 +369,15 @@ create sequence seq_notice;
 --drop sequence seq_notice;
 
 insert into notice (num, user_id, title, content) 
-values (seq_notice.nextval, 'tester1', 'Å×½ºÆ®°øÁöÀÔ´Ï´Ù.', 'Å×½ºÆ®°øÁö¸¶ÀÌÅ©Å×½ºÆ®¾Æ¾ÆÇÏ³ªµÑÇÏ³ªµÑ');
+values (seq_notice.nextval, 'tester1', 'í…ŒìŠ¤íŠ¸ê³µì§€ìž…ë‹ˆë‹¤.', 'í…ŒìŠ¤íŠ¸ê³µì§€ë§ˆì´í¬í…ŒìŠ¤íŠ¸ì•„ì•„í•˜ë‚˜ë‘˜í•˜ë‚˜ë‘˜');
 insert into notice (num, user_id, title, content, SAVE_NAME) 
-values (seq_notice.nextval, 'tester', 'Å×½ºÆ®°øÁöÀÔ´Ï´Ù.', 'Å×½ºÆ®°øÁö¸¶ÀÌÅ©Å×½ºÆ®¾Æ¾ÆÇÏ³ªµÑÇÏ³ªµÑ', 
+values (seq_notice.nextval, 'tester', 'í…ŒìŠ¤íŠ¸ê³µì§€ìž…ë‹ˆë‹¤.', 'í…ŒìŠ¤íŠ¸ê³µì§€ë§ˆì´í¬í…ŒìŠ¤íŠ¸ì•„ì•„í•˜ë‚˜ë‘˜í•˜ë‚˜ë‘˜', 
 'hinotice.png');
 
 select * from notice;
 
 
---------------------somoim_gallery  // MongDB·Î ±¸Ãà ¿¹Á¤
+--------------------somoim_gallery  // MongDBë¡œ êµ¬ì¶• ì˜ˆì •
 --CREATE TABLE SOMOIM_GALLERY 
 --(
 --  NUM NUMBER NOT NULL 
@@ -403,9 +403,9 @@ select * from notice;
 --ENABLE;
 --
 --COMMENT ON COLUMN SOMOIM_GALLERY.NUM IS 'pk';
---COMMENT ON COLUMN SOMOIM_GALLERY.SOM_MEMBER_NUM IS '¼Ò¸ðÀÓº° °¶·¯¸® ÀÛ¼ºÀÚ °íÀ¯¹øÈ£';
---COMMENT ON COLUMN SOMOIM_GALLERY.SAVE_NAME IS 'ÀÌ¹ÌÁöÆÄÀÏ¸í';
---COMMENT ON COLUMN SOMOIM_GALLERY.GOOD_COUNT IS 'ÁÁ¾Æ¿ä';
+--COMMENT ON COLUMN SOMOIM_GALLERY.SOM_MEMBER_NUM IS 'ì†Œëª¨ìž„ë³„ ê°¤ëŸ¬ë¦¬ ìž‘ì„±ìž ê³ ìœ ë²ˆí˜¸';
+--COMMENT ON COLUMN SOMOIM_GALLERY.SAVE_NAME IS 'ì´ë¯¸ì§€íŒŒì¼ëª…';
+--COMMENT ON COLUMN SOMOIM_GALLERY.GOOD_COUNT IS 'ì¢‹ì•„ìš”';
 --
 ----drop table somoim_gallery
 --
@@ -418,7 +418,7 @@ select * from notice;
 --select * from somoim_gallery;
 
 
-----------------------------schedule // Âü°¡ÀÚ Ä®·³(PARTICIPANT)Àº µ¥ÀÌÅÍ°¡ Áßº¹µÉ ¼öµµ ÀÖ¾î¼­ UK ÁöÁ¤ ºÒ°¡ 
+----------------------------schedule // ì°¸ê°€ìž ì¹¼ëŸ¼(PARTICIPANT)ì€ ë°ì´í„°ê°€ ì¤‘ë³µë  ìˆ˜ë„ ìžˆì–´ì„œ UK ì§€ì • ë¶ˆê°€ 
 CREATE TABLE SOMOIM_SCHEDULE ( 
 NUM NUMBER NOT NULL , 
 SCHEDULE_DATE VARCHAR2(100) NOT NULL, 
@@ -444,14 +444,14 @@ ENABLE;
 
 
 COMMENT ON COLUMN SOMOIM_SCHEDULE.NUM IS 'pk'; 
-COMMENT ON COLUMN SOMOIM_SCHEDULE.SCHEDULE_DATE IS 'ÀÏÁ¤ ³¯Â¥'; 
-COMMENT ON COLUMN SOMOIM_SCHEDULE.SCHEDULE_TIME IS 'ÀÏÁ¤ ½Ã°£'; 
-COMMENT ON COLUMN SOMOIM_SCHEDULE.SCHEDULE_TITLE IS  'ÀÏÁ¤ ÀÌ¸§'; 
-COMMENT ON COLUMN SOMOIM_SCHEDULE.PLACE IS 'ÀÏÁ¤ Àå¼Ò'; 
-COMMENT ON COLUMN SOMOIM_SCHEDULE.MONEY IS 'Âü°¡ºñ'; -- »èÁ¦ÇÏ±â·Î ÇÔ, ³íÀÇ ÇÊ¿ä
-COMMENT ON COLUMN SOMOIM_SCHEDULE.SOM_MEMBER_NUM IS 'ÀÏÁ¤ ÀÛ¼ºÀÚ °íÀ¯¹øÈ£';
-COMMENT ON COLUMN SOMOIM_SCHEDULE.PARTICIPANT IS 'Âü°¡ÀÚ ¸ñ·Ï';
-COMMENT ON COLUMN SOMOIM_SCHEDULE.PARTICIPANT_COUNT IS 'Âü°¡ÀÚ ¼ö';
+COMMENT ON COLUMN SOMOIM_SCHEDULE.SCHEDULE_DATE IS 'ì¼ì • ë‚ ì§œ'; 
+COMMENT ON COLUMN SOMOIM_SCHEDULE.SCHEDULE_TIME IS 'ì¼ì • ì‹œê°„'; 
+COMMENT ON COLUMN SOMOIM_SCHEDULE.SCHEDULE_TITLE IS  'ì¼ì • ì´ë¦„'; 
+COMMENT ON COLUMN SOMOIM_SCHEDULE.PLACE IS 'ì¼ì • ìž¥ì†Œ'; 
+COMMENT ON COLUMN SOMOIM_SCHEDULE.MONEY IS 'ì°¸ê°€ë¹„'; -- ì‚­ì œí•˜ê¸°ë¡œ í•¨, ë…¼ì˜ í•„ìš”
+COMMENT ON COLUMN SOMOIM_SCHEDULE.SOM_MEMBER_NUM IS 'ì¼ì • ìž‘ì„±ìž ê³ ìœ ë²ˆí˜¸';
+COMMENT ON COLUMN SOMOIM_SCHEDULE.PARTICIPANT IS 'ì°¸ê°€ìž ëª©ë¡';
+COMMENT ON COLUMN SOMOIM_SCHEDULE.PARTICIPANT_COUNT IS 'ì°¸ê°€ìž ìˆ˜';
 
 --drop table somoim_schedule;
 
@@ -459,12 +459,12 @@ create sequence seq_somoim_schedule;
 --drop sequence seq_somoim_schedule; 
 
 insert into somoim_schedule (num, schedule_date, schedule_time, schedule_title, place, money, som_member_num, participant, participant_count) 
-values (seq_somoim_schedule.nextval, '20230701', '19:00', '7¿ùÁ¤±â¸ðÀÓ','°­³²¿ª',10000, 1,'±èÃ¶¼ö/±è¿µÈñ/tester',3);
+values (seq_somoim_schedule.nextval, '20230701', '19:00', '7ì›”ì •ê¸°ëª¨ìž„','ê°•ë‚¨ì—­',10000, 1,'ê¹€ì² ìˆ˜/ê¹€ì˜í¬/tester',3);
 
 select * from somoim_schedule;
 
 
-----------------------------pay // Âü°¡ÀÚ µ¥ÀÌÅÍ ¹®Á¦ ³íÀÇ ÇÊ¿ä
+----------------------------pay // ì°¸ê°€ìž ë°ì´í„° ë¬¸ì œ ë…¼ì˜ í•„ìš”
 CREATE TABLE SOMOIM_PAY (  
 NUM NUMBER NOT NULL , 
 MONEY NUMBER NOT NULL, 
@@ -491,20 +491,20 @@ REFERENCES SOMOIM_SCHEDULE
 ENABLE;
 
 COMMENT ON COLUMN SOMOIM_PAY.NUM IS 'pk'; 
-COMMENT ON COLUMN SOMOIM_PAY.MONEY IS 'Á¤»ê ±Ý¾×'; 
-COMMENT ON COLUMN SOMOIM_PAY.SOM_SCHEDULE_NUM IS 'ÀÏÁ¤ °íÀ¯¹øÈ£'; 
-COMMENT ON COLUMN SOMOIM_PAY.BANK_ACCOUNT IS 'ÀÏÁ¤ »ý¼ºÀÚ °èÁÂ¹øÈ£';
-COMMENT ON COLUMN SOMOIM_PAY.PAY_COMPLETE_PARTICIPANT IS 'Á¤»ê ¿Ï·áÀÚ ¸ñ·Ï';
-COMMENT ON COLUMN SOMOIM_PAY.SADARI IS '»ç´Ù¸®Å¸±â';
-COMMENT ON COLUMN SOMOIM_PAY.PARTICIPANT IS 'Âü¿©ÀÚ ¸ñ·Ï';
+COMMENT ON COLUMN SOMOIM_PAY.MONEY IS 'ì •ì‚° ê¸ˆì•¡'; 
+COMMENT ON COLUMN SOMOIM_PAY.SOM_SCHEDULE_NUM IS 'ì¼ì • ê³ ìœ ë²ˆí˜¸'; 
+COMMENT ON COLUMN SOMOIM_PAY.BANK_ACCOUNT IS 'ì¼ì • ìƒì„±ìž ê³„ì¢Œë²ˆí˜¸';
+COMMENT ON COLUMN SOMOIM_PAY.PAY_COMPLETE_PARTICIPANT IS 'ì •ì‚° ì™„ë£Œìž ëª©ë¡';
+COMMENT ON COLUMN SOMOIM_PAY.SADARI IS 'ì‚¬ë‹¤ë¦¬íƒ€ê¸°';
+COMMENT ON COLUMN SOMOIM_PAY.PARTICIPANT IS 'ì°¸ì—¬ìž ëª©ë¡';
 
 --drop table somoim_pay; 
 
 create sequence seq_somoim_pay; 
 --drop sequence seq_somoim_pay; 
 
-insert into somoim_pay (num, money, som_schedule_num, bank_account, pay_complete_participant, sadari, participant) --¹é´Ü¿¡¼­ Ã³¸®
-values (seq_somoim_pay.nextval, 20000, 1,'110-259-626110','±èÃ¶¼ö/tester', '»ç´Ù¸®Å¸±â', 'tseter');
+insert into somoim_pay (num, money, som_schedule_num, bank_account, pay_complete_participant, sadari, participant) --ë°±ë‹¨ì—ì„œ ì²˜ë¦¬
+values (seq_somoim_pay.nextval, 20000, 1,'110-259-626110','ê¹€ì² ìˆ˜/tester', 'ì‚¬ë‹¤ë¦¬íƒ€ê¸°', 'tseter');
 
 select * from somoim_pay;
 
@@ -532,9 +532,9 @@ REFERENCES USERINFO
 )
 ENABLE;
 
-COMMENT ON COLUMN FOLLOWING.USER_ID IS '³» ¾ÆÀÌµð';
-COMMENT ON COLUMN FOLLOWING.FOLLOWING_ID IS 'ÆÈ·ÎÀ× ¾ÆÀÌµð';
-COMMENT ON COLUMN FOLLOWING.FOLLOWING_COUNT IS 'ÆÈ·ÎÀ× ¼ö';
+COMMENT ON COLUMN FOLLOWING.USER_ID IS 'ë‚´ ì•„ì´ë””';
+COMMENT ON COLUMN FOLLOWING.FOLLOWING_ID IS 'íŒ”ë¡œìž‰ ì•„ì´ë””';
+COMMENT ON COLUMN FOLLOWING.FOLLOWING_COUNT IS 'íŒ”ë¡œìž‰ ìˆ˜';
 
 --drop table following;
 
@@ -571,10 +571,10 @@ REFERENCES USERINFO
 ENABLE;
 
 
-COMMENT ON COLUMN FOLLOWER.USER_ID IS '³» ¾ÆÀÌµð';
-COMMENT ON COLUMN FOLLOWER.FOLLOWER_ID IS 'ÆÈ·Î¿ö ¾ÆÀÌµð';
+COMMENT ON COLUMN FOLLOWER.USER_ID IS 'ë‚´ ì•„ì´ë””';
+COMMENT ON COLUMN FOLLOWER.FOLLOWER_ID IS 'íŒ”ë¡œì›Œ ì•„ì´ë””';
 COMMENT ON COLUMN FOLLOWER.NUM IS 'pk';
-COMMENT ON COLUMN FOLLOWER.follower_COUNT IS 'ÆÈ·Î¿ö ¼ö';
+COMMENT ON COLUMN FOLLOWER.follower_COUNT IS 'íŒ”ë¡œì›Œ ìˆ˜';
 
 --drop table follower;
 
@@ -615,25 +615,25 @@ REFERENCES USERINFO
 )
 ENABLE;
 COMMENT ON COLUMN community_BOARD.NUM IS 'pk';
-COMMENT ON COLUMN community_BOARD.TITLE IS '±ÛÁ¦¸ñ';
-COMMENT ON COLUMN community_BOARD.USER_ID IS 'ÀÛ¼ºÀÚ ¾ÆÀÌµð';
-COMMENT ON COLUMN community_BOARD.CONTENT IS '±Û³»¿ë';
-COMMENT ON COLUMN community_BOARD.SAVE_NAME IS '»çÁøÀÌ¸§';
-COMMENT ON COLUMN community_BOARD.WRITE_DATE IS 'ÀÛ¼º½Ã°£';
-COMMENT ON COLUMN community_BOARD.VIEW_COUNT IS 'Á¶È¸¼ö';
-COMMENT ON COLUMN community_BOARD.GOOD_COUNT IS 'ÁÁ¾Æ¿ä';
+COMMENT ON COLUMN community_BOARD.TITLE IS 'ê¸€ì œëª©';
+COMMENT ON COLUMN community_BOARD.USER_ID IS 'ìž‘ì„±ìž ì•„ì´ë””';
+COMMENT ON COLUMN community_BOARD.CONTENT IS 'ê¸€ë‚´ìš©';
+COMMENT ON COLUMN community_BOARD.SAVE_NAME IS 'ì‚¬ì§„ì´ë¦„';
+COMMENT ON COLUMN community_BOARD.WRITE_DATE IS 'ìž‘ì„±ì‹œê°„';
+COMMENT ON COLUMN community_BOARD.VIEW_COUNT IS 'ì¡°íšŒìˆ˜';
+COMMENT ON COLUMN community_BOARD.GOOD_COUNT IS 'ì¢‹ì•„ìš”';
 --drop table community_board;
 create sequence seq_community_board;
 --drop sequence seq_community_board;
 insert into community_board (num, title, USER_ID, content,SAVE_NAME, VIEW_COUNT, GOOD_COUNT)
-values (seq_community_board.nextval, 'Å×½ºÆ® Á¦¸ñ','tester', 'Å×½ºÆ® ³»¿ë', 'reviewimg.png',5,5);
+values (seq_community_board.nextval, 'í…ŒìŠ¤íŠ¸ ì œëª©','tester', 'í…ŒìŠ¤íŠ¸ ë‚´ìš©', 'reviewimg.png',5,5);
 select * from community_board;
 
 ---------------------alert
 CREATE TABLE ALERT 
 (
   NUM NUMBER NOT NULL 
-, ALERT_CONTENT VARCHAR2(200) DEFAULT '¾Ë¸²ÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.' NOT NULL 
+, ALERT_CONTENT VARCHAR2(200) DEFAULT 'ì•Œë¦¼ì´ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.' NOT NULL 
 , USER_ID VARCHAR2(20) NOT NULL 
 , CONSTRAINT ALERT_PK PRIMARY KEY 
   (
@@ -643,8 +643,8 @@ CREATE TABLE ALERT
 );
 
 COMMENT ON COLUMN ALERT.NUM IS 'pk';
-COMMENT ON COLUMN ALERT.ALERT_CONTENT IS '¾Ë¸²³»¿ë';
-COMMENT ON COLUMN ALERT.USER_ID IS '¹Þ´Â»ç¶÷';
+COMMENT ON COLUMN ALERT.ALERT_CONTENT IS 'ì•Œë¦¼ë‚´ìš©';
+COMMENT ON COLUMN ALERT.USER_ID IS 'ë°›ëŠ”ì‚¬ëžŒ';
 
 --drop table alert;
 
@@ -652,7 +652,7 @@ create sequence seq_alert;
 --drop sequence seq_alert;
 
 insert into alert (num, user_id, alert_content) 
-values (seq_alert.nextval, 'tester1', 'ÀÌ °Ô½Ã±Û¿¡ ´ñ±ÛÀÌ ´Þ·È¾î¿ä!');
+values (seq_alert.nextval, 'tester1', 'ì´ ê²Œì‹œê¸€ì— ëŒ“ê¸€ì´ ë‹¬ë ¸ì–´ìš”!');
 
 select * from alert;
 
@@ -663,15 +663,15 @@ user_id varchar(50) not null,
 content varchar(2000) not null,
 write_date date default sysdate not null,
 good_count number default 0 not null,
-constraint review_comments_pk primary key
+constraint community_comments_pk primary key
 (
     NUM
 )  
     ENABLE
 );
 
-ALTER TABLE REVIEW_comments
-ADD CONSTRAINT REVIEW_comments_FK1 FOREIGN KEY
+ALTER TABLE community_comments
+ADD CONSTRAINT community_comments_FK1 FOREIGN KEY
 (
   USER_ID
 )
@@ -681,16 +681,31 @@ REFERENCES USERINFO
 )
 ENABLE;
 
+ALTER TABLE COMMUNITY_COMMENTS 
+ADD (BOARD_NUM NUMBER );
+
+ALTER TABLE COMMUNITY_COMMENTS
+ADD CONSTRAINT COMMUNITY_COMMENTS_FK2 FOREIGN KEY
+(
+  BOARD_NUM 
+)
+REFERENCES COMMUNITY_BOARD
+(
+  NUM 
+)
+ENABLE;
+
+
 COMMENT ON COLUMN community_comments.NUM IS 'pk';
-COMMENT ON COLUMN community_comments.USER_ID IS 'ÀÛ¼ºÀÚ ¾ÆÀÌµð';
-COMMENT ON COLUMN community_comments.CONTENT IS '´ñ±Û³»¿ë';
-COMMENT ON COLUMN community_comments.WRITE_DATE IS 'ÀÛ¼º½Ã°£';
-COMMENT ON COLUMN community_comments.GOOD_COUNT IS 'ÁÁ¾Æ¿ä';
+COMMENT ON COLUMN community_comments.USER_ID IS 'ìž‘ì„±ìž ì•„ì´ë””';
+COMMENT ON COLUMN community_comments.CONTENT IS 'ëŒ“ê¸€ë‚´ìš©';
+COMMENT ON COLUMN community_comments.WRITE_DATE IS 'ìž‘ì„±ì‹œê°„';
+COMMENT ON COLUMN community_comments.GOOD_COUNT IS 'ì¢‹ì•„ìš”';
 --drop table community_comments;
 create sequence seq_community_comments;
 --drop sequence seq_community_commments;
 insert into community_comments (num, USER_ID, content,GOOD_COUNT)
-values (seq_community_comments.nextval, 'tester', 'Å×½ºÆ® ´ñ±Û',5);
+values (seq_community_comments.nextval, 'tester', 'í…ŒìŠ¤íŠ¸ ëŒ“ê¸€',5);
 select * from community_comments;
 
 --------------------------------msg
@@ -735,14 +750,14 @@ REFERENCES USERINFO
 ENABLE;
 
 COMMENT ON COLUMN MESSAGE.NUM IS 'pk';
-COMMENT ON COLUMN MESSAGE.MSG_TITLE IS 'ÂÊÁö Á¦¸ñ';
-COMMENT ON COLUMN MESSAGE.RECEIVER_ID IS '¼ö½ÅÀÚ ¾ÆÀÌµð';
-COMMENT ON COLUMN MESSAGE.GUBUN IS '¼ö½Å/¹ß½Å ±¸ºÐ';
-COMMENT ON COLUMN MESSAGE.CREATE_DATE IS '¼ö½Å/¹ß½Å ³¯Â¥';
-COMMENT ON COLUMN MESSAGE.MSG_CONTENT IS 'ÂÊÁö ³»¿ë';
-COMMENT ON COLUMN MESSAGE.SENDER_ID IS '¹ß½ÅÀÚ ¾ÆÀÌµð';
-COMMENT ON COLUMN MESSAGE.USER_ID IS 'À¯Àú ¾ÆÀÌµð';
-COMMENT ON COLUMN MESSAGE.READ_YN IS 'ÀÐÀ½Ç¥½Ã';
+COMMENT ON COLUMN MESSAGE.MSG_TITLE IS 'ìª½ì§€ ì œëª©';
+COMMENT ON COLUMN MESSAGE.RECEIVER_ID IS 'ìˆ˜ì‹ ìž ì•„ì´ë””';
+COMMENT ON COLUMN MESSAGE.GUBUN IS 'ìˆ˜ì‹ /ë°œì‹  êµ¬ë¶„';
+COMMENT ON COLUMN MESSAGE.CREATE_DATE IS 'ìˆ˜ì‹ /ë°œì‹  ë‚ ì§œ';
+COMMENT ON COLUMN MESSAGE.MSG_CONTENT IS 'ìª½ì§€ ë‚´ìš©';
+COMMENT ON COLUMN MESSAGE.SENDER_ID IS 'ë°œì‹ ìž ì•„ì´ë””';
+COMMENT ON COLUMN MESSAGE.USER_ID IS 'ìœ ì € ì•„ì´ë””';
+COMMENT ON COLUMN MESSAGE.READ_YN IS 'ì½ìŒí‘œì‹œ';
 
 --drop table message;
 
@@ -750,7 +765,7 @@ create sequence seq_message;
 --drop sequence seq_message;
 
 insert into message (num, user_id, gubun, msg_title, receiver_id, create_date, msg_content, sender_id, read_yn)
-values (seq_message.nextval, 'tester', 0, '¾È³çÇÏ¼¼¿©??', 'tester', '2023-06-29', '¿À´Ãºñ°¡¿ÈÇÏ´ÃÀÌ¾îµÎÄÄÄÄ', 'tester1', 1);
+values (seq_message.nextval, 'tester', 0, 'ì•ˆë…•í•˜ì„¸ì—¬??', 'tester', '2023-06-29', 'ì˜¤ëŠ˜ë¹„ê°€ì˜´í•˜ëŠ˜ì´ì–´ë‘ì»´ì»´', 'tester1', 1);
 
 select * from message;
 
@@ -758,7 +773,7 @@ select * from message;
 
 --somoim_gallery(mongoDB)
 --myfeed_gallery(mongoDB)
---±âÅ¸ µîµî..
+--ê¸°íƒ€ ë“±ë“±..
 
 
 
