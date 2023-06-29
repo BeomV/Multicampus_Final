@@ -374,7 +374,7 @@ nav > ul > li{
 /* login.html 로그인 영역*/
 
 .login_section{
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     display: flex;
