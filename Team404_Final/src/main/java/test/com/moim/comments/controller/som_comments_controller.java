@@ -30,22 +30,21 @@ public class som_comments_controller {
 	@RequestMapping(value = "/som_comm_deleteOK.do", method = RequestMethod.GET)
 	public String som_comm_deleteOK(som_commentsVO vo) {
 		log.info("/som_comm_deleteOK.do...{}", vo);
-		
 		int result = commService.delete(vo);
+
 		log.info("result...{}", result);
 		
-		return "redirect:b_selectOne.do?wnum=";
-		
+		return "redirect:join_selectOne.do?num="+vo.getSom_board_num();
 	}
 	
 	@RequestMapping(value = "/som_comm_insertOK.do", method = RequestMethod.GET)
 	public String som_comm_insertOK(som_commentsVO vo) {
-		log.info("/som_comm_insertOK.do...{}", vo);
 		
 		int result = commService.insert(vo);
+		
 		log.info("result...{}", result);
 		
-		return "redirect:b_selectOne.do?wnum=";
+		return "redirect:join_selectOne.do?num="+vo.getNum();
 		
 	}
 	

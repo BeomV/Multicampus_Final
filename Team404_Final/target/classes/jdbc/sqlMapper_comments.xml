@@ -10,18 +10,17 @@
 		where som_board_num=#{som_board_num} order by num desc
 	</select>
 
-<!-- 	<insert id="c_INSERT"> -->
-<!-- 		insert into comments(cnum,wnum,content,writer) -->
-<!-- 		values(seq_comments.nextval,#{wnum},#{content},#{writer}) -->
-
-<!-- 	</insert> -->
+	<insert id="SOM_C_INSERT" parameterType="test.com.moim.comments.model.som_commentsVO">
+		insert into somoim_board_comments (num, som_member_num, content, good_count, som_board_num) 
+values (SEQ_SOMOIM_BOARD_COMMENTS.nextval, 1 , #{content, jdbcType=VARCHAR },0,#{som_board_num, jdbcType=VARCHAR})
+	</insert>
 
 <!-- 	<update id="c_UPDATE"> -->
 <!-- 		update comments set content=?,wdate=sysdate " -->
 <!-- 			+ "where cnum=? -->
 <!-- 	</update> -->
 
-<!-- 	<delete id="c_DELETE"> -->
-<!-- 		delete from comments where cnum=? -->
-<!-- 	</delete> -->
+	<delete id="SOM_C_DELETE">
+		delete from SOMOIM_BOARD_COMMENTS where  num = #{num, jdbcType=VARCHAR} and som_board_num = #{som_board_num, jdbcType=VARCHAR}
+	</delete>
 </mapper>

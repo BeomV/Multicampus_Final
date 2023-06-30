@@ -64,8 +64,10 @@
 		<div class="comments_sec">
 			<h3>댓글</h3>
 
+
 			<span>
 				<ul class="com_grid">
+
 
 					<!-- 댓글 한 파트  -->
 					<c:forEach items="${coms}" var="com">
@@ -80,14 +82,27 @@
 											<strong>닉네임</strong>
 											<!--  c_writers name -->
 											<span>
-												<button type="button">
+											<form action="som_comm_updateOK.do">
+														<input type="hidden" name="num" value="${com.num}"> 
+														<input type="hidden" name="som_board_num" value="${com.som_board_num}">
+														
+												<button type="submit">
 													<i class="fas fa-edit"></i>
 													<!-- 댓글 수정 -->
 												</button>
-												<button type="button">
-													<i class="fas fa-trash-alt"></i>
-													<!-- 댓글 삭제  -->
-												</button>
+												</form>
+
+
+
+
+												<form action="som_comm_deleteOK.do?num=${com.num}&som_board_num=${com.som_board_num}">
+														<input type="hidden" name="num" value="${com.num}"> 
+														<input type="hidden" name="som_board_num" value="${com.som_board_num}">
+														<button type="submit">
+														<i class="fas fa-trash-alt"></i>
+														<!-- 댓글 삭제 -->
+													</button>
+												</form>
 											</span>
 										</div>
 										<p>${com.content}</p>
@@ -106,21 +121,23 @@
 
 
 				</ul>
-				<form action="som_comm_insertOK.do" method="GET"><
 				<div class="join_commnets_insert_section">
-						<div class="comments_user_profile">
-							<div class="commnets_user_profile_img">
-								<i class="far fa-user"></i>
-							</div>
-							<p>닉네임</p>
+					<div class="comments_user_profile">
+						<div class="commnets_user_profile_img">
+							<i class="far fa-user"></i>
 						</div>
-<!-- 						<form action="som_comm_insertOK.do"> -->
-						<input type="text" name="content" placeholder="댓글 작성">
+						<p>닉네임</p>
+					</div>
+					<form action="som_comm_insertOK.do?som_board_num=${vo2.num}">
+						<!-- 						<form action="som_comm_insertOK.do"> -->
+						<input type="hidden" name="som_board_num" value="${vo2.num}">
+						<input type="hidden" name="num" value="${vo2.num}"> <input
+							type="text" name="content" placeholder="댓글 작성">
 						<button type="submit">댓글 작성</button>
-<!-- 						</form> -->
-				
+					</form>
+					<!-- 						</form> -->
+
 				</div>
-				</form>
 			</span>
 
 		</div>

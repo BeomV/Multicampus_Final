@@ -23,9 +23,10 @@ public class som_commentsDAOimpl implements som_commentsDAO {
 	}
 	@Override
 	public int insert(som_commentsVO vo) {
-		log.info(" dao.inserct().... ");
+		log.info(" dao.inserct().... {}", vo );
 		log.info("등록됩니다");
-		return 0;
+		
+		return sqlsession.update("SOM_C_INSERT",vo);
 	}
 
 	@Override
@@ -36,8 +37,8 @@ public class som_commentsDAOimpl implements som_commentsDAO {
 
 	@Override
 	public int delete(som_commentsVO vo) {
-		log.info(" dao.delete().... ");
-		return 0;
+		log.info("delete()...{}",vo);
+		return sqlsession.delete("SOM_C_DELETE",vo);
 	}
 
 	@Override
