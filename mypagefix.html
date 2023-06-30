@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="/css/mypage.css">
+    <link rel="stylesheet" href="/css/mypage_min.css">
 </head>
 <body>
     <div class="header">
@@ -44,6 +45,7 @@
       
     </div>
 <hr style="margin-bottom: 10px;">
+
     <div class="total_area" >
         <div class="total_position">
        <ul>
@@ -55,7 +57,7 @@
                                 <img src="/Img/0112.png" alt="프로필 이미지" >
                             </li>
                             <li class = "profile_fix_but">
-                                <button type="button" href="#">이미지 편집</button>
+                                <button type="button" href="#">편집</button>
                             </li>
                         </ul>
                     </div>
@@ -81,15 +83,7 @@
                             <div class="insert_area_id">
                                 <h2 class="id">나의 주소</h2>
                                 <input style="width: 45%;" type="text" placeholder="나의 주소를 입력하세요" id="address" value="서울특별시 성북구">
-                                <button style="width: 10%; 
-                                height: 38px;
-                                border-radius: 5px;
-                                outline: none;
-                                border: lightgray solid 1px;
-                                background-color: white;
-                                color: gray;
-                            
-                            " type="button" > 주소 변경</button>
+                                <button type="button" id="juso" >변경</button>
 
                             </div>
                             <!-- 휴대폰 번호 -->
@@ -97,22 +91,15 @@
                                 <h2 class="id">휴대폰 번호</h2>
                                 <input type="text" placeholder="아이디를 입력하세요" id="tel" value=" 01066389914">
                                 <div class="insert_area_id_but" style="text-align: center; width:70%; background-color: white;"">
-                                    <button class="area_id_but" type="button" 
-                                    style="width: 20%; 
-                                      border-radius: 5px;
-                                      outline: none;
-                                      background-color: white;
-                                      color: gray;
-                                    margin-right: 10%;
-                                    ">
-                                        인증 번호 전송</button>
+                                    <button class="area_id_but" type="button" id="em_certi">인증</button>
                                 </div>
                             </div>
                                 
                         </div>
                     </div>
                 </div>
-            </li>
+            </div>
+        </li>
             <li>
                 <div class="email_area">
                     <div class="mypage_insert_email_footer">
@@ -181,7 +168,4 @@
        
     </div>
 </body>
-</html>
-</body>
-
 </html>
