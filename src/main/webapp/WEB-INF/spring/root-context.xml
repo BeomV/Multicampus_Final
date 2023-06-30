@@ -25,7 +25,7 @@
 		<property name="mapperLocations">
 			<list>
 
-				<value>classpath:jdbc/sqlMapper_board.xml</value>
+				<value>classpath:jdbc/sqlMapper_community.xml</value>
 
 			</list>
 		</property>
