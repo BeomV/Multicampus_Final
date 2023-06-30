@@ -16,7 +16,7 @@
 
     <div class="main_container">
         <div class="img_banner">
-            <img src="resources/img/banner_test.png">  
+            <img src="resources/img/banner_test.png">
 
         </div>
         <div class="main_pictogram">
@@ -29,61 +29,62 @@
                 <li><i class="fa-solid fa-paw"></i></li>
                 <li><i class="fa-solid fa-laptop-file"></i></li>
                 <li><i class="fa-solid fa-language"></i></li>
-            </ul>  
+            </ul>
 
         </div>
         <div class="moim_list01">
             <strong>소모임</strong>
             <ul>
                 <li>
-                    <div>
-                        <img src="resources/img/0112.png">
+                    <div class="moimst_list_01_img_box">
+                        <img src="resources/img/아이유.png">
                     </div>
                     <div class="main_selectList">
                         <p class="hashtag">위스키</p>
-                        <h1>왕초보를 위한 위스키 클래스! 내가</h1>
+                        <h1>왕초보를 위한 위스키 클래스! 내가ddddddddddd</h1>
                         <p class="sub_tit">소셜링 성동구 6.20(화) 오후 7:30</p>
                     </div>
-                    
+
                 </li>
                 <li>
-                    <div>
-                        <img src="resources/img/0112.png">
+                    <div class="moimst_list_01_img_box">
+                        <img src="resources/img/아이유.png">
                     </div>
                     <div class="main_selectList">
                         <p class="hashtag">위스키</p>
-                        <h1>왕초보를 위한 위스키 클래스! 내가</h1>
+                        <h1>왕초보를 위한 위스키 클래스! 내가ddddddddddd</h1>
                         <p class="sub_tit">소셜링 성동구 6.20(화) 오후 7:30</p>
                     </div>
-                    
+
                 </li>
                 <li>
-                    <div>
-                        <img src="resources/img/0112.png">
+                    <div class="moimst_list_01_img_box">
+                        <img src="/img/0112.png">
                     </div>
                     <div class="main_selectList">
                         <p class="hashtag">위스키</p>
-                        <h1>왕초보를 위한 위스키 클래스! 내가</h1>
+                        <h1>왕초보를 위한 위스키 클래스! 내가ddddddddddd</h1>
                         <p class="sub_tit">소셜링 성동구 6.20(화) 오후 7:30</p>
                     </div>
-                    
+
                 </li>
                 <li>
-                    <div>
-                        <img src="resources/img/0112.png">
+                    <div class="moimst_list_01_img_box">
+                        <img src="resources/img/아이유.png">
                     </div>
                     <div class="main_selectList">
                         <p class="hashtag">위스키</p>
-                        <h1>왕초보를 위한 위스키 클래스! 내가</h1>
+                        <h1>왕초보를 위한 위스키 클래스! 내가ddddddddddd</h1>
                         <p class="sub_tit">소셜링 성동구 6.20(화) 오후 7:30</p>
                     </div>
-                    
+
                 </li>
-            
-                
 
 
-            </ul>   
+
+
+
+            </ul>
             <button id="more_info">더보기 ></button>
 
         </div>
@@ -92,58 +93,58 @@
             <ul>
                 <li>
                     <div>
-                        <img src="resources/img/0112.png">
+                        <img src="/img/0112.png">
                     </div>
                     <div class="main_selectList">
                         <p class="hashtag">위스키</p>
                         <h1>왕초보를 위한 위스키 클래스! 내가</h1>
                         <p class="sub_tit">소셜링 성동구 6.20(화) 오후 7:30</p>
                     </div>
-                    
+
                 </li>
                 <li>
                     <div>
-                        <img src="resources/img/0112.png">
+                        <img src="/img/0112.png">
                     </div>
                     <div class="main_selectList">
                         <p class="hashtag">위스키</p>
                         <h1>왕초보를 위한 위스키 클래스! 내가</h1>
                         <p class="sub_tit">소셜링 성동구 6.20(화) 오후 7:30</p>
                     </div>
-                    
+
                 </li>
                 <li>
                     <div>
-                        <img src="resources/img/0112.png">
+                        <img src="/img/0112.png">
                     </div>
                     <div class="main_selectList">
                         <p class="hashtag">위스키</p>
                         <h1>왕초보를 위한 위스키 클래스! 내가</h1>
                         <p class="sub_tit">소셜링 성동구 6.20(화) 오후 7:30</p>
                     </div>
-                    
+
                 </li>
                 <li>
                     <div>
-                        <img src="resources/img/0112.png">
+                        <img src="/img/0112.png">
                     </div>
                     <div class="main_selectList">
                         <p class="hashtag">위스키</p>
                         <h1>왕초보를 위한 위스키 클래스! 내가</h1>
                         <p class="sub_tit">소셜링 성동구 6.20(화) 오후 7:30</p>
                     </div>
-                    
+
                 </li>
-            
-                
 
 
-            </ul>   
+
+
+            </ul>
             <button id="more_info">더보기 ></button>
 
         </div>
         <div class="main_section05">
-            IMG   
+            IMG
 
         </div>
 
@@ -163,7 +164,7 @@
             <ul>
                 <li>인스타그램</li>
                 <li>네이버 블로그</li>
-                
+
             </ul>
         </div>
         <div class="footer_company">
@@ -174,11 +175,11 @@
                 <li>주소: 서울시 강남구 태헤란로 ~~~~~</li>
             </ul>
         </div>
-       
+
     </div>
 
 
 
-    
+
 </body>
 </html>
