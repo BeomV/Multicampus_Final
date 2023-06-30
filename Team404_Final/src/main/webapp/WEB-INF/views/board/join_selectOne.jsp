@@ -106,6 +106,7 @@
 
 
 				</ul>
+				<form action="som_comm_insertOK.do" method="GET"><
 				<div class="join_commnets_insert_section">
 						<div class="comments_user_profile">
 							<div class="commnets_user_profile_img">
@@ -113,10 +114,13 @@
 							</div>
 							<p>닉네임</p>
 						</div>
+<!-- 						<form action="som_comm_insertOK.do"> -->
 						<input type="text" name="content" placeholder="댓글 작성">
 						<button type="submit">댓글 작성</button>
-					</form>
+<!-- 						</form> -->
+				
 				</div>
+				</form>
 			</span>
 
 		</div>
