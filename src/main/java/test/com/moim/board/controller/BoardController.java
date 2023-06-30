@@ -109,6 +109,14 @@ public class BoardController {
 
 		return "board/join_gallery";
 	}
+	@RequestMapping(value = "/join_insert.do", method = RequestMethod.GET)
+	public String join_insert() {
+		log.info("join_insert.do().....");
+
+
+
+		return "board/join_insert";
+	}
 
 
 	

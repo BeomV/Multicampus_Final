@@ -18,9 +18,7 @@
 
 <div class="join_section">
     <jsp:include page="./som_top_menu.jsp"></jsp:include>
-    <div class="img_info">
-        이미지
-    </div>
+
     <div class="top_func">
         <button type="button" style="padding: 5px 12px;">이미지 업로드</button>
     </div>

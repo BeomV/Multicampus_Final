@@ -22,7 +22,7 @@
             이미지
         </div>
         <div class="top_func">
-            <button type="button">글쓰기</button>
+            <button type="button"><a href="/join_insert.do" style="color: white">글쓰기</a></button>
         </div> 
         <div class="view_content">
             <ul>
