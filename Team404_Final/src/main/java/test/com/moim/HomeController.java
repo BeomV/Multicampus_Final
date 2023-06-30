@@ -25,7 +25,7 @@ public class HomeController {
 	 */
 	@RequestMapping(value = {"/","home.do"}, method = RequestMethod.GET)
 	public String home() {
-		log.info("home.do().....");
+		log.info("home.do().....123123");
 		return "home";
 	}
 	
