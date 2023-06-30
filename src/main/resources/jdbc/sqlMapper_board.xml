@@ -9,6 +9,18 @@
 		select * from somoim
 	</select>
 
+
+	<insert id="B_INSERT">
+		insert into somoim(num,som_title,category,max_member,create_date)
+		values(seq_somoim.nextval,#{som_title},#{category},#{max_member},sysdate)
+	</insert>
+
+	<select id="B_SELECT_ONE"
+			resultType="test.com.moim.board.model.BoardVO">
+			select * from somoim where num = #{num}
+	</select>
+
+
 	<!--
 	<select id="b_SELECT_ONE"
 		resultType="test.com.semi.board.model.BoardVO">

@@ -13,370 +13,370 @@ ul{
 
 @media only screen and (min-width: 767px) {
     /* 스타일 작성 */
- 
-  
-
-.gnb{
-    display: flex;
-    width: 1440PX;
-    margin: 0 auto;
-    padding: 10px 0px;
-    justify-content: space-between;
-    border-bottom: 1px solid #ececec;
-}
-
-.logo img{
-    width: 120px;
-
-}
-
-.img_banner{
-    overflow: hidden; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.img_banner img{
-    width: 100%;
-    background-size: cover;
-}
-
-nav{
-    width: 600px;
-    font-weight: 600;
-    margin-top: 10px;
-    margin-left: 50px;
-
-    
-}
-
-nav > ul > li{
-    width: 100px;
-    float: left;
-    
-}
-
-.main_search{
-    width: 500px;
-    margin-top: 10px;
-
-}
-
-.main_search > input{
-    width: 300px;
-    padding: 7px 10px;
-    border: none;
-    border-radius: 6px;
-    background-color: #dadada;
-}
-
-.login{
-    margin-top: 10px;
-}
-
-.login > a{
-    font-size: 12px;
-    color: #888888;
-}
-
-
-/*Body*/
-.main_container{
-    width: 100%;
-}
-
-.img_banner{
-    width: 1440px;
-    margin: 0 auto;
-    background-color: #999;
-    height: 400px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.main_pictogram{
-    width: 1440px;
-    margin: 0 auto;
-    height: 180px;
-    text-align: center;
-
-}
-
-.main_pictogram ul{
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-
-}
-
-.main_pictogram ul li{
-    display: inline-block;
-    display: flex;
-    width: 100px;
-    margin: 0px 20px;
-    border-radius: 15px;
-    background-color: #ececec;
-    height: 100px;
-    justify-content: center;
-     align-items: center;
-    
-
-}
-.main_pictogram ul li i{
-    font-size: 36px;
-    
-}
-
-.main_pictogram ul li i:hover{
-    color: #81a9ff;
-    
-}
-
-
-
-.main_section04{
-    width: 1440px;
-    margin: 0 auto;
-    background-color: #81a9ff;
-    height: 400px;
-    text-align: center;
-}
-.main_section05{
-    width: 1440px;
-    margin: 0 auto;
-    background-color: #a4ffb3;
-    height: 400px;
-    text-align: center;
-}
-
-.footer{
-    width: 1440px;
-    margin: 0 auto;
-}
-
-
-
-/*메인페이지 모임 리스트 1번*/
-
-.moim_list01{
-    width: 1440px;
-    margin: 0 auto;
-    background-color: rgb(240, 183, 183);
-    height: 850px;
-    padding-top: 20px;
-    text-align: center;
-}
-
-.moim_list01 strong{
-    font-size: 36px;
-    
-
-}
-
-.moim_list01 ul{
-    width: 1440px;
-    padding-top: 100px;
-    text-align: center;
-    
-}
-
-.moim_list01 ul li{
-    display: inline-block;
-
-    width: 550px;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
-    height: 200px;
-
-}
-
-.moimst_list_01_img_box{
-    width: 200px;
-    border-radius: 10px;
-    background-color: #9ab8ff;
-    justify-content: center;
-    float: left;
-    height: 200px;
-
-}
-
-.moim_list01 ul div:last-child{
-    width: 330px;
-    text-align: left;
-    float: left;
-    height: 200px;
-    margin-left: 15px;
-    overflow: hidden;
-
-}
-
-.moim_list01 .hashtag {
-    width: 80px;
-    border-radius: 10px;
-    background-color: #d1d1d1;
-    text-align: center;
-}
-
-
-.main_selectList h1{
-    width: 90%;
-    font-size: 18px;
-    padding-top: 30px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-}
-
-.moim_list01 .sub_tit{
-    font-size: 12px;
-    color: #666;
-}
-
-.moimst_list_01_img_box img{
-    width: inherit;
-    display: flex;
-    justify-content: center;
-    
-    background-size: cover;
-    border-radius: 15px;
 
-}
 
 
-/*모임 리스트 2번*/
-.moim_list02{
-    width: 1440px;
-    margin: 0 auto;
-    background-color: #f4f7fd;
-    height: 850px;
-    padding-top: 20px;
-    text-align: center;
-}
+    .gnb{
+        display: flex;
+        width: 1440PX;
+        margin: 0 auto;
+        padding: 10px 0px;
+        justify-content: space-between;
+        border-bottom: 1px solid #ececec;
+    }
+
+    .logo img{
+        width: 120px;
+
+    }
+
+    .img_banner{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img_banner img{
+        width: 100%;
+        background-size: cover;
+    }
 
-.moim_list02 strong{
-    font-size: 36px;
-    
+    nav{
+        width: 600px;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-left: 50px;
+
+
+    }
+
+    nav > ul > li{
+        width: 100px;
+        float: left;
+
+    }
+
+    .main_search{
+        width: 500px;
+        margin-top: 10px;
+
+    }
 
-}
+    .main_search > input{
+        width: 300px;
+        padding: 7px 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: #dadada;
+    }
+
+    .login{
+        margin-top: 10px;
+    }
+
+    .login > a{
+        font-size: 12px;
+        color: #888888;
+    }
+
+
+    /*Body*/
+    .main_container{
+        width: 100%;
+    }
 
-.moim_list02 ul{
-    width: 1440px;
-    padding-top: 100px;
-    text-align: center;
-    
-}
+    .img_banner{
+        width: 1440px;
+        margin: 0 auto;
+        background-color: #999;
+        height: 400px;
+        margin-top: 10px;
+        text-align: center;
+    }
 
-.moim_list02 ul li{
-    display: inline-block;
+    .main_pictogram{
+        width: 1440px;
+        margin: 0 auto;
+        height: 180px;
+        text-align: center;
+
+    }
+
+    .main_pictogram ul{
+        display: flex;
+        width: 1200px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+
+    }
+
+    .main_pictogram ul li{
+        display: inline-block;
+        display: flex;
+        width: 100px;
+        margin: 0px 20px;
+        border-radius: 15px;
+        background-color: #ececec;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+
 
-    width: 550px;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
-    height: 200px;
+    }
+    .main_pictogram ul li i{
+        font-size: 36px;
+
+    }
+
+    .main_pictogram ul li i:hover{
+        color: #81a9ff;
+
+    }
+
+
+
+    .main_section04{
+        width: 1440px;
+        margin: 0 auto;
+        background-color: #81a9ff;
+        height: 400px;
+        text-align: center;
+    }
+    .main_section05{
+        width: 1440px;
+        margin: 0 auto;
+        background-color: #a4ffb3;
+        height: 400px;
+        text-align: center;
+    }
 
-}
+    .footer{
+        width: 1440px;
+        margin: 0 auto;
+    }
+
+
+
+    /*메인페이지 모임 리스트 1번*/
+
+    .moim_list01{
+        width: 1440px;
+        margin: 0 auto;
+        background-color: rgb(240, 183, 183);
+        height: 850px;
+        padding-top: 20px;
+        text-align: center;
+    }
 
-.moim_list02 ul div:first-child{
-    width: 200px;
-    border-radius: 10px;
-    background-color: #81a9ff;
-    
-    float: left;
-    height: 200px;
+    .moim_list01 strong{
+        font-size: 36px;
 
-}
 
-.moim_list02 ul div:last-child{
-    width: 330px;
-    text-align: left;
-    float: left;
-    height: 200px;
-    margin-left: 15px;
-    overflow: hidden;
+    }
 
-}
+    .moim_list01 ul{
+        width: 1440px;
+        padding-top: 100px;
+        text-align: center;
 
-.moim_list02 .hashtag {
-    width: 80px;
-    border-radius: 10px;
-    background-color: #d1d1d1;
-    text-align: center;
-}
+    }
 
+    .moim_list01 ul li{
+        display: inline-block;
 
-.main_selectList h1{
-    font-size: 18px;
-    padding-top: 30px;
+        width: 550px;
+        margin: 10px;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        height: 200px;
 
-}
+    }
 
-.moim_list02 .sub_tit{
-    font-size: 12px;
-    color: #666;
-}
+    .moimst_list_01_img_box{
+        width: 200px;
+        border-radius: 10px;
+        background-color: #9ab8ff;
+        justify-content: center;
+        float: left;
+        height: 200px;
 
-.moim_list02 ul div:first-child img{
-    width: 100%;
-    border-radius: 15px;
+    }
 
-}
+    .moim_list01 ul div:last-child{
+        width: 330px;
+        text-align: left;
+        float: left;
+        height: 200px;
+        margin-left: 15px;
+        overflow: hidden;
 
+    }
 
+    .moim_list01 .hashtag {
+        width: 80px;
+        border-radius: 10px;
+        background-color: #d1d1d1;
+        text-align: center;
+    }
 
 
+    .main_selectList h1{
+        width: 90%;
+        font-size: 18px;
+        padding-top: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
+    }
 
+    .moim_list01 .sub_tit{
+        font-size: 12px;
+        color: #666;
+    }
 
+    .moimst_list_01_img_box img{
+        width: inherit;
+        display: flex;
+        justify-content: center;
 
+        background-size: cover;
+        border-radius: 15px;
 
+    }
 
 
+    /*모임 리스트 2번*/
+    .moim_list02{
+        width: 1440px;
+        margin: 0 auto;
+        background-color: #f4f7fd;
+        height: 850px;
+        padding-top: 20px;
+        text-align: center;
+    }
 
+    .moim_list02 strong{
+        font-size: 36px;
 
-#more_info{
-    width: 160px;
-    padding: 15px 0px;
-    border: none;
-    border-radius: 10px;
-    background-color: white;
-    margin-top: 50px;
-}
 
+    }
 
-/*Footer 부분*/
+    .moim_list02 ul{
+        width: 1440px;
+        padding-top: 100px;
+        text-align: center;
 
-.footer{
-    display: flex;
-    padding: 20px 0px 30px 0px;
-    border-top: #ccc solid 1px;
-    justify-content: space-between;
-}
+    }
 
-.footer li{
-    color: #888888;
-    font-weight: 600;
-}
+    .moim_list02 ul li{
+        display: inline-block;
 
-.footer strong{
-    font-size: 16px;
-}
+        width: 550px;
+        margin: 10px;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        height: 200px;
 
-.footer > div >ul >li{
-    padding: 7px 0px;
-}
+    }
 
-.footer_company ul li{
-    font-size: 12px;
-    
-}
+    .moim_list02 ul div:first-child{
+        width: 200px;
+        border-radius: 10px;
+        background-color: #81a9ff;
+
+        float: left;
+        height: 200px;
+
+    }
+
+    .moim_list02 ul div:last-child{
+        width: 330px;
+        text-align: left;
+        float: left;
+        height: 200px;
+        margin-left: 15px;
+        overflow: hidden;
+
+    }
+
+    .moim_list02 .hashtag {
+        width: 80px;
+        border-radius: 10px;
+        background-color: #d1d1d1;
+        text-align: center;
+    }
+
+
+    .main_selectList h1{
+        font-size: 18px;
+        padding-top: 30px;
+
+    }
+
+    .moim_list02 .sub_tit{
+        font-size: 12px;
+        color: #666;
+    }
+
+    .moim_list02 ul div:first-child img{
+        width: 100%;
+        border-radius: 15px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #more_info{
+        width: 160px;
+        padding: 15px 0px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        margin-top: 50px;
+    }
+
+
+    /*Footer 부분*/
+
+    .footer{
+        display: flex;
+        padding: 20px 0px 30px 0px;
+        border-top: #ccc solid 1px;
+        justify-content: space-between;
+    }
+
+    .footer li{
+        color: #888888;
+        font-weight: 600;
+    }
+
+    .footer strong{
+        font-size: 16px;
+    }
+
+    .footer > div >ul >li{
+        padding: 7px 0px;
+    }
+
+    .footer_company ul li{
+        font-size: 12px;
+
+    }
 
 }
 
@@ -391,7 +391,7 @@ nav > ul > li{
     justify-content: center; /* 수평 정렐 */
     align-items: center; /* 수직 정렬 */
     height: 700px;
-    
+
 
 }
 
@@ -406,7 +406,7 @@ form{
     font-size: 14px;
     font-weight: 400;
     justify-content: space-between;
-    
+
 }
 
 .sub_login label{
@@ -448,7 +448,7 @@ form{
 
 .login_section #auto_login{
     margin-right: 10px;
-    
+
 }
 
 /*register.html 회원가입 영역*/
@@ -504,7 +504,7 @@ form{
     padding: 3px 10px;
     border: solid 1px #d6d6d6;
     border-radius: 5px;
-    
+
 }
 
 #register{

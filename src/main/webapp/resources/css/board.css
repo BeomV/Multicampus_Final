@@ -831,9 +831,6 @@
 }
 
 
-
-
-
 #btn_shcedule_insert{
   width: 50%;
   margin: 50px auto 50px auto;
@@ -842,4 +839,14 @@
   color: white;
   border: none;
   border-radius: 5px;
+}
+
+#som_register{
+  width: 50%;
+  margin-top: 100px;
+  padding: 5px 0px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #1785F2;
 }

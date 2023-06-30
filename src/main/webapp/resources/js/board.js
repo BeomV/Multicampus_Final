@@ -1,8 +1,6 @@
 $(document).ready(function() {
-    $('.board_grid li input[type="button"]').click(function() {
-      $(this).toggleClass('category_active'); // 현재 클릭한 버튼에 category_active 클래스를 토글(toggle)
-      $('.board_grid li input[type="button"]').not(this).removeClass('category_active'); // 다른 버튼에서 category_active 클래스 제거
-    });//ENd
+
+
 
     $('.category_more a').click(function(event){
         $('.category_more').hide();
@@ -20,6 +18,19 @@ $(document).ready(function() {
         });
     });//End
 
+    $(document).on('click', '.board_grid li input[type="button"]', function() {
+        $(this).toggleClass('category_active'); // 현재 클릭한 버튼에 category_active 클래스를 토글(toggle)
+        $('.board_grid li input[type="button"]').not(this).removeClass('category_active'); // 다른 버튼에서 category_active 클래스 제거
+    });
+
+    $('#som_insert-btn').click(function() {
+        window.location.href = '/som_insert.do';
+    });// End
+
+    // $(document).on('click', '.join_gnb li a', function() {
+    //     $(this).toggleClass('category_active'); // 현재 클릭한 버튼에 category_active 클래스를 토글(toggle)
+    //     $('.join_gnb li a').not(this).removeClass('category_active'); // 다른 버튼에서 category_active 클래스 제거
+    // });
 
 
 
@@ -30,4 +41,30 @@ $(document).ready(function() {
 
 
 
-  });//End Document.ready();
+});//End Document.ready();
+
+// 비동기 처리
+
+function som_insertOK() {
+    console.log("som_insertOK....");
+
+    var findCategory = $('.category_active').val();
+
+    $.ajax({
+        url: "som_insertOK.do",
+        data: {
+            som_title: $('#som_title').val(),
+            category: findCategory,
+            max_member: $('#moim_max').val()
+        },
+        method: 'POST',
+        dataType: 'json',
+        success: function(response) {
+            console.log('ajax....success', response);
+            alert("성공");
+        },
+        error:function(xhr,status,error){
+            console.log('xhr.status:', xhr.status);
+        }
+    });
+}//end som_insertOK

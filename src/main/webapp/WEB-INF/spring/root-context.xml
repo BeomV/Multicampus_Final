@@ -26,6 +26,7 @@
 			<list>
 
 				<value>classpath:jdbc/sqlMapper_board.xml</value>
+				<value>classpath:jdbc/sqlMapper_somoim_board.xml</value>
 
 			</list>
 		</property>

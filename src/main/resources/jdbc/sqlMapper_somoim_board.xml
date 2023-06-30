@@ -4,22 +4,21 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="test.com.moim.board">
-	<select id="B_SELECT_ALL"
-		resultType="test.com.moim.board.model.BoardVO">
-		select * from somoim
+	<select id="SOMOIM_SELECT_ALL"
+		resultType="test.com.moim.board.model.Somoim_BoardVO">
+		select * from somoim_board b
+		INNER JOIN somoim_member m
+		on b.som_member_num = m.num
 	</select>
 
-
-	<insert id="B_INSERT">
-		insert into somoim(num,som_title,category,max_member,create_date)
-		values(seq_somoim.nextval,#{som_title},#{category},#{max_member},sysdate)
-	</insert>
-
-	<select id="B_SELECT_ONE"
-			resultType="test.com.moim.board.model.BoardVO">
-			select * from somoim where num = #{num}
+	<select id="SOMOIM_SELECT_ONE"
+			resultType="test.com.moim.board.model.Somoim_BoardVO">
+		select * from somoim_board b
+		INNER JOIN somoim_member m
+		on b.som_member_num = m.num
+		where b.num=#{num}
 	</select>
-
+	
 
 	<!--
 	<select id="b_SELECT_ONE"
