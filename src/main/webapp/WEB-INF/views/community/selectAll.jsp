@@ -7,39 +7,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/min.css">
-    <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/min.css">
+    <link rel="stylesheet" href="resources/css/community.css">
+
+    
 </head>
 <body>
     <jsp:include page="../top_menu.jsp"></jsp:include>
 
 <body>
-    <div class="header">
-        <div class="gnb">
-            <div class="logo">
-                <img src="/Img/logo.png">
-            </div>
-            <nav>
-                <ul>
-                    <li><a>원데이</a></li>
-                    <li><a>소모임</a></li>
-                    <li><a>이벤트</a></li>
-                    <li><a>커뮤니티</a></li>
-                    <li><a>고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="main_search">
-                <input type="search" placeholder="검색">
-            </div>
-            <div class="login">
-                <a href="/login.html">로그인</a>
-                <a>로그아웃</a>
-            </div>
-
-        </div>
-
-    </div>
+    
         <div class="community_section_top">
             <div class="community_title">
                 <h2>
@@ -62,7 +40,7 @@
             </div>
         </div>
         <div class="community_navigation_upload">
-            <button type="button">리뷰 올리기</button>  
+            <button type="button">+</button>  
         </div>
         <div class="community_review_section">
             <div class="community_review_view">
