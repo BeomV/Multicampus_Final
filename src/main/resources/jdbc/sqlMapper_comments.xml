@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.semi.comments">
+	<select id="c_SELECT_ALL"
+		resultType="test.com.semi.comments.model.CommentsVO">
+		select * from comments where wnum=? order by cnum desc
+	</select>
+
+	<insert id="c_INSERT">
+		insert into comments(cnum,wnum,content,writer)
+		values(seq_comments.nextval,#{wnum},#{content},#{writer})
+
+	</insert>
+
+	<update id="c_UPDATE">
+		update comments set content=?,wdate=sysdate "
+			+ "where cnum=?
+	</update>
+
+	<delete id="c_DELETE">
+		delete from comments where cnum=?
+	</delete>
+</mapper>
