@@ -34,7 +34,7 @@ public class BoardController {
 		List<BoardVO> vos = service.selectAll();
 
 
-		return "board/som_selectAll";
+		return "board/selectAll";
 	}
 	
 }

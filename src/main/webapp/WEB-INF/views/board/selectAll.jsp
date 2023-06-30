@@ -56,7 +56,7 @@
                 <button type="button">모임 만들기</button>
             </div>
             <ul class="rec_list_grid">
-                <!--<c:forEach var="vo" items="${vos}">-->
+                
                 <li>
                     <div class="moim_img">
                         <div class="img_box">
@@ -71,7 +71,7 @@
                     </div>
 
                 </li>
-<%--                </c:forEach>--%>
+
 
             </ul>
 
