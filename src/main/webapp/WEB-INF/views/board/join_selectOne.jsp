@@ -2,7 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page session="false" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="UTF-8">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +20,8 @@
 
     <div class="join_section">
         <jsp:include page="./som_top_menu.jsp"></jsp:include>
-        <div class="img_info">
-            이미지
-        </div>
         <div class="top_func">
-            <button type="button">글쓰기</button>
+            <button type="button"><a href="/join_insert.do">글쓰기</a></button>
         </div> 
         <div class="view_content" style="height: auto; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 50px;">
             

@@ -1,21 +1,18 @@
 package test.com.moim.board.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import test.com.moim.board.model.BoardVO;
 import test.com.moim.board.model.Somoim_BoardVO;
 import test.com.moim.board.service.BoardService;
 
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -92,8 +89,9 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/join_selectOne.do", method = RequestMethod.GET)
-	public String join_selectOne(Somoim_BoardVO vo, Model model) {
+	public String join_selectOne(Somoim_BoardVO vo, Model model, HttpServletResponse response) {
 		log.info("join_selectOne.do().....");
+
 
 		Somoim_BoardVO vo2 = service.selectJoin(vo);
 		log.info("test...{}",vo2);
@@ -101,6 +99,23 @@ public class BoardController {
 		model.addAttribute("vo2",vo2);
 
 		return "board/join_selectOne";
+	}
+
+	@RequestMapping(value = "/join_gallery.do", method = RequestMethod.GET)
+	public String join_gallery() {
+		log.info("join_gallery.do().....");
+
+
+
+		return "board/join_gallery";
+	}
+	@RequestMapping(value = "/join_insert.do", method = RequestMethod.GET)
+	public String join_insert() {
+		log.info("join_insert.do().....");
+
+
+
+		return "board/join_insert";
 	}
 
 
