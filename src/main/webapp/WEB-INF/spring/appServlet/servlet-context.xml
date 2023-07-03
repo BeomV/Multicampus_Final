@@ -24,6 +24,11 @@
 	
 	<context:component-scan base-package="test.com.moim" />
 	
-	
+	<interceptors>
+		<interceptor>
+			<mapping path="/*.do" />
+			<beans:bean class="test.com.moim.Interceptor.LoginInterceptor"></beans:bean>
+		</interceptor>
+	</interceptors>
 	
 </beans:beans>
