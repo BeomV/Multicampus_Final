@@ -17,6 +17,9 @@
 		select * from somoim where som_title like #{searchWord}
 	</select>
 	
+	<select id="SOMOIM_SEARCH_LIST_AREA" resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim where area like #{searchWord}
+	</select>
 	
 	<insert id="SOMOIM_INSERT" parameterType="test.com.moim.somoim.model.SomoimVO">
 		insert into somoim (num,som_title,category,max_member,create_date,area, som_content) 

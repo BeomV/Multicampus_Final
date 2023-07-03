@@ -21,21 +21,37 @@ public class SomoimDAOimpl implements SomoimDAO {
 	}
 
 	@Override
-	public SomoimVO selectOne() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int insert(SomoimVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+	public SomoimVO selectOne(SomoimVO vo) {
+		log.info("selectOne()...{}", vo);
+		return session.selectOne("SOMOIM_SELECT_ONE", vo);
 	}
 
 	@Override
 	public List<SomoimVO> searchList(String searchKey, String searchWord) {
-		// TODO Auto-generated method stub
-		return null;
+		log.info("searchList()...{}, {}", searchKey, searchWord);
+		
+		if(searchKey.equals("som_title"))
+			return session.selectList("SOMOIM_SEARCH_LIST_TITLE", searchWord);
+		else 
+			return session.selectList("SOMOIM_SEARCH_LIST_AREA", searchWord);
+	}
+
+	@Override
+	public int insert(SomoimVO vo) {
+		log.info("insert()...{}", vo);
+		return session.insert("SOMOIM_INSERT", vo);
+	}
+
+	@Override
+	public int update(SomoimVO vo) {
+		log.info("update()...{}", vo);
+		return session.update("SOMOIM_UPDATE", vo);
+	}
+
+	@Override
+	public int delete(SomoimVO vo) {
+		log.info("delete()...{}", vo);
+		return session.delete("SOMOIM_DELETE", vo);
 	}
 
 }
