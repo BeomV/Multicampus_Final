@@ -5,18 +5,18 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 @Data
-public class Somoim_BoardVO {
+public class Somoim_BoardVO{
+
     private int num;
     private String title;
-    private String content;
-    private String save_nmae;
+    private  String content;
+    private String save_name;
     private Timestamp write_date;
     private int view_count;
     private int good_count;
     private int vote_num;
     private int som_member_num;
+    private int somoim_num;
 
-//  Somoim_Member FK
-    private String user_id;
 
 }

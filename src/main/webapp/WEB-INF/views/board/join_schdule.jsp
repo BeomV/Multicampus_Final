@@ -47,7 +47,7 @@
                         <div class="sch_info" style="text-align: left">
                             <h2>${vo.schedule_date}</h2>
                             <strong>06/17</strong>
-                            <p>일시:</p>
+                            <p>일시: $</p>
                             <p>장소:</p>
                             <p>회비:</p>
                             <p>06/17</p>
