@@ -22,5 +22,36 @@ public class SomoimService {
 		return dao.selectAll(vo);
 	}
 
+
+	public SomoimVO selectOne(SomoimVO vo) {
+		log.info("somoim_selectOne()....{}", vo);
+		return dao.selectOne(vo);
+	}
+
+
+	public List<SomoimVO> searchList(String searchKey, String searchWord) {
+		log.info("searchList()....{},{}", searchKey, searchWord);
+		return dao.searchList(searchKey, searchWord);
+	}
+
+
+	public int insert(SomoimVO vo) {
+		log.info("insert()....{}", vo);
+		return dao.insert(vo);
+	}
+
+
+	public int update(SomoimVO vo) {
+		log.info("update()....{}", vo);
+		return dao.update(vo);
+	}
+
+
+	public int delete(SomoimVO vo) {
+		log.info("delete().....{}", vo);
+		return dao.delete(vo);
+	}
+	
+
 	
 }
