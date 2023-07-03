@@ -53,7 +53,7 @@
         <div class="rec_list">
             <div class="rec_list_top">
                 <h1>🔥 추천 모임 리스트 🔥</h1>
-                <button type="button" id="som_insert-btn">모임 만들기</button>
+                <a href="som_insert.do"><button type="button" id="som_insert-btn">모임 만들기</button></a>
             </div>
             <ul class="rec_list_grid">
                 <c:forEach var="vo" items="${vos}" end="3">

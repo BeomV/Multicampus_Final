@@ -21,9 +21,9 @@ public class SomoimController {
 	SomoimService service;
 
 
-	@RequestMapping(value = "/somoim_selectAll.do", method = RequestMethod.GET)
-	public String somoim_selectAll(SomoimVO vo, Model model) {
-		log.info("somoim_selectAll.do().....{}", vo);
+	@RequestMapping(value = "/som_selectAll.do", method = RequestMethod.GET)
+	public String som_selectAll(SomoimVO vo, Model model) {
+		log.info("som_selectAll.do().....{}", vo);
 		log.info("-------", vo.getCategory());
 
 		List<SomoimVO> vos = service.selectAll(vo);
@@ -33,9 +33,9 @@ public class SomoimController {
 		return "board/som_selectAll";
 	}
 
-	@RequestMapping(value = "/somoim_selectOne.do", method = RequestMethod.GET)
-	public String somoim_selectOne(SomoimVO vo, Model model) {
-		log.info("somoim_selectOne.do().....{}", vo);
+	@RequestMapping(value = "/som_selectOne.do", method = RequestMethod.GET)
+	public String som_selectOne(SomoimVO vo, Model model) {
+		log.info("som_selectOne.do().....{}", vo);
 		
 		SomoimVO vo2 = service.selectOne(vo);
 		
@@ -44,9 +44,9 @@ public class SomoimController {
 		return "somoim/selectOne";
 	}
 	
-	@RequestMapping(value = "/somoim_searchList.do", method = RequestMethod.GET)
-	public String somoim_searchList(String searchKey, String searchWord) {
-		log.info("somoim_searchList.do().....{}, {}", searchKey, searchWord);
+	@RequestMapping(value = "/som_searchList.do", method = RequestMethod.GET)
+	public String som_searchList(String searchKey, String searchWord) {
+		log.info("som_searchList.do().....{}, {}", searchKey, searchWord);
 		
 		List<SomoimVO> vos = service.searchList(searchKey, searchWord);
 		
@@ -54,19 +54,27 @@ public class SomoimController {
 		return "redirect:som_selectAll.do";
 	}
 	
-	@RequestMapping(value = "/somoim_insert.do", method = RequestMethod.GET)
-	public String somoim_insert(SomoimVO vo) {
-		log.info("somoim_insert.do().....{}", vo);
+	@RequestMapping(value = "/som_insert.do", method = RequestMethod.GET)
+	public String som_insert() {
+		log.info("som_insert.do().....");
 		
-		int result = service.insert(vo);
-		
-		
-		return "redirect:selectAll.do";
+		return "board/som_insert";
 	}
 	
-	@RequestMapping(value = "/somoim_update.do", method = RequestMethod.GET)
-	public String somoim_update(SomoimVO vo) {
-		log.info("somoim_update.do().....{}", vo);
+	@RequestMapping(value = "/som_insertOK.do", method = RequestMethod.POST)
+	public String som_insertOK(SomoimVO vo) {
+		log.info("som_insertOK.do().....{}", vo);
+		
+		int result = service.insert(vo);
+		if (result==1)
+			return "redirect:som_selectOne.do?num="+ vo.getNum();
+		else
+			return "board/som_insert";
+	}
+	
+	@RequestMapping(value = "/som_update.do", method = RequestMethod.GET)
+	public String som_update(SomoimVO vo) {
+		log.info("som_update.do().....{}", vo);
 		
 		int result = service.update(vo);
 		
@@ -74,9 +82,9 @@ public class SomoimController {
 		return "redirect:selectAll.do";
 	}
 	
-	@RequestMapping(value = "/somoim_delete.do", method = RequestMethod.GET)
-	public String somoim_delete(SomoimVO vo) {
-		log.info("somoim_delete.do().....{}", vo);
+	@RequestMapping(value = "/som_delete.do", method = RequestMethod.GET)
+	public String som_delete(SomoimVO vo) {
+		log.info("som_delete.do().....{}", vo);
 		
 		int result = service.delete(vo);
 		
