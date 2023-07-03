@@ -12,4 +12,7 @@ public interface BoardDAO {
     public List<Somoim_BoardVO> selectList();
 
     Somoim_BoardVO selectJoin(Somoim_BoardVO vo);
+
+    List<Somoim_ScheduleVO> sch_selectList();
+
 }

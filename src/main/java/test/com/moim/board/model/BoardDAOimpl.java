@@ -46,4 +46,9 @@ public class BoardDAOimpl implements BoardDAO{
     public Somoim_BoardVO selectJoin(Somoim_BoardVO vo) {
         return sqlSession.selectOne("SOMOIM_SELECT_ONE",vo);
     }
+
+    @Override
+    public List<Somoim_ScheduleVO> sch_selectList() {
+        return sqlSession.selectList("Sch_SELECT_ALL");
+    }
 }

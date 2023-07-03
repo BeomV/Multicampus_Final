@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import test.com.moim.board.model.BoardDAO;
 import test.com.moim.board.model.BoardVO;
 import test.com.moim.board.model.Somoim_BoardVO;
+import test.com.moim.board.model.Somoim_ScheduleVO;
 
 import java.util.List;
 
@@ -38,5 +39,9 @@ public class BoardService {
 
     public Somoim_BoardVO selectJoin(Somoim_BoardVO vo) {
         return dao.selectJoin(vo);
+    }
+
+    public List<Somoim_ScheduleVO> sch_selelctList() {
+        return dao.sch_selectList();
     }
 }
