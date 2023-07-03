@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>인스타그램 게시글 작성</title>
+  <style>
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group textarea {
+      height: 100px;
+    }
+
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="toolbar">
+    <button id="image-upload-button">
+      <i class="fas fa-image"></i>
+    </button>
+    <button id="file-upload-button">
+      <i class="fas fa-file-alt"></i>
+    </button>
+    <button id="bold-button">
+      <i class="fas fa-bold"></i>
+    </button>
+    <button id="italic-button">
+      <i class="fas fa-italic"></i>
+    </button>
+    <!-- 추가적인 툴바 버튼들을 여기에 추가할 수 있습니다 -->
+  </div>
+  
+  <div class="container">
+    <h1>인스타그램 게시글 작성</h1>
+    <form>
+      <div class="form-group">
+        <label for="username">사용자 이름</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="caption">캡션</label>
+        <textarea id="caption" name="caption" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="image">이미지 업로드</label>
+        <input type="file" id="image" name="image" accept="image/*">
+      </div>
+      <div class="form-group">
+        <button type="submit">게시하기</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
