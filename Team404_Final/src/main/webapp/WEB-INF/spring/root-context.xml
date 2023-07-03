@@ -28,6 +28,7 @@
 				<value>classpath:jdbc/sqlMapper_board.xml</value>
 				<value>classpath:jdbc/sqlMapper_somoim_board.xml</value>
 				<value>classpath:jdbc/sqlMapper_comments.xml</value>
+				<value>classpath:jdbc/sqlMapper_d_comments.xml</value>
 
 			</list>
 		</property>

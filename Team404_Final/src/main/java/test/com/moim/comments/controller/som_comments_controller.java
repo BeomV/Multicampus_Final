@@ -23,7 +23,7 @@ public class som_comments_controller {
 		int result = commService.update(vo);
 		log.info("result...{}", result);
 		
-		return "redirect:b_selectOne.do?wnum=";
+		return "redirect:join_selectOne.do?num="+vo.getSom_board_num();
 		
 	}
 	

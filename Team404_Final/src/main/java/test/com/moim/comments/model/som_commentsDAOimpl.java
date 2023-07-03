@@ -31,8 +31,8 @@ public class som_commentsDAOimpl implements som_commentsDAO {
 
 	@Override
 	public int update(som_commentsVO vo) {
-		log.info(" dao.update().... ");
-		return 0;
+		log.info("update()...{}",vo);
+		return sqlsession.update("SOM_C_UPDATE",vo);
 	}
 
 	@Override
