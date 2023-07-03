@@ -392,6 +392,7 @@ nav > ul > li{
     align-items: center; /* 수직 정렬 */
     height: 700px;
     
+    
 
 }
 
@@ -464,7 +465,7 @@ form{
 
 }
 
-form{
+.register_section form{
     width: inherit;
 
 }
