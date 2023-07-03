@@ -12,15 +12,9 @@ import lombok.extern.slf4j.Slf4j;
 import test.com.moim.somoim.model.SomoimVO;
 import test.com.moim.somoim.service.SomoimService;
 
-/**
- * Handles requests for the application home page.
- */
 
 @Slf4j
 @Controller
-
-
-
 public class SomoimController {
 	
 	@Autowired
@@ -50,7 +44,7 @@ public class SomoimController {
 		return "somoim/selectOne";
 	}
 	
-	@RequestMapping(value = "/somoim_selectOne.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/somoim_searchList.do", method = RequestMethod.GET)
 	public String somoim_searchList(String searchKey, String searchWord) {
 		log.info("somoim_searchList.do().....{}, {}", searchKey, searchWord);
 		
