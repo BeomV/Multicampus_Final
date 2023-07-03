@@ -41,7 +41,7 @@ public class SomoimController {
 		
 		model.addAttribute("vo2", vo2);
 		
-		return "somoim/selectOne";
+		return "board/som_selectOne";
 	}
 	
 	@RequestMapping(value = "/som_searchList.do", method = RequestMethod.GET)
@@ -61,15 +61,15 @@ public class SomoimController {
 		return "board/som_insert";
 	}
 	
-	@RequestMapping(value = "/som_insertOK.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/som_insertOK.do", method = RequestMethod.GET)
 	public String som_insertOK(SomoimVO vo) {
 		log.info("som_insertOK.do().....{}", vo);
 		
 		int result = service.insert(vo);
 		if (result==1)
-			return "redirect:som_selectOne.do?num="+ vo.getNum();
+			return "redirect:som_selectAll.do";
 		else
-			return "board/som_insert";
+			return "redirect:som_insert.do";
 	}
 	
 	@RequestMapping(value = "/som_update.do", method = RequestMethod.GET)

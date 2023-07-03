@@ -14,5 +14,6 @@ public class SomoimVO {
 	private Timestamp create_date;
 	private String area;
 	private String som_content;
+	private String save_name;
 
 }

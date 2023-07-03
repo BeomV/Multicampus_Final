@@ -22,12 +22,12 @@
 	</select>
 	
 	<insert id="SOMOIM_INSERT" parameterType="test.com.moim.somoim.model.SomoimVO">
-		insert into somoim (num,som_title,category,max_member,create_date,area, som_content) 
-		values(seq_somoim.nextval,#{som_title},#{category},#{max_member},sysdate,#{area}, #{som_content})
+		insert into somoim (num,som_title,category,max_member,create_date,area, som_content, save_name) 
+		values(seq_somoim.nextval,#{som_title},#{category},#{max_member},sysdate,#{area}, #{som_content}, #{save_name})
 	</insert>
 	
 	<update id="SOMOIM_UPDATE" parameterType="test.com.moim.somoim.model.SomoimVO">
-		update somoim set category=#{category}, area=#{area}, som_content=#{som_content} where num = #{num}
+		update somoim set category=#{category.val}, area=#{area}, som_content=#{som_content} where num = #{num}
 	</update>
 	
 	<delete id="SOMOIM_DELETE">
