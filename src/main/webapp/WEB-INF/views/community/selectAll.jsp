@@ -40,16 +40,15 @@
             </div>
         </div>
         <div class="community_navigation_upload">
-            <button type="button">+</button>  
+            <button type="button"><a href="/moim/community_insert.do">피드 작성</a></button>  
         </div>
         <div class="community_review_section">
             <div class="community_review_view">
                 <ul class="review_grid">
-                    <li>
+                    <li><a href="community_selectOne.do">
                         <div class="community_review_img">
-                        
                         </div>
-                        <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong>
+                        <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong></a>
                     </li>
                     <li>
                         <div class="community_review_img">
