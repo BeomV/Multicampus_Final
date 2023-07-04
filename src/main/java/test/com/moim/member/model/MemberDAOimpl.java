@@ -18,7 +18,7 @@ public class MemberDAOimpl implements MemberDAO {
 	@Override
 	public int insert(MemberVO vo) {
 		log.info("insert()...{}", vo);
-		return 0;
+		return session.insert(null, vo);
 	}
 
 	@Override

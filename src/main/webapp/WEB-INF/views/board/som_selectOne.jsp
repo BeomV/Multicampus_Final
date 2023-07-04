@@ -21,7 +21,7 @@
 
 
 
-<form action="som_member_insertOK.do">
+<form action="som_member_insertOK.do" method="get">
     <div class="join_section">
         <jsp:include page="./som_top_menu.jsp"></jsp:include>
         <div class="img_info">

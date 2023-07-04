@@ -24,10 +24,13 @@ public class MemberRestController {
 	@RequestMapping(value = "/som_member_insertOK.do", method = RequestMethod.GET)
 	public String som_member_insertOK(MemberVO vo) {
 		log.info("som_member_insertOK.do().....{}", vo);
-
-
-
-		return "redirect:som_selectOne.do?num="+vo.getNum();
+		
+		int result = service.insert(vo);
+		
+		if(result==1)
+			return "가입완료!"+vo.getNum()+vo.getSom_title();
+		else
+			return "가입실패..."+vo.getNum()+vo.getSom_title();
 	}
 	
 }

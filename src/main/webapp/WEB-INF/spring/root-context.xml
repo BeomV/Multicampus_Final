@@ -29,6 +29,7 @@
 		<property name="mapperLocations">
 			<list>
 				<value>classpath:jdbc/sqlMapper_somoim.xml</value>
+				<value>classpath:jdbc/sqlMapper_member.xml</value>
 			</list>
 		</property>
 	</bean>
