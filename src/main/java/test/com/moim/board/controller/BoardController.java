@@ -2,6 +2,8 @@ package test.com.moim.board.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import test.com.moim.board.model.BoardVO;
 import test.com.moim.board.model.Somoim_BoardVO;
 import test.com.moim.board.service.BoardService;
-import test.com.moim.com_comments.model.som_comm_commentsVO;
-import test.com.moim.com_comments.service.som_comm_comments_Service;
-import test.com.moim.comments.model.som_commentsVO;
-import test.com.moim.comments.service.som_comments_Service;
 
 /**
  * Handles requests for the application home page.
@@ -30,12 +28,6 @@ public class BoardController {
 	
 	@Autowired
 	BoardService service;
-	
-	@Autowired
-	som_comments_Service commService;
-	
-	@Autowired
-	som_comm_comments_Service c_commService;
 
 
 	@RequestMapping(value = "/som_selectAll.do", method = RequestMethod.GET)
@@ -87,50 +79,45 @@ public class BoardController {
 		log.info("join_selectAll().....");
 
 		List<Somoim_BoardVO> vos = service.selectList();
-	
+
 		for (Somoim_BoardVO vo : vos) {
-			log.info("vo¿‘¥œ¥Ÿ........{}",vo.toString());
-			
+			log.info(vo.toString());
 		}
-		model.addAttribute("vos", vos);
+		model.addAttribute("vos",vos);
+
 		return "board/join_selectAll";
 	}
 
 	@RequestMapping(value = "/join_selectOne.do", method = RequestMethod.GET)
-	public String join_selectOne(Somoim_BoardVO vo, Model model) {
-//		log.info("join_selectOne.do().....");
-//
+	public String join_selectOne(Somoim_BoardVO vo, Model model, HttpServletResponse response) {
+		log.info("join_selectOne.do().....");
+
+
 		Somoim_BoardVO vo2 = service.selectJoin(vo);
-//		log.info("test...{}",vo2);
+		log.info("test...{}",vo2);
+
 		model.addAttribute("vo2",vo2);
-		
-		som_commentsVO cvo = new som_commentsVO();
-		cvo.setSom_board_num(vo.getNum());
-		List<som_commentsVO> coms = commService.selectAll(cvo);
-//		System.out.println("coms:::"+coms);
-//		System.out.println("cvo.getSom_board_num:"+cvo.getSom_board_num());
-//		
-		som_comm_commentsVO c_cvo = new som_comm_commentsVO();
-		c_cvo.setSom_board_num(cvo.getSom_board_num());
-		
-		List<som_comm_commentsVO> c_coms=c_commService.selectAll(c_cvo);
-		
-//		System.out.println("c_coms:::"+c_coms);
-//		System.out.println("c_cvo.getSom_board_num:"+c_cvo.getSom_board_num());
-//		System.out.println("coms:"+c_cvo.getSom_board_num());
-//	
-		
-		model.addAttribute("coms", coms);
-		model.addAttribute("c_coms", c_coms);
-		
-//		System.out.println("coms:::"+coms);
-//
-//		System.out.println("c_coms:::"+c_coms);
-//		
 
 		return "board/join_selectOne";
 	}
-	
+
+	@RequestMapping(value = "/join_gallery.do", method = RequestMethod.GET)
+	public String join_gallery() {
+		log.info("join_gallery.do().....");
+
+
+
+		return "board/join_gallery";
+	}
+	@RequestMapping(value = "/join_insert.do", method = RequestMethod.GET)
+	public String join_insert() {
+		log.info("join_insert.do().....");
+
+
+
+		return "board/join_insert";
+	}
+
 
 	
 }
