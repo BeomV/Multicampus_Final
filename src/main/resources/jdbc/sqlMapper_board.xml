@@ -20,6 +20,11 @@
 			select * from somoim where num = #{num}
 	</select>
 
+	<select id="Sch_SELECT_ALL"
+			resultType="test.com.moim.board.model.Somoim_ScheduleVO">
+		select * from somoim_schedule
+	</select>
+
 
 	<!--
 	<select id="b_SELECT_ONE"

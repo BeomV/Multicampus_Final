@@ -63,5 +63,59 @@ public class CommunityController {
 		return "community/insert";
 	}
 	
+	@RequestMapping(value = "/community_insertOK.do", method = RequestMethod.POST)
+	public String community_insertOK(CommunityVO vo) {
+		log.info("/community_insertOK.do...{}", vo);
+		
+		int result = service.insert(vo);
+		log.info("result...{}", result);
+		
+		if(result==1) {
+			return "redirect:community_selectAll.do";
+		}else {
+			return "redirect:community_insert.do";
+		}
+		
+	}
 	
+	@RequestMapping(value = "/community_update.do", method = RequestMethod.GET)
+	public String community_update(CommunityVO vo, Model model) {
+		log.info("/community_update.do...{}", vo);
+
+		CommunityVO vo2 = service.selectOne(vo);
+
+		model.addAttribute("vo2", vo2);
+
+		return "community/update";
+	}
+	
+	@RequestMapping(value = "/community_updateOK.do", method = RequestMethod.POST)
+	public String community_updateOK(CommunityVO vo) {
+		log.info("/community_updateOK.do...{}", vo);
+		
+		int result = service.update(vo);
+		log.info("result...{}", result);
+		
+		if(result==1) {
+			return "redirect:community_selectOne.do?num="+vo.getNum();
+		}else {
+			return "redirect:community_update.do?num="+vo.getNum();
+		}
+		
+	}
+	
+	@RequestMapping(value = "/community_deleteOK.do", method = RequestMethod.GET)
+	public String community_deleteOK(CommunityVO vo) {
+		log.info("/community_deleteOK.do...{}", vo);
+		
+		int result = service.delete(vo);
+		log.info("result...{}", result);
+		
+		if(result==1) {
+			return "redirect:community_selectAll.do";
+		}else {
+			return "redirect:community_selectOne.do?num="+vo.getNum();
+		}
+		
+	}
 }

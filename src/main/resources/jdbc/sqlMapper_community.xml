@@ -13,32 +13,32 @@
 	</select>
 	
 	
-<!-- 	<select id="CB_SEARCH_LIST_TITLE" resultType="test.com.moim.community.model.CommunityVO"> -->
-<!-- 		select * from community_board where title like #{searchWord} -->
-<!-- 	</select> -->
+	<select id="CB_SEARCH_LIST_TITLE" resultType="test.com.moim.community.model.CommunityVO">
+		select * from community_board where title like #{searchWord}
+	</select>
 	
-<!-- 	<select id="CB_SEARCH_LIST_CONTENT" resultType="test.com.moim.community.model.CommunityVO"> -->
-<!-- 		select * from community_board where content like #{searchWord}  -->
-<!-- 	</select> -->
+	<select id="CB_SEARCH_LIST_CONTENT" resultType="test.com.moim.community.model.CommunityVO">
+		select * from community_board where content like #{searchWord} 
+	</select>
 	
-<!-- 	<select id="CB_SEARCH_LIST_USER_ID" resultType="test.com.moim.community.model.CommunityVO"> -->
-<!-- 		select * from community_board where user_id like #{searchWord}  -->
-<!-- 	</select> -->
+	<select id="CB_SEARCH_LIST_USER_ID" resultType="test.com.moim.community.model.CommunityVO">
+		select * from community_board where user_id like #{searchWord} 
+	</select>
 	
-<!-- 	<select id="CB_SEARCH_LIST_SAVE_NAME" resultType="test.com.moim.community.model.CommunityVO"> -->
-<!-- 		select * from community_board where save_name like #{searchWord}  -->
-<!-- 	</select> -->
+	<select id="CB_SEARCH_LIST_SAVE_NAME" resultType="test.com.moim.community.model.CommunityVO">
+		select * from community_board where save_name like #{searchWord} 
+	</select>
 	
-<!-- 	<insert id="CB_INSERT" parameterType="test.com.moim.community.model.CommunityVO"> -->
-<!-- 		insert into community_board(num,title,user_id,content,save_name)  -->
-<!-- 		values(seq_community_board.nextval,#{title},#{user_id},#{content},#{save_name}) -->
-<!-- 	</insert> -->
+	<insert id="CB_INSERT" parameterType="test.com.moim.community.model.CommunityVO">
+		insert into community_board(num,title,user_id,content,save_name) 
+		values(seq_community_board.nextval,#{title},#{user_id},#{content},#{save_name})
+	</insert>
 	
-<!-- 	<update id="CB_UPDATE" parameterType="test.com.moim.community.model.CommunityVO"> -->
-<!-- 		update community_board set title=#{title} , content=#{content} ,  -->
-<!-- 		wdate=sysdate -->
-<!-- 		where num = #{num} -->
-<!-- 	</update> -->
+	<update id="CB_UPDATE" parameterType="test.com.moim.community.model.CommunityVO">
+		update community_board set title=#{title} , content=#{content} , 
+		wdate=sysdate
+		where num = #{num}
+	</update>
 	
 <!-- 	<update id="CB_good_count_UP" parameterType="test.com.moim.community.model.CommunityVO"> -->
 <!-- 		update community_board set view_count=view_count+1 -->
@@ -50,8 +50,8 @@
 <!-- 		where num = #{num} -->
 <!-- 	</update> -->
 	
-<!-- 	<delete id="CB_DELETE"> -->
-<!-- 		delete from community_board where num = #{num} -->
-<!-- 	</delete> -->
+	<delete id="CB_DELETE">
+		delete from community_board where num = #{num}
+	</delete>
 	
 </mapper>

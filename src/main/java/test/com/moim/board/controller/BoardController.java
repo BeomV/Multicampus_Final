@@ -4,15 +4,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import test.com.moim.board.model.BoardVO;
 import test.com.moim.board.model.Somoim_BoardVO;
+import test.com.moim.board.model.Somoim_ScheduleVO;
 import test.com.moim.board.service.BoardService;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -28,6 +27,9 @@ public class BoardController {
 	
 	@Autowired
 	BoardService service;
+
+	@Autowired
+	HttpSession session;
 
 
 	@RequestMapping(value = "/som_selectAll.do", method = RequestMethod.GET)
@@ -71,6 +73,9 @@ public class BoardController {
 
 		model.addAttribute("vo2",vo2);
 
+		session.setAttribute("num",vo.getNum());
+		log.info(String.valueOf(vo.getNum()));
+
 		return "board/som_selectOne";
 	}
 
@@ -89,7 +94,7 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/join_selectOne.do", method = RequestMethod.GET)
-	public String join_selectOne(Somoim_BoardVO vo, Model model, HttpServletResponse response) {
+	public String join_selectOne(Somoim_BoardVO vo, Model model) {
 		log.info("join_selectOne.do().....");
 
 
@@ -97,6 +102,7 @@ public class BoardController {
 		log.info("test...{}",vo2);
 
 		model.addAttribute("vo2",vo2);
+
 
 		return "board/join_selectOne";
 	}
@@ -117,6 +123,19 @@ public class BoardController {
 
 		return "board/join_insert";
 	}
+
+	@RequestMapping(value = "/join_schdule.do", method = RequestMethod.GET)
+	public String join_schdule(Model model) {
+		log.info("join_schdule.do().....");
+
+		List<Somoim_ScheduleVO> vos = service.sch_selelctList();
+
+		model.addAttribute("vos",vos);
+
+
+		return "board/join_schdule";
+	}
+
 
 
 	
