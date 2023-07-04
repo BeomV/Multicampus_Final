@@ -52,7 +52,7 @@
 		<div class="category_more">
 			<a>카테고리 더보기</a>
 		</div>
-		<form action="som_insertOK.do">
+		<form action="som_insertOK.do" enctype="multipart/form-data" method="post">
 		<div class="moim_insert">
 			<h1>지역</h1>
 			<button type="button" id="moim_location">
@@ -87,7 +87,7 @@
 					<option value="해외/언어">해외/언어</option>
 					<option value="베이커리">베이커리</option>
 				</select>
-				<h1>대표 사진</h1> <input type="file" id="moim_profile" name="save_name">
+				<h1>대표 사진</h1> <input type="file" id="moim_profile" name="file">
 			</span>
 			<button type="submit" id="moim_btn">모임 만들기</button>
 

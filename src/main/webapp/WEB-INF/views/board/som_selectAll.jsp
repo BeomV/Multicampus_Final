@@ -16,7 +16,6 @@
 	crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/1652357a48.js"
 	crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="resources/js/board.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -123,116 +122,40 @@
 				<input type="search" placeholder="검색" id="board_search"> <input
 					type="button" value="검색" onclick="som_searchList">
 			</div>
+			
+			
+			
 			<div class="list_selectAll">
 				<ul class="list_grid">
+					
+<!-- 					<li> -->
+<!-- 						<div class="list_box"> -->
+<!-- 							<img src="resources/img/0112.png"> <span> -->
+<!-- 								<h1>title</h1> -->
+<!-- 								<p>모임개설일:</p> -->
+<!-- 								<p>수원시 멤버 12명</p> -->
+<!-- 							</span> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
+					
+					<c:forEach var="vo" items="${vos}">
 					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
+					<a href="som_selectOne.do?num=${vo.num}">
+						<input type="hidden" value="${vo.num}">
+						<input type="hidden" value="${vo.create_date}">
+							<div class="moim_img">
+								<div class="img_box">
+								<img src="resources/img/${vo.save_name}"></div>
+								<span>
+									<h1>${vo.som_title}</h1>
+									<p class="sub_tit">소셜링 📌 ${vo.area}</p>
+									<p class="sub_tit">⏱ ${vo.create_date }</p>
+								</span>
+
+							</div>
+					</a>
 					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
-					<li>
-						<div class="list_box">
-							<img src="resources/img/0112.png"> <span>
-								<h1>title</h1>
-								<p>모임개설일:</p>
-								<p>수원시 멤버 12명</p>
-							</span>
-						</div>
-					</li>
+				</c:forEach>
 
 
 

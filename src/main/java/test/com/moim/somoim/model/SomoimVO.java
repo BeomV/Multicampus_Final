@@ -2,6 +2,8 @@ package test.com.moim.somoim.model;
 
 import java.sql.Timestamp;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import lombok.Data;
 
 @Data
@@ -15,5 +17,6 @@ public class SomoimVO {
 	private String area;
 	private String som_content;
 	private String save_name;
+	private MultipartFile file;
 
 }

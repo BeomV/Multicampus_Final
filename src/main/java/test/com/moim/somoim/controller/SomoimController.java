@@ -1,6 +1,13 @@
 package test.com.moim.somoim.controller;
 
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+
+import javax.imageio.ImageIO;
+import javax.servlet.ServletContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +26,9 @@ public class SomoimController {
 	
 	@Autowired
 	SomoimService service;
+	
+	@Autowired
+	ServletContext sContext;
 
 
 	@RequestMapping(value = "/som_selectAll.do", method = RequestMethod.GET)
@@ -61,11 +71,47 @@ public class SomoimController {
 		return "board/som_insert";
 	}
 	
-	@RequestMapping(value = "/som_insertOK.do", method = RequestMethod.GET)
-	public String som_insertOK(SomoimVO vo) {
+	@RequestMapping(value = "/som_insertOK.do", method = RequestMethod.POST)
+	public String som_insertOK(SomoimVO vo) throws IllegalStateException, IOException {
 		log.info("som_insertOK.do().....{}", vo);
 		
+		int fileNameLength = vo.getFile().getOriginalFilename().length();
+		String getOriginalFileName = vo.getFile().getOriginalFilename();
+
+		log.info("getOriginalFilename : {}", getOriginalFileName);
+		log.info("fileNameLength : {}", fileNameLength);
+		
+		vo.setSave_name(getOriginalFileName.length() == 0 ? "아이유.png" : getOriginalFileName);
+		
+		if (getOriginalFileName.length() == 0) {
+			vo.setSave_name("아이유.png");
+			
+		} else {
+			vo.setSave_name(getOriginalFileName);
+			// 웹 어플리케이션이 갖는 실제 경로 : 이미지를 업로드할 대상 경로를 찾아서 파일 저장
+			String realPath = sContext.getRealPath("resources/img");
+			log.info("realPath : {}", realPath);
+
+			File f = new File(realPath + "\\" + vo.getSave_name());
+
+			vo.getFile().transferTo(f);
+
+			//// create thumbnail image/////////
+			BufferedImage original_buffer_img = ImageIO.read(f);
+			BufferedImage thumb_buffer_img = new BufferedImage(50, 50, BufferedImage.TYPE_3BYTE_BGR);
+			Graphics2D graphic = thumb_buffer_img.createGraphics();
+			graphic.drawImage(original_buffer_img, 0, 0, 50, 50, null);
+			File thumb_file = new File(realPath + "/thumb_" + vo.getSave_name());
+			String formatName = vo.getSave_name().substring(vo.getSave_name().lastIndexOf(".")+1);
+			log.info("formatName : {}", formatName);
+			ImageIO.write(thumb_buffer_img, formatName, thumb_file);
+
+		} // end else
+		
+		log.info("{}", vo);
 		int result = service.insert(vo);
+		
+		log.info("result : {}", result);
 		if (result==1)
 			return "redirect:som_selectAll.do";
 		else
