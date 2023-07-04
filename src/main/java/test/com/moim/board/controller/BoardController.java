@@ -184,6 +184,19 @@ public class BoardController {
 
     }
 
+    @RequestMapping(value = "/join_schedule_insert.do", method = RequestMethod.GET)
+    public String join_schedule_insert(Somoim_BoardVO vo) {
+        log.info("join_schedule_insert.do().....");
+
+        int result = service.delete(vo);
+
+
+        return "board/join_schedule_insert";
+
+
+
+    }
+
 
 
 

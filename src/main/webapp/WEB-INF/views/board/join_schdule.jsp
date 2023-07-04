@@ -21,7 +21,7 @@
 
 
     <div class="top_func">
-        <button type="button" style="padding: 5px 12px;">일정 만들기</button>
+        <button type="button" style="padding: 5px 12px;"><a href="join_schedule_insert.do" style="color: white">일정 만들기</a></button>
     </div>
 
     <div class="schedule_box">

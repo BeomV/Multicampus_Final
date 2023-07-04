@@ -13,6 +13,7 @@ public class Somoim_ScheduleVO {
     private String participant;
     private int participant_count;
     private int somoim_num;
+    private int max_participant;
 
 
 

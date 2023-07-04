@@ -28,6 +28,10 @@
 	<delete id="SOMOIM_DELETE">
 		delete from somoim_board where num=#{num}
 	</delete>
+
+	<insert id="SCHEDULE_INSERT">
+
+	</insert>
 	
 
 	<!--
