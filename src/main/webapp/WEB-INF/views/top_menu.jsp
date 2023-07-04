@@ -23,6 +23,18 @@
             <div class="login">
                 <a href="login.do">로그인</a>
                 <a>로그아웃</a>
+                    <li><a>소모임</a></li>
+                    <li><a>이벤트</a></li>
+                    <li><a>커뮤니티</a></li>
+                    <li><a>고객센터</a></li>
+                </ul>
+            </nav>
+            <div class="main_search">
+                <input type="search" placeholder="검색">
+            </div>
+            <div class="login">
+                <a href="login.do">로그인</a>
+                <a href="logout.do">로그아웃</a>
             </div>
 
         </div>

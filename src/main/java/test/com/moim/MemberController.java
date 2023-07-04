@@ -16,12 +16,20 @@ public class MemberController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
-	public String home() {
-
-		log.info("/login.do....");
-		
-		return "member/login";
-	}
+//	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
+//	public String home() {
+//
+//		log.info("/login.do....");
+//		
+//		return "member/login";
+//	}
 	
+//	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
+//	public String home() {
+//
+//		log.info("/login.do....");
+//		
+//		return "member/login";
+//	}
+//	
 }
