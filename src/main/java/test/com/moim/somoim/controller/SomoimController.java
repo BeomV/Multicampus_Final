@@ -4,10 +4,12 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.http.HttpRequest;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletContext;
+import javax.servlet.ServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,10 +35,15 @@ public class SomoimController {
 
 	@RequestMapping(value = "/som_selectAll.do", method = RequestMethod.GET)
 	public String som_selectAll(SomoimVO vo, Model model) {
-		log.info("som_selectAll.do().....{}", vo);
-		log.info("-------", vo.getCategory());
+		log.info("som_selectAll.do().....");
+		log.info("-------");
 
 		List<SomoimVO> vos = service.selectAll(vo);
+		for (SomoimVO vo2 : vos) {
+			log.info(vo2.getCategory());
+			log.info(vo2.getSom_title());
+			log.info(vo2.getArea());
+		}
 
 		model.addAttribute("vos",vos);
 
@@ -55,10 +62,12 @@ public class SomoimController {
 	}
 	
 	@RequestMapping(value = "/som_searchList.do", method = RequestMethod.GET)
-	public String som_searchList(String searchKey, String searchWord, Model model) {
+	public String som_searchList(String searchKey, String searchWord, String category, Model model) {
 		log.info("som_searchList.do().....{}, {}", searchKey, searchWord);
+		log.info("------------{}", category);
 		
-		List<SomoimVO> vos = service.searchList(searchKey, searchWord);
+		
+		List<SomoimVO> vos = service.searchList(searchKey, searchWord, category);
 		
 		model.addAttribute("vos", vos);
 		

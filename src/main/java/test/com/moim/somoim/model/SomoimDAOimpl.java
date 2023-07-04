@@ -27,11 +27,13 @@ public class SomoimDAOimpl implements SomoimDAO {
 	}
 
 	@Override
-	public List<SomoimVO> searchList(String searchKey, String searchWord) {
+	public List<SomoimVO> searchList(String searchKey, String searchWord, String category) {
 		log.info("searchList()...{}, {}", searchKey, searchWord);
+		log.info("searchList()...category : {}", category);
 		
 		if(searchKey.equals("소모임 이름"))
 			return session.selectList("SOMOIM_SEARCH_LIST_TITLE", "%"+searchWord+"%");
+		
 		else 
 			return session.selectList("SOMOIM_SEARCH_LIST_AREA", "%"+searchWord+"%");
 	}

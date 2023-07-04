@@ -9,6 +9,6 @@ public interface SomoimDAO {
 	public int insert(SomoimVO vo);
 	public int update(SomoimVO vo);
 	public int delete(SomoimVO vo);
-	public List<SomoimVO> searchList(String searchKey, String searchWord);
+	public List<SomoimVO> searchList(String searchKey, String searchWord, String category);
 	
 }

@@ -29,9 +29,10 @@ public class SomoimService {
 	}
 
 
-	public List<SomoimVO> searchList(String searchKey, String searchWord) {
+	public List<SomoimVO> searchList(String searchKey, String searchWord, String category) {
 		log.info("searchList()....{},{}", searchKey, searchWord);
-		return dao.searchList(searchKey, searchWord);
+		log.info("searchList()....{}", category);
+		return dao.searchList(searchKey, searchWord, category);
 	}
 
 

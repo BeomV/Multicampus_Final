@@ -27,7 +27,7 @@
 		<div class="board_category">
 
 			<ul class="board_grid">
-				<li><input type="button" value="전체" class="category_active"></li>
+				<li><input type="button" value="여행" class="category_active"></li>
 				<li><input type="button" value="운동"></li>
 				<li><input type="button" value="야구관람"></li>
 				<li><input type="button" value="게임/오락"></li>
@@ -86,6 +86,7 @@
 					<option value="업종/직무">업종/직무</option>
 					<option value="해외/언어">해외/언어</option>
 					<option value="베이커리">베이커리</option>
+					<option value="여행">여행</option>
 				</select>
 				<h1>대표 사진</h1> <input type="file" id="moim_profile" name="file">
 			</span>

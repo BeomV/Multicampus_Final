@@ -3,7 +3,7 @@
 	language="java"%>
 <%@ page session="false"%>
 <!DOCTYPE html>
-<html lang="UTP-8">
+<html lang="UTF-8">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 
 <script type="text/javascript">
 	$(function() {
-		$(".button").on('click', function() {
+		$(".button").on('click', function(category) {
 			console.log("onload...");
 				var category = $(this).val();
 				console.log($(this).val());
@@ -33,8 +33,9 @@
 					'category':category
 				},
 				success : function(data){
-					console.log(data);
-					
+					console.log('이게 데이터', data);
+					console.log('category', category);
+
 					$('body').html(data);
 				},
 				error : function(xhr, status, error){
@@ -65,24 +66,24 @@
 	<div class="board_section">
 		<div class="board_category">
 			<ul class="board_grid">
-				<li><input type="button" name="button" value="여행" class="category_active"></li>
-				<li><input type="button" value="운동" class="button"></li>
-				<li><input type="button" value="야구관람" class="button"></li>
-				<li><input type="button" value="게임/오락" class="button"></li>
-				<li><input type="button" value="아웃도어" class="button"></li>
-				<li><input type="button" value="반려동물" class="button"></li>
-				<li><input type="button" value="문화/공연" class="button"></li>
-				<li><input type="button" value="카페/맛집" class="button"></li>
-				<li><input type="button" value="공예" class="button"></li>
-				<li><input type="button" value="도서" class="button"></li>
-				<li><input type="button" value="사진/영상" class="button"></li>
-				<li><input type="button" value="사교/인맥" class="button"></li>
-				<li><input type="button" value="음악/악기" class="button"></li>
-				<li><input type="button" value="업종/직무" class="button"></li>
-				<li><input type="button" value="해외/언어" class="button"></li>
-				<li><input type="button" value="요리" class="button"></li>
-				<li><input type="button" value="베이커리" class="button"></li>
-				<li><input type="button" value="자유주제" class="button"></li>
+				<li><input type="button" name="category" value="여행" class="button"></li>
+				<li><input type="button" name="category" value="운동" class="button"></li>
+				<li><input type="button" name="category" value="야구" class="button"></li>
+				<li><input type="button" name="category" value="게임/오락" class="button"></li>
+				<li><input type="button" name="category" value="아웃도어" class="button"></li>
+				<li><input type="button" name="category" value="반려동물" class="button"></li>
+				<li><input type="button" name="category" value="문화/공연" class="button"></li>
+				<li><input type="button" name="category" value="카페/맛집" class="button"></li>
+				<li><input type="button" name="category" value="공예" class="button"></li>
+				<li><input type="button" name="category" value="도서" class="button"></li>
+				<li><input type="button" name="category" value="사진/영상" class="button"></li>
+				<li><input type="button" name="category" value="사교/인맥" class="button"></li>
+				<li><input type="button" name="category" value="음악/악기" class="button"></li>
+				<li><input type="button" name="category" value="업종/직무" class="button"></li>
+				<li><input type="button" name="category" value="해외/언어" class="button"></li>
+				<li><input type="button" name="category" value="요리" class="button"></li>
+				<li><input type="button" name="category" value="베이커리" class="button"></li>
+				<li><input type="button" name="category" value="자유주제" class="button"></li>
 
 
 			</ul>
@@ -132,6 +133,7 @@
 					<option>지역</option>				
 				</select>
 				<input type="text" placeholder="검색" id="board_search" name="searchWord">
+				<input type="hidden" name="category" value=${param.category }>
 				<input type="submit" value="검색">
 			</div>
 			</form>
@@ -140,22 +142,13 @@
 			
 			<div class="list_selectAll">
 				<ul class="list_grid">
-					
-<!-- 					<li> -->
-<!-- 						<div class="list_box"> -->
-<!-- 							<img src="resources/img/0112.png"> <span> -->
-<!-- 								<h1>title</h1> -->
-<!-- 								<p>모임개설일:</p> -->
-<!-- 								<p>수원시 멤버 12명</p> -->
-<!-- 							</span> -->
-<!-- 						</div> -->
-<!-- 					</li> -->
-					
 					<c:forEach var="vo" items="${vos}">
+					<c:if test="${vo.category eq param.category }">
 					<li>
 					<a href="som_selectOne.do?num=${vo.num}">
 						<input type="hidden" value="${vo.num}">
 						<input type="hidden" value="${vo.create_date}">
+						<input type="hidden" value="${vo.category}">
 							<div class="moim_img">
 								<div class="img_box">
 								<img src="resources/img/${vo.save_name}"></div>
@@ -168,6 +161,26 @@
 							</div>
 					</a>
 					</li>
+					</c:if>
+					<c:if test="${param.category eq null}">
+					<li>
+					<a href="som_selectOne.do?num=${vo.num}">
+						<input type="hidden" value="${vo.num}">
+						<input type="hidden" value="${vo.create_date}">
+						<input type="hidden" value="${vo.category}">
+							<div class="moim_img">
+								<div class="img_box">
+								<img src="resources/img/${vo.save_name}"></div>
+								<span>
+									<h1>${vo.som_title}</h1>
+									<p class="sub_tit">소셜링 📌 ${vo.area}</p>
+									<p class="sub_tit">⏱ ${vo.create_date }</p>
+								</span>
+
+							</div>
+					</a>
+					</li>
+					</c:if>
 				</c:forEach>
 
 
