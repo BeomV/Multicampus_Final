@@ -24,6 +24,7 @@ public class MemberRestController {
 	@RequestMapping(value = "/som_member_insertOK.do", method = RequestMethod.GET)
 	public String som_member_insertOK(MemberVO vo) {
 		log.info("som_member_insertOK.do().....{}", vo);
+		log.info("==========="+ vo.getNum() + vo.getSom_title() + vo.getSave_name());
 		
 		int result = service.insert(vo);
 		

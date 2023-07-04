@@ -18,25 +18,29 @@ public class MemberDAOimpl implements MemberDAO {
 	@Override
 	public int insert(MemberVO vo) {
 		log.info("insert()...{}", vo);
-		return session.insert(null, vo);
+		return session.insert("MEMBER_INSERT", vo);
 	}
 
 	@Override
 	public int delete(MemberVO vo) {
 		log.info("delete()...{}", vo);
-		return 0;
+		return session.delete("MEMBER_DELETE", vo);
 	}
 
 	@Override
 	public List<MemberVO> selectAll() {
 		log.info("selectAll()...");
-		return null;
+		return session.selectList("MEMBER_SELECT_ALL");
 	}
 
 	@Override
 	public List<MemberVO> searchList(String searchKey, String searchWord) {
 		log.info("searchList()...{}, {}", searchKey, searchWord);
-		return null;
+		
+		if(searchKey.equals("user_id"))
+			return session.selectList("MEMBER_SEARCH_LIST_USERID", "%"+searchWord+"%");
+		else
+			return session.selectList("MEMBER_SEARCH_LIST_SOMTITLE", "%"+searchWord+"%");
 	}
 
 }
