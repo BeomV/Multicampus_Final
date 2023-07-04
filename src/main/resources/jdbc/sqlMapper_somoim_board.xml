@@ -9,6 +9,8 @@
 		select * from somoim_board b
 		INNER JOIN somoim_member m
 		on b.som_member_num = m.num
+
+
 	</select>
 
 	<select id="SOMOIM_SELECT_ONE"
@@ -32,7 +34,42 @@
 	<insert id="SCHEDULE_INSERT">
 
 	</insert>
-	
+
+	<select id="Sch_SELECT_ONE"
+			resultType="test.com.moim.board.model.Somoim_ScheduleVO">
+
+			select * from somoim_schedule where num =#{num}
+	</select>
+
+	<update id="Sch_UPDATE">
+		update somoim_schedule set
+			schedule_title =#{schedule_title},
+			schedule_date=#{schedule_date},
+			schedule_time = #{schedule_time},
+			place=#{place},
+			money=#{money},
+			max_participant=#{max_participant}
+		where num = #{num}
+	</update>
+
+	<delete id="Sch_DELETE">
+		delete from somoim_schedule where num=#{num}
+	</delete>
+
+	<insert id="JOIN_INSERT">
+		insert into somoim_board(num,title,content,som_member_num,somoim_num,write_date)
+		values(
+			seq_somoim_board.nextval,
+		    #{title},
+			#{content},
+			(SELECT num FROM somoim_member WHERE user_id = #{user_id}),
+			#{somoim_num},
+			sysdate
+
+
+
+		)
+	</insert>
 
 	<!--
 	<select id="b_SELECT_ONE"

@@ -68,6 +68,36 @@ function som_insertOK() {
     });
 }//end som_insertOK
 
+function join_insertOK() {
+    console.log("join_insert....");
+
+    console.log($('#insert_id').val());
+    console.log($('#insert_num').val());
+    console.log($('#insert_title').val());
+    console.log($('#insert_content').val());
+
+    $.ajax({
+        url: "join_insertOK.do",
+        data: {
+            user_id: $('#insert_id').val(),
+            somoim_num: $('#insert_num').val(),
+            title: $('#insert_title').val(),
+            content: $('#insert_content').val(),
+
+        },
+        method: 'POST',
+        dataType: 'text',
+        success: function(response) {
+            console.log('ajax....success', response);
+            location.href="join_selectAll.do";
+
+        },
+        error:function(xhr,status,error){
+            console.log('xhr.status:', xhr.status);
+        }
+    });
+}//end function()
+
 function join_updateOK() {
     console.log("join_updateOK....");
 
@@ -94,18 +124,48 @@ function join_updateOK() {
 }//end function()
 
 function join_schedule_insertOK() {
-    console.log("join_schedule_insert....");
+console.log("join_schedule_insert....");
+
+
+$.ajax({
+    url: "join_schedule_insertOK.do",
+    data: {
+        schedule_title: $('#sch_insert_title').val(),
+        schedule_date: $('#shc_insert_date').val(),
+        schedule_time: $('#shc_insert_time').val(),
+        place: $('#sch_insert_place').val(),
+        max_participant: $('#sch_insert_max_member').val(),
+        user_id: $('#user_id').val(),
+        money: $('#sch_insert_money').val(),
+
+
+    },
+    method: 'POST',
+    dataType: 'text',
+    success: function(response) {
+        console.log('ajax....success', response);
+        location.href="join_schedule.do";
+
+    },
+    error:function(xhr,status,error){
+        console.log('xhr.status:', xhr.status);
+    }
+});
+}//end function
+
+function join_schedule_updateOK() {
+    console.log("join_schedule_updateOK....");
 
 
     $.ajax({
-        url: "join_schedule_insertOK.do",
+        url: "join_schedule_updateOK.do",
         data: {
+            num: $('#update_num').val(),
             schedule_title: $('#sch_insert_title').val(),
             schedule_date: $('#shc_insert_date').val(),
             schedule_time: $('#shc_insert_time').val(),
             place: $('#sch_insert_place').val(),
             max_participant: $('#sch_insert_max_member').val(),
-            user_id: $('#user_id').val(),
             money: $('#sch_insert_money').val(),
 
 

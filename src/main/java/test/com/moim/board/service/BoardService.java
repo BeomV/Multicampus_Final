@@ -55,4 +55,20 @@ public class BoardService {
     public int Sch_insert(Somoim_ScheduleVO vo) {
         return dao.Sch_insert(vo);
     }
+
+    public Somoim_ScheduleVO selectOne_schedule(Somoim_ScheduleVO vo) {
+        return dao.selectOne_schedule(vo);
+    }
+
+    public int Sch_update(Somoim_ScheduleVO vo) {
+        return dao.Sch_update(vo);
+    }
+
+    public int Sch_delete(Somoim_ScheduleVO vo) {
+        return dao.Sch_delete(vo);
+    }
+
+    public int join_insert(Somoim_BoardVO vo) {
+        return dao.join_insert(vo);
+    }
 }

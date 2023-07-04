@@ -35,15 +35,20 @@
                                 <button type="button">취소</button>
                             </span>
                         <span>
-                                <button type="button"><i class="fas fa-edit"></i></button>
-                                <button type="button"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button">
+                                    <a href="join_schedule_update.do?num=${vo.num}"><i class="fas fa-edit"></i></a>
+                                </button>
+                                <button type="button">
+                                    <a href="join_schedule_delete.do?num=${vo.num}"><i class="fas fa-trash-alt"></i></a>
+                                </button>
                             </span>
 
                     </div>
                     <div class="sch_content">
                         <div class="sch_info" style="text-align: left">
+                            <input type="hidden" value="${vo.num}">
                             <h2>${vo.schedule_date}</h2>
-                            <strong>${vo.schedule_title}</strong>
+                            <strong style="font-size: 20px;" >${vo.schedule_title}</strong>
                             <p>일시: ${vo.schedule_date}</p>
                             <p>장소: ${vo.place}</p>
                             <p>회비: ${vo.money}</p>

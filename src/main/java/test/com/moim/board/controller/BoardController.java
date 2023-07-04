@@ -76,7 +76,9 @@ public class BoardController {
 		model.addAttribute("vo2",vo2);
 
 		session.setAttribute("num",vo.getNum());
+        session.setAttribute("Board_num", vo.getNum());
 		log.info(String.valueOf(vo.getNum()));
+
 
 		return "board/som_selectOne";
 	}
@@ -117,11 +119,19 @@ public class BoardController {
 
 		return "board/join_gallery";
 	}
-	@RequestMapping(value = "/join_insert.do", method = RequestMethod.GET)
-	public String join_insert() {
+    @RequestMapping(value = "/join_insert.do", method = RequestMethod.GET)
+    public String join_insert() {
+        log.info("join_insert.do().....");
+
+
+
+        return "board/join_insert";
+    }
+	@RequestMapping(value = "/join_insertOK.do", method = RequestMethod.POST)
+	public String join_insertOK(Somoim_BoardVO vo) {
 		log.info("join_insert.do().....");
 
-
+        int result = service.join_insert(vo);
 
 		return "board/join_insert";
 	}
@@ -204,6 +214,47 @@ public class BoardController {
 
 
     }
+    @RequestMapping(value = "/join_schedule_update.do", method = RequestMethod.GET)
+    public String join_schedule_update(Somoim_ScheduleVO vo,Model model) {
+        log.info("join_schedule_update.do().....");
+
+        Somoim_ScheduleVO vo2 = service.selectOne_schedule(vo);
+
+        model.addAttribute("vo2",vo2);
+        return "board/join_schedule_update";
+
+
+
+    }
+
+    @RequestMapping(value = "/join_schedule_updateOK.do", method = RequestMethod.POST)
+    public String join_schedule_updateOK(Somoim_ScheduleVO vo) {
+        log.info("join_schedule_update.do().....{}",vo);
+
+        int result = service.Sch_update(vo);
+
+
+        return "board/join_schedule_update";
+
+
+
+    }
+
+    @RequestMapping(value = "/join_schedule_delete.do", method = RequestMethod.GET)
+    public String join_schedule_delete(Somoim_ScheduleVO vo) {
+        log.info("join_schedule_delete.do().....{}",vo);
+
+        int result = service.Sch_delete(vo);
+
+
+
+        return "redirect:join_schedule.do";
+
+
+
+    }
+
+
 
 
 
