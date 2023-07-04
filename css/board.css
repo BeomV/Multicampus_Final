@@ -816,11 +816,11 @@
 
 .schedule_insert_section input{
   display: block;
-  margin: 10px auto;
+  margin: 20px auto;
   width: 100%;
   border: none;
   border-bottom: solid 1px #ccc;
-  padding: 40px 0px 40px 0px;
+  padding: 10px 0px 10px 0px;
   outline: none;
   
 }
