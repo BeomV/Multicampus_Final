@@ -21,6 +21,8 @@ public class MemberController {
 
 		log.info("/login.do....");
 		
+		log.info("...........이렇게요?");
+		
 		return "member/login";
 	}
 	

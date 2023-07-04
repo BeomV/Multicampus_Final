@@ -24,14 +24,18 @@
     <div class="join_section">
         <jsp:include page="./som_top_menu.jsp"></jsp:include>
         <div class="img_info">
+<<<<<<< HEAD
             <img src="resources/img/banner_test.png">
+=======
+            <img height="300px" width="1500" src="resources/img/${vo2.save_name}">
+>>>>>>> refs/remotes/origin/sssun
         </div>
         <div class="som_tit">
             <h1 class="main_tit" style="padding: 10px;">${vo2.som_title}</h1>
             <p style="font-weight: 600; color: #999";>카테고리: ${vo2.category} ㅣ 모임 정원: ${vo2.max_member} ㅣ 모임 개설일: ${vo2.create_date}</p>
 
 <%--            <p>모임 개설일: ${vo2.create_date}</p>--%>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sapiente necessitatibus illum sint unde ad fugit, voluptatum commodi repudiandae laboriosam. Aperiam possimus, eius tenetur temporibus dolorum laudantium beatae quibusdam fuga?</p>
+            <p>${vo2.som_content }</p>
         </div>
         <div class="join_member">
             <h1>가입한 멤버</h1>
@@ -135,8 +139,9 @@
 
             </div>
         </div>
-        <button type="button" id="som_register">모임 가입하기</button>
+        <button type="submit" id="som_register">모임 가입하기</button>
     </div>
+    
     <div class="footer">
         <div>
             <strong>온앤오프</strong>
