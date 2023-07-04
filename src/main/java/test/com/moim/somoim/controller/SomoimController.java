@@ -92,6 +92,16 @@ public class SomoimController {
 		return "redirect:selectAll.do";
 	}
 	
+	@RequestMapping(value = "/som_member_insertOK.do", method = RequestMethod.GET)
+	public String som_member_insertOK(SomoimVO vo) {
+		log.info("som_delete.do().....{}", vo);
+		
+		int result = service.delete(vo);
+		
+		
+		return "redirect:selectAll.do";
+	}
+	
 	
 
 	

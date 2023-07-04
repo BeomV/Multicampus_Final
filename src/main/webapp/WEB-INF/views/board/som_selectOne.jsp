@@ -21,6 +21,7 @@
 
 
 
+<form action="som_member_insertOK.do">
     <div class="join_section">
         <jsp:include page="./som_top_menu.jsp"></jsp:include>
         <div class="img_info">
@@ -137,6 +138,7 @@
         </div>
         <button type="submit" id="som_register">모임 가입하기</button>
     </div>
+</form>
     
     <div class="footer">
         <div>
