@@ -40,55 +40,61 @@
         </div>
 
     </div>
+    <form action="community_insertOK.do" method="post" enctype="multipart/form-data">
 
-        <div class="community_section">
+		<div class="community_section">
 
-            <div class="c_insert_func">
-                <span>
-                  <label for="image-upload" class="toolbar-label">
-                    <i class="fas fa-image"></i><a>이미지</a>
-                  </label>
-                  <input type="file" id="image-upload" name="image-upload" class="file-input" accept="image/*">
-                
-                  <label for="file-upload" class="toolbar-label">
-                    <i class="fas fa-file-alt"></i><a>파일</a>
-                  </label>
-                  <input type="file" id="file-upload" name="file-upload" class="file-input" accept="*">
-            
-                  <label for="text-size" class="toolbar-label">
-                    <i class="fas fa-text-height"></i>
-                  </label>
-                  <select id="text-size" class="toolbar-select">
-                    <option value="small">작게</option>
-                    <option value="medium">보통</option>
-                    <option value="large">크게</option>
-                  </select>
-            
-                  <label for="text-style" class="toolbar-label">
-                    <i class="fas fa-font"></i>
-                  </label>
-                  <select id="text-style" class="toolbar-select">
-                    <option value="normal">보통</option>
-                    <option value="italic">이탤릭</option>
-                    <option value="bold">굵게</option>
-                  </select>
-            
+			<div class="c_insert_func">
+				<span> <label for="image-upload" class="toolbar-label">
+						<i class="fas fa-image"></i><a>이미지</a>
+				</label> <input type="file" id="image-upload" name="image-upload"
+					class="file-input" accept="image/*"> <label
+					for="file-upload" class="toolbar-label"> <i
+						class="fas fa-file-alt"></i><a>파일</a>
+				</label> <input type="file" id="file-upload" name="file-upload"
+					class="file-input" accept="*"> <label for="text-size"
+					class="toolbar-label"> <i class="fas fa-text-height"></i>
+				</label> <select id="text-size" class="toolbar-select">
+						<option value="small">작게</option>
+						<option value="medium">보통</option>
+						<option value="large">크게</option>
+				</select> <label for="text-style" class="toolbar-label"> <i
+						class="fas fa-font"></i>
+				</label> <select id="text-style" class="toolbar-select">
+						<option value="normal">보통</option>
+						<option value="italic">이탤릭</option>
+						<option value="bold">굵게</option>
+				</select>
 
-                </span>
-            </div>
-            <div class="community_insert_secction">
-                    <span>
-                        <h2>제목</h2>
-                        <input type="text" placeholder="제목을 입력하세요">
-                        <h3>내용</h3>
-                        <input type="text" placeholder="내용을 입력하세요" id="insert_content">
-        
-                    </span>
-                <button type="button">작성완료</button>
-        
-            </div>
-        
-        </div>
+
+				</span>
+			</div>
+			<div class="community_insert_secction">
+                    <div>
+                        <h3><label for="writer">작성자</label></h3>
+                      </div>
+                      <div>
+                        <input type="hidden" id="user_id" name="user_id" value="${user_id}">
+                        ${user_id}
+                      </div>
+                    <div>
+                      <h2><label for="title">제목</label></h2>
+                    </div>
+                    <div>
+                      <input type="text" id="title" name="title" value="title1">
+                    </div>
+                    <div>
+                      <h3><label for="content">내용</label></h3>
+                    </div>
+                    <div>
+                      <input type="text" id="insert_content" name="content" value="내용을 입력하세요">
+                    </div>
+                    
+                    <input type="submit" value="작성완료">
+			</div>
+
+		</div>
+</form>
         
 
 
