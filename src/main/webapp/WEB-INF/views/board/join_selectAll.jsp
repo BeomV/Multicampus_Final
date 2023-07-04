@@ -22,7 +22,7 @@
             이미지
         </div>
         <div class="top_func">
-            <button type="button">글쓰기</button>
+            <button type="button"><a href="/join_insert.do" style="color: white">글쓰기</a></button>
         </div> 
         <div class="view_content">
             <ul>
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="bbs_func">
                                     <button type="button">
-                                        <a href=""><i class="fas fa-edit"></i></a>
+                                        <a href="/join_update.do?num=${vo.num}"><i class="fas fa-edit"></i></a>
                                     </button>
                                     <button type="button">
                                         <i class="fas fa-trash-alt"></i>

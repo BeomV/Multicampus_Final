@@ -296,9 +296,18 @@
 }
 .img_info{
   margin-top: 10px;
+  background-color: red;
   width: 100%;
   height: 300px;
-  background-color: red;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_info img{
+  width: inherit;
+
 }
 
 .som_tit{
