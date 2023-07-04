@@ -36,6 +36,8 @@
                 <a href="login.do">로그인</a>
                 <a href="logout.do">로그아웃</a>
             </div>
+            
+            <a href="cs_notice.do">==============공지사항////////////////</a>
 
         </div>
 
