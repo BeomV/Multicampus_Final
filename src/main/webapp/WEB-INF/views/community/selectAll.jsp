@@ -48,75 +48,13 @@
 					<li><a href="community_selectOne.do?num=${vo.num}">
 							<div class="community_review_img">
 								<!-- 이미지를 여기에 추가할 수 있습니다 -->
-							</div> <strong>${vo.title}</strong>
+							</div><strong>${vo.title}</strong>
 					</a></li>
 				</c:forEach>
 			</ul>
 		</div>
 	</div>
-	<!--         <div class="community_review_section"> -->
-	<!--             <div class="community_review_view"> -->
-	<!--                 <ul class="review_grid"> -->
-	<!--                     <li><a href="community_selectOne.do"> -->
-	<!--                         <div class="community_review_img"> -->
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong></a> -->
-	<!--                     </li> -->
-	<!--                     <li> -->
-	<!--                         <div class="community_review_img"> -->
-
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong> -->
-	<!--                     </li> -->
-	<!--                     <li> -->
-	<!--                         <div class="community_review_img"> -->
-
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong> -->
-	<!--                     </li> -->
-	<!--                     <li> -->
-	<!--                         <div class="community_review_img"> -->
-
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong> -->
-	<!--                     </li> -->
-	<!--                     <li> -->
-	<!--                         <div class="community_review_img"> -->
-
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong> -->
-	<!--                     </li> -->
-	<!--                     <li> -->
-	<!--                         <div class="community_review_img"> -->
-
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong> -->
-	<!--                     </li> -->
-	<!--                     <li> -->
-	<!--                         <div class="community_review_img"> -->
-
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong> -->
-	<!--                     </li> -->
-	<!--                     <li> -->
-	<!--                         <div class="community_review_img"> -->
-
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong> -->
-	<!--                     </li> -->
-	<!--                     <li> -->
-	<!--                         <div class="community_review_img"> -->
-
-	<!--                         </div> -->
-	<!--                         <strong>안녕하세요 여러분 오랜만에 제가 온앤오프에서 옛날부터 체험해보고 싶은</strong> -->
-	<!--                     </li> -->
-	<!--                 </ul> -->
-	<!--             </div> -->
-	<!--         </div> -->
-
-
-
-
+	
 	<div class="footer">
 		<div>
 			<strong>온앤오프</strong>
