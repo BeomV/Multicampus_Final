@@ -68,3 +68,28 @@ function som_insertOK() {
         }
     });
 }//end som_insertOK
+
+function join_updateOK() {
+    console.log("join_updateOK....");
+
+
+    $.ajax({
+        url: "join_updateOK.do",
+        data: {
+            num: $('#update_num').val(),
+            title: $('#update_title').val(),
+            content: $('#insert_content').val(),
+
+        },
+        method: 'POST',
+        dataType: 'text',
+        success: function(response) {
+            console.log('ajax....success', response);
+            location.href="join_selectAll.do";
+
+        },
+        error:function(xhr,status,error){
+            console.log('xhr.status:', xhr.status);
+        }
+    });
+}//end som_insertOK

@@ -15,4 +15,7 @@ public interface BoardDAO {
 
     List<Somoim_ScheduleVO> sch_selectList();
 
+    int update(Somoim_BoardVO vo);
+
+    int delete(Somoim_BoardVO vo);
 }

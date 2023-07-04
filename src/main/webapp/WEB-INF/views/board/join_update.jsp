@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="resources/css/board.css">
     <link rel="stylesheet" href="resources/css/board_min.css">
     <script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
+    <script src="resources/js/board.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -36,17 +37,18 @@
     <div class="join_insert_secction">
              <span>
 
+                 <input type="hidden" value="${vo2.num}" id="update_num">
                 <h2>제목</h2>
-                <input type="text" placeholder="제목을 입력하세요" value="${vo2.title}">
+                <input type="text" placeholder="제목을 입력하세요" value="${vo2.title}" id="update_title">
                 <h3>내용</h3>
                 <input type="text" placeholder="내용을 입력하세요" id="insert_content" value="${vo2.content}">
                 <h2>작성자</h2>
-                <input type="text" placeholder="작성자" style="background-color: #ccc;" value="${vo2.user_id}" readonly>
+                <input type="text" placeholder="작성자" style="background-color: #ccc;" value="${vo2.user_id}" id="update_user_id" readonly>
                 <h2>작성 날짜</h2>
-                <input type="text" placeholder="작성날짜" style="background-color: #ccc;" value="${vo2.write_date}" readonly>
+                <input type="text" placeholder="작성날짜" style="background-color: #ccc;" value="${vo2.write_date}" id="update_write_date" readonly>
 
             </span>
-        <button type="button">수정완료</button>
+        <button type="button" onclick="join_updateOK()">수정완료</button>
 
 
     </div>
@@ -54,15 +56,6 @@
 
 
 </div>
-
-
-
-
-
-
-
-
-
 
 
 
