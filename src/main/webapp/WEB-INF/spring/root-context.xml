@@ -5,12 +5,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	
 	<bean id="propertyPlaceholderConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	 class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<value>classpath:jdbc/oracle.properties</value>
 		</property>
 	</bean>
+	
+	
 
 	<!--1. pom.xml commons-dbcp.jar -->
 	<bean id="dataSource"
@@ -30,6 +33,7 @@
 			<list>
 				<value>classpath:jdbc/sqlMapper_somoim.xml</value>
 				<value>classpath:jdbc/sqlMapper_member.xml</value>
+				<value>classpath:jdbc/sqlMapper_userinfo.xml</value>
 			</list>
 		</property>
 	</bean>
