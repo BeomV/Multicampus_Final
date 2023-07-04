@@ -47,6 +47,14 @@
 		});//end click
 
 	});//end ready
+	
+// 	function som_searchList(){
+		
+		
+		
+// 	}
+	
+	
 </script>
 </head>
 <body>
@@ -113,15 +121,20 @@
 			</ul>
 
 		</div>
-
 		<div class="board_list">
+			<form action="som_searchList.do">
 			<div class="board_list_category_detail">
-				<button type="button" class="list_active">전체</button>
-				<button type="button">국내여행</button>
-				<button type="button">해외여행</button>
-				<input type="search" placeholder="검색" id="board_search"> <input
-					type="button" value="검색" onclick="som_searchList">
+				<a href="som_selectAll.do?category=all"><button type="button" class="list_active" name="all">전체</button></a> 
+<!-- 				<a href="som_selectAll.do?category=local"><button type="button" name="local">국내여행</button></a> -->
+<!-- 				<a href="som_selectAll.do?category=foreign"><button type="button" name="foreign">해외여행</button></a> -->
+				<select name="searchKey">
+					<option>소모임 이름</option>
+					<option>지역</option>				
+				</select>
+				<input type="text" placeholder="검색" id="board_search" name="searchWord">
+				<input type="submit" value="검색">
 			</div>
+			</form>
 			
 			
 			

@@ -30,7 +30,7 @@ public class SomoimDAOimpl implements SomoimDAO {
 	public List<SomoimVO> searchList(String searchKey, String searchWord) {
 		log.info("searchList()...{}, {}", searchKey, searchWord);
 		
-		if(searchKey.equals("som_title"))
+		if(searchKey.equals("소모임 이름"))
 			return session.selectList("SOMOIM_SEARCH_LIST_TITLE", "%"+searchWord+"%");
 		else 
 			return session.selectList("SOMOIM_SEARCH_LIST_AREA", "%"+searchWord+"%");

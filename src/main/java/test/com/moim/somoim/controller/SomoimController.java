@@ -55,13 +55,14 @@ public class SomoimController {
 	}
 	
 	@RequestMapping(value = "/som_searchList.do", method = RequestMethod.GET)
-	public String som_searchList(String searchKey, String searchWord) {
+	public String som_searchList(String searchKey, String searchWord, Model model) {
 		log.info("som_searchList.do().....{}, {}", searchKey, searchWord);
 		
 		List<SomoimVO> vos = service.searchList(searchKey, searchWord);
 		
+		model.addAttribute("vos", vos);
 		
-		return "redirect:som_selectAll.do";
+		return "board/som_selectAll";
 	}
 	
 	@RequestMapping(value = "/som_insert.do", method = RequestMethod.GET)
