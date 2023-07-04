@@ -6,17 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>findpassword</title>
-    <link rel="stylesheet" href="resouces/css/style.css">
-    <link rel="stylesheet" href="resouces/css/min.css">
-    <link rel="stylesheet" href="resouces/css/find.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/min.css">
+    <link rel="stylesheet" href="resources/css/find.css">
     
+</head>
+
     
 <body>
      
     <div class="header">
         <div class="gnb">
             <div class="logo">
-                <img src="resources/img/logo.png">
+                <img src="resources/uploadimg/logo.png">
             </div>
             <nav>
                 <ul>
@@ -31,8 +33,8 @@
                 <input type="search" placeholder="검색">
             </div>
             <div class="login">
-                <a href="/login.html">로그인</a>
-                <a>로그아웃</a>
+                <a href="login.do">로그인</a>
+                <a  href="logout.do">로그아웃</a>
             </div>
 
         </div>
@@ -47,12 +49,12 @@
           <h2>비밀번호 찾기 </h2>           
         </div>
         <h5 style="display: inline; margin-left: 50%;">- 
-            <span style="color: blue;"> 01. 아이디 입력</span> 02. 본인 확인 &gt; 03. 비밀번호 재설정</h5>
+            <span style="color: blue;"> 01. 아이디 입력</span> > 02. 본인 확인 &gt; 03. 비밀번호 재설정</h5>
         </div>
         <div class="total" >
-            <h3 style="height: 4px; margin-right: 50%;">이름</h3>
-            <input type="text"  placeholder="이름을 입력하세요" id="find_password" style="width: 50%;" > <br>       
-        <button style="width: 30%;" type="button">제출</button>
+            <h3 style="height: 4px; margin-right: 50%;">아이디</h3>
+            <input type="text"  placeholder="아이디를 입력하세요" id="find_password" style="width: 50%;" > <br>       
+        <button style="width: 30%;" type="button" onclick="location.href='findPassword2.do'">제출</button>
     </div>    
 </div>
       

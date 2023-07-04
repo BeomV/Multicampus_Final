@@ -8,22 +8,23 @@
         alert(alertMessage);
         }
     </script>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>findID</title>
+    <title>findpassword_2</title>
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/min.css">
     <link rel="stylesheet" href="resources/css/find.css">
-</head>
     
+    
+
     
 <body>
-        <div class="header">
+     
+    <div class="header">
         <div class="gnb">
             <div class="logo">
-                <img src="resouces/uploadimg/logo.png">
+                <img src="resources/uploadimg/logo.png">
             </div>
             <nav>
                 <ul>
@@ -38,28 +39,30 @@
                 <input type="search" placeholder="검색">
             </div>
             <div class="login">
-                <a href="login.do">로그인</a>
-                <a href="logout.do">로그아웃</a>
+                <a href="/login.do">로그인</a>
+                <a href="/logout.do">로그아웃</a>
             </div>
 
         </div>
 
     </div>
-
+    
     <div class="find_sec" >
     
         <div class="insert_sec" >
 
         <div class="find_title" >
-          <h2>아이디 찾기 </h2>           
+          <h2>비밀번호 찾기 </h2>           
+        </div>
+        <h5 style="display: inline; margin-left: 50%;">- 
+            01. 아이디 입력 &gt; <span style="color: blue;"> 02. 본인 확인 </span> &gt; 03. 비밀번호 재설정</h5>
         </div>
 
 
+
             <div class="total" >
-                <div class="insert_id">
-                    <h3 style="height: 4px; margin-right: 50%;">아이디</h3>
-                    <input type="text"  placeholder="아이디를 입력하세요" id="find_password" style="width: 50%;" > <br>       
-                </div>   
+                <h3 style="height: 4px; margin-right: 50%;">이름</h3>
+                <input type="text"  placeholder="이름을 입력하세요" id="find_password"  > <br>       
                     <div class="email" >
                         <div class="emailtitle" >
                             <h3  style="height: 4px; ">이메일</h3>
@@ -77,15 +80,15 @@
                             <div class="injarea" style="text-align: center;">
                             <button id="inj" type="button" onclick="showMessage()">인증번호가 오지 않았나요?</button> <br>
                             </div>
-                        <button type="button" id="submitpass" onclick="location.href='findPassword.do'">비밀번호 찾기</button>
+                        <button type="button" id="submitpass" onclick="location.href='findPassword3.do'">비밀번호 찾기</button>
                     </div>
-                </div>    
-        </div>
-    </div>
-                
-        
-    
 
+                </div>    
+                
+        </div>
+                
+            
+      <br>
    
 
     <div class="footer">

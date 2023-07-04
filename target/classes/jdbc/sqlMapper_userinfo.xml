@@ -14,8 +14,8 @@
   </select>
   
   <insert id="U_INSERT" parameterType="test.com.moim.userinfo.model.UserinfoVO">
-  	insert into userinfo(num,user_id,pw,name,email,save_name) 
-		values(seq_member.nextval,#{user_id},#{pw},#{name},#{email},#{save_name})
+  	insert into userinfo(num,user_id,pw,name,email,save_name,point,birthday) 
+		values(seq_userinfo.nextval,#{user_id},#{pw},#{name},#{email},#{save_name},#{point},#{birthday})
   </insert>
   
   <select id="LOGIN" resultType="test.com.moim.userinfo.model.UserinfoVO">

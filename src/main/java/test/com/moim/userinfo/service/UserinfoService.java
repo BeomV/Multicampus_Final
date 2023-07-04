@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 import test.com.moim.userinfo.model.UserinfoDAO;
 import test.com.moim.userinfo.model.UserinfoVO;
+import test.com.moim.userinfo.model.UserinfoVO;
 
 @Slf4j
 @Service
@@ -30,6 +31,10 @@ public class UserinfoService {
 	
 	public UserinfoVO login(UserinfoVO vo) {
 		return dao.login(vo);
+	}
+	
+	public UserinfoVO idCheck(UserinfoVO vo) {
+		return dao.idCheck(vo);
 	}
 
 }

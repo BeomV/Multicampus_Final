@@ -45,6 +45,12 @@ public class UserinfoDAOimpl implements UserinfoDAO {
 		log.info("login()..{}",vo);
 		return sqlSession.selectOne("LOGIN",vo);
 	}
+
+	@Override
+	public UserinfoVO idCheck(UserinfoVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }

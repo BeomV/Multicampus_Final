@@ -12,4 +12,6 @@ public interface UserinfoDAO {
 
 	UserinfoVO login(UserinfoVO vo);
 
+	UserinfoVO idCheck(UserinfoVO vo);
+
 }

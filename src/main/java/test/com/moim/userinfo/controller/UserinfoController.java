@@ -65,6 +65,8 @@ public class UserinfoController {
 	public String u_insertOK(UserinfoVO vo) throws IllegalStateException, IOException {
 
 		log.info("/u_insertOK.do...{}", vo);
+		vo.setBirthday(vo.getBirthday_year()+"/"+vo.getBirthday_month()+"/"+vo.getBirthday_day());
+		log.info("/u_insertOK.do...{}", vo);
 
 		String getOriginalFilename = vo.getFile().getOriginalFilename();
 		int fileNameLength = vo.getFile().getOriginalFilename().length();
@@ -99,7 +101,7 @@ public class UserinfoController {
 		int result = service.insert(vo);
 
 		if (result == 1) {
-			return "redirect:u_selectAll.do";
+			return "redirect:login.do";
 		} else {
 			return "redirect:u_insert.do";
 		}
@@ -135,12 +137,43 @@ public class UserinfoController {
 		}
 
 	}
+	
+	@RequestMapping(value = "/logout.do", method = RequestMethod.GET)
+	public String logout() {
+		log.info("/logout.do");
+		
+		session.invalidate();
+
+		return "redirect:home.do";
+	}
+
 
 	@RequestMapping(value = "/u_findId.do", method = RequestMethod.GET)
 	public String u_findId() {
 		log.info("/u_findId.do");
 
 		return "userinfo/findId";
+	}
+	
+	@RequestMapping(value = "/findPassword.do", method = RequestMethod.GET)
+	public String findPassword() {
+		log.info("/findPassword.do");
+		
+		return "userinfo/findPassword";
+	}
+	
+	@RequestMapping(value = "/findPassword2.do", method = RequestMethod.GET)
+	public String findPassword2() {
+		log.info("/findPassword2.do");
+		
+		return "userinfo/findPassword2";
+	}
+	
+	@RequestMapping(value = "/findPassword3.do", method = RequestMethod.GET)
+	public String findPassword3() {
+		log.info("/findPassword3.do");
+		
+		return "userinfo/findPassword3";
 	}
 
 }

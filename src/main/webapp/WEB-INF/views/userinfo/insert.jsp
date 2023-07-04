@@ -67,22 +67,31 @@ function idCheck(){
                     <br>
                     <input type="text" placeholder="이름를 입력하세요." id="name" name="name" value="kim12"> 
                     <br>
-                    <div class="birth_gender" value="">
+                    <div class="birth_gender" >
                     <span>
                         <label>
                             생년월일
                         </label>
                         <br>
-                        <select>
-                            <option>1996</option>
+                        <select name="birthday_year">
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
                         </select>
-                        <select>
-                            <option>01</option>
+                        
+                        <select name="birthday_month">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
                         </select>
-                        <select>
-                            <option>02</option>
+                        
+                        <select name="birthday_day">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
                         </select>
                     </span>
+                    
                     <span>
                         <label>
                             성별
@@ -115,12 +124,11 @@ function idCheck(){
                 <br>
                 <input type="tel" placeholder="휴대폰 번호를 입력하세요" id="user_tel">
                 <br>
+                            <button id="register">회원가입</button>
+    
 --%>
-                <button id="register">회원가입</button>
-                    
-                    
-
-                
+               <input id="register" type="submit" value="회원가입"></input>
+                                    
 
         </form>
 
