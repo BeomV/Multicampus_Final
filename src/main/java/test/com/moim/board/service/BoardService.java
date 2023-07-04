@@ -51,4 +51,8 @@ public class BoardService {
 
     public int delete(Somoim_BoardVO vo) {
         return dao.delete(vo);    }
+
+    public int Sch_insert(Somoim_ScheduleVO vo) {
+        return dao.Sch_insert(vo);
+    }
 }

@@ -2,6 +2,8 @@ $(document).ready(function() {
 
 
 
+
+
     $('.category_more a').click(function(event){
         $('.category_more').hide();
         event.preventDefault();
@@ -32,20 +34,13 @@ $(document).ready(function() {
     //     $('.join_gnb li a').not(this).removeClass('category_active'); // 다른 버튼에서 category_active 클래스 제거
     // });
 
-    $(document).ready(function(){
-        $('#shc_insert_max_member').on('input', function() {
-            $('#range_text').text(this.value + '명');
-        });
-    });
-
-
-
-
 
 
 
 
 });//End Document.ready();
+
+
 
 // 비동기 처리
 
@@ -98,25 +93,28 @@ function join_updateOK() {
     });
 }//end function()
 
-function join_schedule_insert() {
+function join_schedule_insertOK() {
     console.log("join_schedule_insert....");
 
 
     $.ajax({
-        url: "join_schedule_insert.do",
+        url: "join_schedule_insertOK.do",
         data: {
             schedule_title: $('#sch_insert_title').val(),
             schedule_date: $('#shc_insert_date').val(),
             schedule_time: $('#shc_insert_time').val(),
             place: $('#sch_insert_place').val(),
             max_participant: $('#sch_insert_max_member').val(),
+            user_id: $('#user_id').val(),
+            money: $('#sch_insert_money').val(),
+
 
         },
         method: 'POST',
-        dataType: 'json',
+        dataType: 'text',
         success: function(response) {
             console.log('ajax....success', response);
-            location.href="join_selectAll.do";
+            location.href="join_schedule.do";
 
         },
         error:function(xhr,status,error){

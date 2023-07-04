@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page session="false" %>
 <!DOCTYPE html>
@@ -50,14 +51,12 @@
 
                         </div>
                         <div class="sch_member">
-                            <h2>참석 멤버</h2>
+                            <h2 style="padding-bottom: 10px">참석 멤버</h2>
                             <ul class="schm_grid">
-                                <c:forEach var="schedule" items="${part}">
-                                    <c:forEach var="dataPart" items="${schedule}">
-                                        <li>
-                                            <i class="far fa-user"></i> <input type="hidden" value="${dataPart}">
-                                        </li>
-                                    </c:forEach>
+                                <c:forEach var="participant" items="${fn:split(vo.participant, '/')}" varStatus="status">
+                                    <li>
+                                        <i class="far fa-user"></i> <input type="hidden" value="${participant}">
+                                    </li>
                                 </c:forEach>
                             </ul>
 

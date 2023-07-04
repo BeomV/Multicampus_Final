@@ -18,4 +18,6 @@ public interface BoardDAO {
     int update(Somoim_BoardVO vo);
 
     int delete(Somoim_BoardVO vo);
+
+    int Sch_insert(Somoim_ScheduleVO vo);
 }

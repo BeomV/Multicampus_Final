@@ -7,6 +7,7 @@ public class Somoim_ScheduleVO {
     private int num;
     private String schedule_date;
     private String schedule_title;
+    private String schedule_time;
     private String place;
     private int money;
     private int som_member_num;
@@ -14,6 +15,8 @@ public class Somoim_ScheduleVO {
     private int participant_count;
     private int somoim_num;
     private int max_participant;
+    private String user_id;
+
 
 
 

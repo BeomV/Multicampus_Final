@@ -28,7 +28,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		log.info("preHandle()....user_id : {}",user_id);
 		
 		
-		if(sPath.equals("/selectAll.do")
+		if(sPath.equals("/som_selectAll.do")
 				|| sPath.equals("/selectOne.do")) {
 			
 			if(user_id == null) {

@@ -62,4 +62,9 @@ public class BoardDAOimpl implements BoardDAO{
         return sqlSession.delete("SOMOIM_DELETE",vo);
     }
 
+    @Override
+    public int Sch_insert(Somoim_ScheduleVO vo) {
+        return sqlSession.insert("Sch_INSERT",vo);
+    }
+
 }

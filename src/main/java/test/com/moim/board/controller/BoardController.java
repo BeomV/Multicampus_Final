@@ -126,22 +126,17 @@ public class BoardController {
 		return "board/join_insert";
 	}
 
-	@RequestMapping(value = "/join_schdule.do", method = RequestMethod.GET)
-	public String join_schdule(Model model) {
-        log.info("join_schdule.do().....");
+	@RequestMapping(value = "/join_schedule.do", method = RequestMethod.GET)
+	public String join_schedule(Model model) {
+        log.info("join_schedule.do().....{}");
 
         List<Somoim_ScheduleVO> vos = service.sch_selelctList();
-        List<List<String>> part = new ArrayList<>();
 
-        for(Somoim_ScheduleVO vo : vos) {
-            String[] dataParts = vo.getParticipant().split("/");
-            part.add(Arrays.asList(dataParts));
-        }
 
         model.addAttribute("vos", vos);
-        model.addAttribute("part", part);
 
-        return "board/join_schdule";
+
+        return "board/join_schedule";
 	}
 
     @RequestMapping(value = "/join_update.do", method = RequestMethod.GET)
@@ -185,10 +180,23 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/join_schedule_insert.do", method = RequestMethod.GET)
-    public String join_schedule_insert(Somoim_BoardVO vo) {
+    public String join_schedule_insert() {
         log.info("join_schedule_insert.do().....");
 
-        int result = service.delete(vo);
+
+
+
+        return "board/join_schedule_insert";
+
+
+
+    }
+
+    @RequestMapping(value = "/join_schedule_insertOK.do", method = RequestMethod.POST)
+    public String join_schedule_insertOK(Somoim_ScheduleVO vo) {
+        log.info("join_schedule_insertOK.do().....{}",vo);
+
+        int result = service.Sch_insert(vo);
 
 
         return "board/join_schedule_insert";
