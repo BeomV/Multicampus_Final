@@ -70,9 +70,9 @@
 				<h1>카테고리</h1>
 				
 				<select name="category" id="category">
-					<option value="baseball">야구</option>
-					<option value="book">독서</option>
-					<option value="cook">요리</option>
+					<option value="야구">야구</option>
+					<option value="독서">독서</option>
+					<option value="요리">요리</option>
 					<option value="운동">운동</option>
 					<option value="게임/오락">게임/오락</option>
 					<option value="아웃도어">아웃도어</option>
