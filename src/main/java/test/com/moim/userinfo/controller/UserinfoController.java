@@ -112,7 +112,7 @@ public class UserinfoController {
 		log.info("/login.do....{}", message);
 
 		if (message != null)
-			message = "아이디/비밀번호를 확인하세요";
+			message = "�븘�씠�뵒/鍮꾨�踰덊샇瑜� �솗�씤�븯�꽭�슂";
 		model.addAttribute("message", message);
 
 		return "userinfo/login";
@@ -131,11 +131,27 @@ public class UserinfoController {
 			return "redirect:login.do?message=fail";
 		} else {
 			session.setAttribute("user_id", vo2.getUser_id());
+			System.out.println(vo2.getUser_id());
 			return "redirect:home.do";
 		}
 
 	}
 
+	
+	@RequestMapping(value = "/logout.do", method = RequestMethod.GET)
+	public String logout(UserinfoVO vo) {
+		log.info("/logout.do...{}", vo);
+
+		UserinfoVO vo2 = service.login(vo);
+		log.info("vo2...{}", vo2);
+		
+	    session.invalidate();
+		return  "redirect:/home.do";
+
+
+	}
+	
+	
 	@RequestMapping(value = "/u_findId.do", method = RequestMethod.GET)
 	public String u_findId() {
 		log.info("/u_findId.do");

@@ -10,16 +10,16 @@
   </select>
   
   <select id="U_SELECT_ONE" resultType="test.com.moim.userinfo.model.UserinfoVO">
-  	select * from userinfo where num = #{num}
+  	select * from userinfo where num = #{num, jdbcType=VARCHAR }
   </select>
   
   <insert id="U_INSERT" parameterType="test.com.moim.userinfo.model.UserinfoVO">
   	insert into userinfo(num,user_id,pw,name,email,save_name) 
-		values(seq_member.nextval,#{user_id},#{pw},#{name},#{email},#{save_name})
+		values(seq_member.nextval,#{user_id, jdbcType=VARCHAR},#{pw, jdbcType=VARCHAR},#{name, jdbcType=VARCHAR},#{email, jdbcType=VARCHAR},#{save_name, jdbcType=VARCHAR})
   </insert>
   
   <select id="LOGIN" resultType="test.com.moim.userinfo.model.UserinfoVO">
-		select * from userinfo where user_id = #{user_id} and pw = #{pw}
+		select * from userinfo where user_id = #{user_id, jdbcType=VARCHAR} and pw = #{pw, jdbcType=VARCHAR}
 	</select>
   
   </mapper>

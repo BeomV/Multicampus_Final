@@ -29,6 +29,7 @@
 				<value>classpath:jdbc/sqlMapper_somoim_board.xml</value>
 				<value>classpath:jdbc/sqlMapper_comments.xml</value>
 				<value>classpath:jdbc/sqlMapper_d_comments.xml</value>
+				<value>classpath:jdbc/sqlMapper_userinfo.xml</value>
 
 			</list>
 		</property>
@@ -45,4 +46,8 @@
 		<property name="maxUploadSize" value="-1" />
 		<!-- -1 이면 크기제한 없음 -->
 	</bean>
+	
+	
+	
+	
 </beans>
