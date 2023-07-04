@@ -136,6 +136,20 @@ public class BoardController {
 		return "board/join_schdule";
 	}
 
+    @RequestMapping(value = "/join_update.do", method = RequestMethod.GET)
+    public String join_update(Model model, Somoim_BoardVO vo) {
+        log.info("join_update.do().....");
+
+        Somoim_BoardVO vo2 = service.selectJoin(vo);
+        log.info("test...{}",vo2);
+
+        model.addAttribute("vo2",vo2);
+
+
+        return "board/join_update";
+    }
+
+
 
 
 	
