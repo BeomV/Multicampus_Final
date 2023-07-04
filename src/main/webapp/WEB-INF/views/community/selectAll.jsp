@@ -45,10 +45,10 @@
 		<div class="community_review_view">
 			<ul class="review_grid">
 				<c:forEach var="vo" items="${vos}">
-					<li><a href="community_selectOne.do?num=${vo.NUM}">
+					<li><a href="community_selectOne.do?num=${vo.num}">
 							<div class="community_review_img">
 								<!-- 이미지를 여기에 추가할 수 있습니다 -->
-							</div> <strong>${vo.TITLE}</strong>
+							</div> <strong>${vo.title}</strong>
 					</a></li>
 				</c:forEach>
 			</ul>
