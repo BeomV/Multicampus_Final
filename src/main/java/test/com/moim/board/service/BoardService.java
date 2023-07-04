@@ -44,4 +44,11 @@ public class BoardService {
     public List<Somoim_ScheduleVO> sch_selelctList() {
         return dao.sch_selectList();
     }
+
+    public int update(Somoim_BoardVO vo) {
+        return dao.update(vo);
+    }
+
+    public int delete(Somoim_BoardVO vo) {
+        return dao.delete(vo);    }
 }

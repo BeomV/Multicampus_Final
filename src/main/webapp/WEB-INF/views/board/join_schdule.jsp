@@ -19,10 +19,6 @@
 <div class="join_section">
     <jsp:include page="./som_top_menu.jsp"></jsp:include>
 
-    <div class="top_func">
-        <button type="button" style="padding: 5px 12px;">이미지 업로드</button>
-    </div>
-
 
     <div class="top_func">
         <button type="button" style="padding: 5px 12px;">일정 만들기</button>
@@ -46,28 +42,23 @@
                     <div class="sch_content">
                         <div class="sch_info" style="text-align: left">
                             <h2>${vo.schedule_date}</h2>
-                            <strong>06/17</strong>
-                            <p>일시: $</p>
-                            <p>장소:</p>
-                            <p>회비:</p>
-                            <p>06/17</p>
+                            <strong>${vo.schedule_title}</strong>
+                            <p>일시: ${vo.schedule_date}</p>
+                            <p>장소: ${vo.place}</p>
+                            <p>회비: ${vo.money}</p>
+
 
                         </div>
                         <div class="sch_member">
                             <h2>참석 멤버</h2>
                             <ul class="schm_grid">
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
-                                <li><i class="far fa-user"></i></li>
+                                <c:forEach var="schedule" items="${part}">
+                                    <c:forEach var="dataPart" items="${schedule}">
+                                        <li>
+                                            <i class="far fa-user"></i> <input type="hidden" value="${dataPart}">
+                                        </li>
+                                    </c:forEach>
+                                </c:forEach>
                             </ul>
 
                         </div>

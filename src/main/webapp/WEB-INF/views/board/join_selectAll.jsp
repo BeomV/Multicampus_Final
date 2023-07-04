@@ -42,10 +42,10 @@
                                 </div>
                                 <div class="bbs_func">
                                     <button type="button">
-                                        <a href=""><i class="fas fa-edit"></i></a>
+                                        <a href="/join_update.do?num=${vo.num}"><i class="fas fa-edit"></i></a>
                                     </button>
                                     <button type="button">
-                                        <i class="fas fa-trash-alt"></i>
+                                        <a href="join_deleteOK.do?num=${vo.num}"><i class="fas fa-trash-alt"></i></a>
                                     </button>
                                 </div>
                             </div>

@@ -1,18 +1,22 @@
 package test.com.moim.board.controller;
 
-import lombok.extern.slf4j.Slf4j;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import lombok.extern.slf4j.Slf4j;
 import test.com.moim.board.model.BoardVO;
 import test.com.moim.board.model.Somoim_BoardVO;
 import test.com.moim.board.model.Somoim_ScheduleVO;
 import test.com.moim.board.service.BoardService;
-
-import javax.servlet.http.HttpSession;
-import java.util.List;
 
 /**
  * Handles requests for the application home page.
@@ -126,17 +130,65 @@ public class BoardController {
 
 	@RequestMapping(value = "/join_schdule.do", method = RequestMethod.GET)
 	public String join_schdule(Model model) {
-		log.info("join_schdule.do().....");
+        log.info("join_schdule.do().....");
 
-		List<Somoim_ScheduleVO> vos = service.sch_selelctList();
+        List<Somoim_ScheduleVO> vos = service.sch_selelctList();
+        List<List<String>> part = new ArrayList<>();
 
-		model.addAttribute("vos",vos);
+        for(Somoim_ScheduleVO vo : vos) {
+            String[] dataParts = vo.getParticipant().split("/");
+            part.add(Arrays.asList(dataParts));
+        }
 
+        model.addAttribute("vos", vos);
+        model.addAttribute("part", part);
 
-		return "board/join_schdule";
+        return "board/join_schdule";
 	}
 
+    @RequestMapping(value = "/join_update.do", method = RequestMethod.GET)
+    public String join_update(Model model, Somoim_BoardVO vo) {
+        log.info("join_update.do().....");
+
+        Somoim_BoardVO vo2 = service.selectJoin(vo);
+        log.info("test...{}",vo2);
+
+        model.addAttribute("vo2",vo2);
 
 
-	
+        return "board/join_update";
+    }
+
+    @RequestMapping(value = "/join_updateOK.do", method = RequestMethod.POST)
+    public String join_updateOK(Somoim_BoardVO vo) {
+        log.info("join_updateOK.do().....");
+
+        int result = service.update(vo);
+
+        if (result==1){
+            return "redirect:join_selectAll.do";
+        }else{
+            return "redirect:join_update.do?num="+vo.getNum();
+        }
+
+    }
+
+    @RequestMapping(value = "/join_deleteOK.do", method = RequestMethod.GET)
+    public String join_deleteOK(Somoim_BoardVO vo) {
+        log.info("join_deleteOK.do().....");
+
+        int result = service.delete(vo);
+
+
+            return "redirect:join_selectAll.do";
+
+
+
+    }
+
+
+
+
+
+
 }
