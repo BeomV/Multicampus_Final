@@ -30,8 +30,8 @@
 	</select>
 	
 	<insert id="CB_INSERT" parameterType="test.com.moim.community.model.CommunityVO">
-		insert into community_board(num,title,user_id,content,save_name) 
-		values(seq_community_board.nextval,#{title},#{user_id},#{content},#{save_name})
+		insert into community_board(num,title,user_id,content) 
+		values(seq_community_board.nextval,#{title},#{user_id},#{content})
 	</insert>
 	
 	<update id="CB_UPDATE" parameterType="test.com.moim.community.model.CommunityVO">
