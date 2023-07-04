@@ -2,6 +2,8 @@ package test.com.moim.community.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +25,9 @@ import test.com.moim.community.service.CommunityService;
 
 
 public class CommunityController {
+	
+	@Autowired
+	HttpSession session;
 	
 	@Autowired
 	CommunityService service;
@@ -56,7 +61,9 @@ public class CommunityController {
 	}
 	
 	@RequestMapping(value = "/community_insert.do", method = RequestMethod.GET)
-	public String community_insert() {
+	public String community_insert(Model model) {
+		String userId = (String) session.getAttribute("user_id");
+		model.addAttribute("user_id", userId);
 		log.info("community_insert.do().....");
 
 
@@ -64,7 +71,9 @@ public class CommunityController {
 	}
 	
 	@RequestMapping(value = "/community_insertOK.do", method = RequestMethod.POST)
-	public String community_insertOK(CommunityVO vo) {
+	public String community_insertOK(Model model , CommunityVO vo){
+		String userId = (String) session.getAttribute("user_id");
+		model.addAttribute("user_id", userId);
 		log.info("/community_insertOK.do...{}", vo);
 		
 		int result = service.insert(vo);
@@ -105,7 +114,7 @@ public class CommunityController {
 	}
 	
 	@RequestMapping(value = "/community_deleteOK.do", method = RequestMethod.GET)
-	public String community_deleteOK(CommunityVO vo) {
+	public String community_deleteOK(CommunityVO vo){
 		log.info("/community_deleteOK.do...{}", vo);
 		
 		int result = service.delete(vo);

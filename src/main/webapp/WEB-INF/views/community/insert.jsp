@@ -17,7 +17,8 @@
 <body>
 	<jsp:include page="../top_menu.jsp"></jsp:include>
 
-
+	<form action="community_insertOK.do" method="post"
+		enctype="multipart/form-data">
 
 		<div class="community_section">
 
@@ -47,22 +48,40 @@
 				</span>
 			</div>
 			<div class="community_insert_secction">
-				<span>
-					<h2>제목</h2> <input type="text" placeholder="제목을 입력하세요">
-					<h3>내용</h3> <input type="text" placeholder="내용을 입력하세요"
-					id="insert_content">
+				<div class="writer">
+					<h3>
+						<label for="writer">작성자</label>
+					</h3>
+				</div>
+				<div>
+					${user_id} <input type="hidden" id="user_id" name="user_id"
+						value="${user_id}">
+				</div>
+				<div>
+					<h2>
+						<label for="title">제목</label>
+					</h2>
+				</div>
+				<div>
+					<input type="text" id="title" name="title" value="테스트제목">
+				</div>
+				<div>
+					<h3>
+						<label for="content">내용</label>
+					</h3>
+				</div>
+				<div>
+					<input type="text" id="insert_content" name="content"
+						value="테스트 내용">
+				</div>
 
-				</span>
-
-				<button type="button"
-					onclick="window.location.href='community_selectAll.do'">
-					<span style="font-weight: bold;">작성완료</span>
-				</button>
-
+				<div class="center">
+					<input type="submit" value="작성완료">
+				</div>
 			</div>
 
 		</div>
-
+	</form>
 	<div class="footer">
 
 		<div>

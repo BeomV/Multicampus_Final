@@ -209,42 +209,55 @@
     text-align: center;
   }
   
-.community_insert_secction span{
-    text-align: left;
-  }
-  
-.community_insert_secction span h2{
-    margin-top: 50px;
-  }
-  
-.community_insert_secction span h3{
-    margin-top: 20px;
-  }
-  
-.community_insert_secction span input{
-    width: 99%;
-    border: #ccc solid 1px;
-    border-radius: 5px;
-    outline: none;
-    padding: 8px 12px;
-    margin-top: 20px;
-  }
+.community_insert_secction {
+  text-align: left;
+}
+
+.community_insert_secction h2,
+.community_insert_secction h3 {
+  margin-top: 50px;
+}
+
+.community_insert_secction input[type="text"] {
+  width: 99%;
+  border: #ccc solid 1px;
+  border-radius: 5px;
+  outline: none;
+  padding: 8px 12px;
+  margin-top: 20px;
+}
+
+.community_insert_secction input[type="submit"] {
+  width: 50%;
+  margin-bottom: 50px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #1785F2;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+}
   
 #insert_content{
     height: 600px;
     text-align: center;
   }
   
-.community_insert_secction button{
-    width: 50%;
-    margin-top: 50px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #1785F2;
-    outline: none;
-    border-radius: 5px;
-    color: white;
-  }
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.center input[type="submit"] {
+  width: 50%;
+  margin-top: 50px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #1785F2;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+}
   
 .c_comments_sec{
     text-align: left;
@@ -380,15 +393,4 @@
     padding: 20px;
     font-weight: 600;
     font-size: 16px;
-  }
-
-.community_insert_secction button{
-    width: 50%;
-    margin-bottom: 50px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #1785F2;
-    outline: none;
-    border-radius: 5px;
-    color: white;
   }

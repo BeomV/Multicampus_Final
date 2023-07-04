@@ -4,6 +4,8 @@ import lombok.Data;
 
 import java.sql.Timestamp;
 
+import org.springframework.web.multipart.MultipartFile;
+
 @Data
 public class CommunityVO {
 
@@ -15,5 +17,6 @@ public class CommunityVO {
 	private Timestamp write_date;
 	private int view_count;
 	private int good_count;
+	private MultipartFile file;
 
 }
