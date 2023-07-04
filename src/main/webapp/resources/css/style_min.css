@@ -5,8 +5,13 @@
     margin: 0 auto;
     height: 850px;
     text-align: center;
+<<<<<<< HEAD
     justify-content: center; /* ìˆ˜í‰ ì •ë  */
     align-items: center; /* ìˆ˜ì§ ì •ë ¬ */
+=======
+    justify-content: center; /* ¼öÆò Á¤·¼ */
+    align-items: center; /* ¼öÁ÷ Á¤·Ä */
+>>>>>>> origin/newnayeon
 
 }
 

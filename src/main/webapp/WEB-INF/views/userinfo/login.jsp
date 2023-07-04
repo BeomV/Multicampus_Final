@@ -15,29 +15,29 @@
 
     <div class="login_section">
 
-        <form>
+       <form action="loginOK.do" method="post">
             
             <labal for="user_id">아이디</labal>
             <br>
-            <input type="text" placeholder="아이디를 입력하세요." id="user_id"> 
+            <input type="text" placeholder="아이디를 입력하세요." id="user_id" name="user_id" value="tester"> 
             
             <br>
 
             <label for="user_pw">비밀번호</label>
-            
             <br>
-            <input type="password" placeholder="비밀번호를 입력하세요." id="user_pw"> 
+            <input type="password" placeholder="비밀번호를 입력하세요." id="user_pw" name="pw" value="hi111"> 
             <br>
             <div class="sub_login">
                 <label><input type="checkbox" id="auto_login">자동로그인</label>
                 <span>
-                <a>아이디/비밀번호 찾기</a>
-                <a>회원가입</a>
+                <a href="u_findId.do">아이디/비밀번호 찾기</a>
+                <a href="u_insert.do">회원가입</a>
                 </span>
             </div>
-            
-            <button id="login_btn">로그인</button>
+
+            <input id="login_btn" type="submit" value="로그인"></input>
         </form>
+        	<p>${message}</p>
     </div>
     
 
