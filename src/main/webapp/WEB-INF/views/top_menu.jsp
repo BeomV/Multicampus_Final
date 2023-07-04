@@ -22,7 +22,7 @@
             </div>
             <div class="login">
                 <a href="login.do">로그인</a>
-                <a>로그아웃</a>
+                <a href="logout.do">로그아웃</a>
             </div>
 
         </div>

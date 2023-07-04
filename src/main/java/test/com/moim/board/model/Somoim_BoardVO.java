@@ -17,6 +17,7 @@ public class Somoim_BoardVO{
     private int vote_num;
     private int som_member_num;
     private int somoim_num;
+    private String user_id;
 
 
 }

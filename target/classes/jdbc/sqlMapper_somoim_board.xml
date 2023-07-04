@@ -18,6 +18,20 @@
 		on b.som_member_num = m.num
 		where b.num=#{num}
 	</select>
+
+	<update id="SOMOIM_UPDATE">
+		update somoim_board set title=#{title},content=#{content}
+		where num=#{num}
+
+	</update>
+
+	<delete id="SOMOIM_DELETE">
+		delete from somoim_board where num=#{num}
+	</delete>
+
+	<insert id="SCHEDULE_INSERT">
+
+	</insert>
 	
 
 	<!--
