@@ -3,48 +3,27 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="test.com.semi.member">
-	<select id="SELECT_ALL"
-		resultType="test.com.semi.member.model.MemberVO">
-		select * from member order by num desc
-	</select>
 
-	<select id="SELECT_ONE"
-		resultType="test.com.semi.member.model.MemberVO">
-		select * from member where num = #{num}
+<mapper namespace="test.com.moim.somoim_member">
+	<select id="MEMBER_SELECT_ALL" resultType="test.com.moim.member.model.MemberVO">
+		select * from somoim_member order by num desc
 	</select>
-
-	<select id="ID_CHECK"
-		resultType="test.com.semi.member.model.MemberVO">
-		select * from member where id = #{id}
+	
+	<select id="MEMBER_SEARCH_LIST_USERID" resultType="test.com.moim.member.model.MemberVO">
+		select * from somoim_member where user_id like #{searchWord}
 	</select>
-
-	<select id="LOGIN"
-		resultType="test.com.semi.member.model.MemberVO">
-		select * from member where id = #{id} and pw = #{pw}
+	
+	<select id="MEMBER_SEARCH_LIST_SOMTITLE" resultType="test.com.moim.member.model.MemberVO">
+		select * from somoim_member where som_title like #{searchWord}
 	</select>
-
-	<select id="SEARCH_LIST_NAME"
-		resultType="test.com.semi.member.model.MemberVO">
-		select * from member where name like #{searchWord}
-	</select>
-
-	<select id="SEARCH_LIST_TEL"
-		resultType="test.com.semi.member.model.MemberVO">
-		select * from member where tel like #{searchWord}
-	</select>
-
-	<insert id="INSERT">
-		insert into member(num,id,pw,name,tel)
-		values(seq_member.nextval,#{id},#{pw},#{name},#{tel})
+	
+	<insert id="MEMBER_INSERT" parameterType="test.com.moim.member.model.MemberVO">
+		insert into somoim_member (num,user_id,som_title,join_date,position,save_name) 
+		values(seq_somoim_member.nextval,#{user_id},#{som_title},sysdate,#{position},#{save_name})
 	</insert>
-
-	<update id="UPDATE">
-		update member set pw=#{pw},name=#{name},tel=#{tel}
-		where num=#{num}
-	</update>
-
-	<delete id="DELETE">
-		delete from member where num=#{num}
+	
+	<delete id="MEMBER_DELETE">
+		delete from somoim_member where num = #{num}
 	</delete>
+
 </mapper>

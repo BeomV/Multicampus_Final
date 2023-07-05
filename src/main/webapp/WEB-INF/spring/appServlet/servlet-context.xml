@@ -12,7 +12,6 @@
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
-
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
@@ -22,14 +21,14 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	
 	<context:component-scan base-package="test.com.moim" />
 	
+
 	<interceptors>
 		<interceptor>
 			<mapping path="/*.do" />
 			<beans:bean class="test.com.moim.Interceptor.LoginInterceptor"/>
 		</interceptor>
 	</interceptors>
-	
+
 </beans:beans>

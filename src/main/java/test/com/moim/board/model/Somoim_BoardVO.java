@@ -19,9 +19,5 @@ public class Somoim_BoardVO{
     private int somoim_num;
     private String user_id;
 
-    //페이징 처리
-    private int start;
-    private int limit;
-
 
 }
