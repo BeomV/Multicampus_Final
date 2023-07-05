@@ -1,25 +1,22 @@
 package test.com.moim.somoim.controller;
 
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.net.http.HttpRequest;
-import java.util.List;
-
-import javax.imageio.ImageIO;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import lombok.extern.slf4j.Slf4j;
 import test.com.moim.somoim.model.SomoimVO;
 import test.com.moim.somoim.service.SomoimService;
+
+import javax.imageio.ImageIO;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 
 @Slf4j
@@ -31,6 +28,9 @@ public class SomoimController {
 	
 	@Autowired
 	ServletContext sContext;
+
+	@Autowired
+	HttpSession session;
 
 
 	@RequestMapping(value = "/som_selectAll.do", method = RequestMethod.GET)
@@ -50,7 +50,8 @@ public class SomoimController {
 		log.info("som_selectOne.do().....{}", vo);
 		
 		SomoimVO vo2 = service.selectOne(vo);
-		
+
+		session.setAttribute("num",vo.getNum());
 		model.addAttribute("vo2", vo2);
 		
 		return "board/som_selectOne";

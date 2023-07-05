@@ -19,35 +19,18 @@ public class BoardDAOimpl implements BoardDAO{
     }
 
 
-    @Override
-    public List<BoardVO> selectAll() {
-        log.info("selectAll()...");
-        return sqlSession.selectList("B_SELECT_ALL");
-    }
-
-    @Override
-    public int insert(BoardVO vo) {
-        log.info("b_insert()....");
-        return sqlSession.insert("B_INSERT",vo);
-    }
-
-    @Override
-    public BoardVO selectOne(BoardVO vo) {
-        return sqlSession.selectOne("B_SELECT_ONE",vo);
-    }
-
 
 
     @Override
     public List<Somoim_BoardVO> selectList(Somoim_BoardVO vo) {
 
 
-        return sqlSession.selectList("SOMOIM_SELECT_ALL",vo);
+        return sqlSession.selectList("JOIN_SOMOIM_SELECT_ALL",vo);
     }
 
     @Override
     public Somoim_BoardVO selectJoin(Somoim_BoardVO vo) {
-        return sqlSession.selectOne("SOMOIM_SELECT_ONE",vo);
+        return sqlSession.selectOne("JOIN_SOMOIM_SELECT_ONE",vo);
     }
 
     @Override
@@ -57,12 +40,12 @@ public class BoardDAOimpl implements BoardDAO{
 
     @Override
     public int update(Somoim_BoardVO vo) {
-        return sqlSession.update("SOMOIM_UPDATE",vo);
+        return sqlSession.update("JOIN_SOMOIM_UPDATE",vo);
     }
 
     @Override
     public int delete(Somoim_BoardVO vo) {
-        return sqlSession.delete("SOMOIM_DELETE",vo);
+        return sqlSession.delete("JOIN_SOMOIM_DELETE",vo);
     }
 
     @Override

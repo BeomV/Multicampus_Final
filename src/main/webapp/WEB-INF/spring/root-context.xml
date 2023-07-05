@@ -1,36 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-<<<<<<<<< Temporary merge branch 1
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	<!-- Root Context: defines shared resources visible to all other web components -->
-		<bean id="propertyPlaceholderConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations">
-			<value>classpath:jdbc/oracle.properties</value>
-		</property>
-=========
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="propertyPlaceholderConfigurer"
 		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations" value="classpath:jdbc/oracle.properties"/>
->>>>>>>>> Temporary merge branch 2
 	</bean>
 
 	<!--1. pom.xml commons-dbcp.jar -->
 	<bean id="dataSource"
-<<<<<<<<< Temporary merge branch 1
-		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName"
-			value="${oracle.DRIVER_NAME}" />
-=========
 		  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName"
 				  value="${oracle.DRIVER_NAME}" />
->>>>>>>>> Temporary merge branch 2
 		<property name="url" value="${oracle.URL}" />
 		<property name="username" value="${oracle.USER}" />
 		<property name="password" value="${oracle.PASSWORD}" />
@@ -38,42 +20,24 @@
 
 	<!--2. pom.xml mybatis.jar -->
 	<bean id="sqlSessionFactory"
-<<<<<<<<< Temporary merge branch 1
-		class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations">
-			<list>
-				<value>classpath:jdbc/sqlMapper_userinfo.xml</value>
-=========
 		  class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations">
 			<list>
 
 				<value>classpath:jdbc/sqlMapper_board.xml</value>
+				<value>classpath:jdbc/sqlMapper_somoim.xml</value>
 				<value>classpath:jdbc/sqlMapper_somoim_board.xml</value>
+				<value>classpath:jdbc/sqlMapper_userinfo.xml</value>
 
 
->>>>>>>>> Temporary merge branch 2
 			</list>
 		</property>
 	</bean>
 
-<<<<<<<<< Temporary merge branch 1
-	<bean id="sqlSession"
-		class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg ref="sqlSessionFactory" />
-	</bean>
-	<bean id="multipartResolver"
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSize" value="-1" />
-		<!-- -1 이면 크기제한 없음 -->
-	</bean>
-=========
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory" />
 	</bean>
 
 
->>>>>>>>> Temporary merge branch 2
 </beans>
