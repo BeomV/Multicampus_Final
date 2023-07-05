@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="UTF-8">
     <script>
    
     </script>
@@ -7,39 +9,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mypage_myactivity_commbyme.html</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/min.css">
-    <link rel="stylesheet" href="/css/Mypage_myactivity_commbyme.css">
-    <link rel="stylesheet" href="/css/Mypage_myactivity_commbyme_min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/min.css">
+    <link rel="stylesheet" href="resources/css/Mypage_myactivity_commbyme.css">
+    <link rel="stylesheet" href="resources/css/Mypage_myactivity_commbyme_min.css">
+        <script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
+    
 
 </head>
 
     
 <body>
+     <jsp:include page="../top_menu.jsp"></jsp:include>
      
     <div class="header">
-        <div class="gnb">
-            <div class="logo">
-                <img src="/Img/logo.png">
-            </div>
-            <nav>
-                <ul>
-                    <li><a>원데이</a></li>
-                    <li><a>소모임</a></li>
-                    <li><a>이벤트</a></li>
-                    <li><a>커뮤니티</a></li>
-                    <li><a>고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="main_search">
-                <input type="search" placeholder="검색">
-            </div>
-            <div class="login">
-                <a href="/login.html">로그인</a>
-                <a>로그아웃</a>
-            </div>
-
-        </div>
+       
 
     </div>
 

@@ -30,4 +30,22 @@ public class MypageController {
 		return "mypage/mypage_myactivity_good";
 	}
 	
+	@RequestMapping(value = "/Mypage_myactivity_likedboard.do", method = RequestMethod.GET)
+	public String Mypage_myactivity_likedboard() {
+		log.info("Mypage_myactivity_likedboard.do().....");
+		
+		
+		
+		return "mypage/Mypage_myactivity_likedboard";
+	}
+	
+	@RequestMapping(value = "/Mypage_myactivity_commbyme.do", method = RequestMethod.GET)
+	public String Mypage_myactivity_commbyme() {
+		log.info("Mypage_myactivity_commbyme.do().....");
+		
+		
+		
+		return "mypage/Mypage_myactivity_commbyme";
+	}
+	
 }
