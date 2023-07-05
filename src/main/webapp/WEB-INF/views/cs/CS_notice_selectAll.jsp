@@ -10,7 +10,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
       var currentPage = 1; // 시작 페이지 번호
-      var itemsPerPage = 5; //표시 항목 수
+      var itemsPerPage = 3; //표시 항목 수
 
       $(".more_but").click(function() {
         currentPage++; // 페이지 번호 증가

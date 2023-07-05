@@ -8,6 +8,7 @@ encoding//src/main/webapp/WEB-INF/views/board/selectAll.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/cs/CS_notice_selectAll.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/cs/Cs_insert.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/cs/resources/css/CS_notice_selectAll.css=UTF-8
+encoding//src/main/webapp/WEB-INF/views/cs/resources/css/board.css=UTF-8
 encoding//src/main/webapp/WEB-INF/views/home.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/top_menu.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/userinfo/findId.jsp=UTF-8

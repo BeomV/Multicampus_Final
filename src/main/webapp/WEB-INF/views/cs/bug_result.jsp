@@ -30,25 +30,25 @@ width:100px;
             <div class="bug_insert_sec">
                 <span>
                     <form action="home.do">
-                    <div class="area_bug_titent">
-                    <div class="area_bug" >
-                        <h2>감사합니다! </h2>
-                        
-                    </div>
-                    
-                        <h3 >빠른 시일내에 검토하겠습니다</h3>
-                    </div>
-            <div class="bug_but_position">
-                <button class="bug_but" type="submit"> 제 출</button>
-            </div>
-                    	<input type="hidden" name="user_id" value="${user_id}" >
-                </span>
+						<div class="area_bug_titent">
+							<div class="area_bug">
+								<h2>감사합니다!</h2>
+
+							</div>
+
+							<h3>빠른 시일내에 검토하겠습니다</h3>
+								</div>
+								<div class="bug_but_position">
+							<button class="bug_but" type="submit">제 출</button>
+						</div>
+						<input type="hidden" name="user_id" value="${user_id}">
+					</form>
+				</span>
                 
 
                     
             </div>
 
-                    </form>
 
 
 	</div>
