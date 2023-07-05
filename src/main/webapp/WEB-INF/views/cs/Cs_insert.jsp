@@ -17,31 +17,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
-        <div class="gnb">
-            <div class="logo">
-                <img src="/Img/logo.png">
-            </div>
-            <nav>
-                <ul>
-                    <li><a>원데이</a></li>
-                    <li><a>소모임</a></li>
-                    <li><a>이벤트</a></li>
-                    <li><a>커뮤니티</a></li>
-                    <li><a>고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="main_search">
-                <input type="search" placeholder="검색">
-            </div>
-            <div class="login">
-                <a href="login.do">로그인</a>
-                <a>로그아웃</a>
-            </div>
+       <jsp:include page="../top_menu.jsp"></jsp:include>
 
-        </div>
-
-    </div>
 
     <div class="join_section">
         <div class="join_gnb">

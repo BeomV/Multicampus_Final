@@ -31,7 +31,9 @@ public class CsController {
 		log.info("cs_notice.do().....{}");
 		String userId = (String) session.getAttribute("user_id");
 		model.addAttribute("user_id", userId);
+		log.info("user_id().....{}", userId);
 
+		
 		List<CsVO> vos = service.selectAll();
 		log.info("join_selectAll().....");
 

@@ -5,107 +5,142 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      var currentPage = 1; // 시작 페이지 번호
+      var itemsPerPage = 5; //표시 항목 수
+
+      $(".more_but").click(function() {
+        currentPage++; // 페이지 번호 증가
+        loadMoreItems();
+      });
+
+      function loadMoreItems() {
+        $.ajax({
+          url: "json_selectAll.do", // json 목록 가져오기
+          method: "GET",
+          data: { page: currentPage, itemsPerPage: itemsPerPage },
+          dataType: "json",
+          success: function(response) {
+            //불러온 항목 처리 및 가공, 출력(html에 추가) 
+            var items = response;
+            var html = "";
+            var startIndex = (currentPage - 1) * itemsPerPage;
+            var endIndex = startIndex + itemsPerPage;
+
+            if (startIndex >= items.length) {
+              // 요청한 페이지에 추가 항목이 없는 경우
+              $(".more_but").hide();
+              alert("더 이상 공지가 없습니다.");
+
+              return;
+            }
+
+            if (endIndex > items.length) {
+              // 마지막 페이지에서 아이템의 인덱스 조정
+              endIndex = items.length;
+            }
+
+            for (var i = startIndex; i < endIndex; i++) {
+              var vo = items[i];
+
+              html += '<div class="noticeOne" style="border-bottom: 1px solid rgb(207, 207, 207);">';
+              html += '<div class="about_one">';
+              html += '<ul>';
+              html += '<li class="notice_item">';
+              html += '<ul class="boarding">';
+              html += '<li>';
+              html += '<div>';
+              html += '<h3><a href="#">' + vo.title + '</a></h3>';
+              html += '<h5 style="height: 5px; margin-top: 10px;">' + vo.write_date + '</h5>';
+              html += '</div>';
+              html += '</li>';
+              html += '</ul>';
+              html += '<li class="notice_img_enter"><a href="#"><img src="resources/img/rightArrow.png"></a></li>';
+              html += '</ul>';
+              html += '</div>';
+              html += '</div>';
+            }
+
+            $(".ajaxLoop").append(html); // 가져온 항목을 추가합니다
+          },
+          error: function(xhr, status, error) {
+            console.error(error);
+          }
+        });
+      }
+    });
+  </script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CS_notice_selectAll</title>
-<link rel="stylesheet" href="resources/css/min.css">
-<link rel="stylesheet" href="resources/css/style.css">
-<link rel="stylesheet" href="resources/css/CS_FAQ.do.css">
-<link rel="stylesheet" href="resources/css/CS_notice_selectAll.css">
+<link rel="stylesheet" href="./resources/css/min.css">
+<link rel="stylesheet" href="./resources/css/style.css">
+<link rel="stylesheet" href="./resources/css/CS_FAQ.do.css">
+<link rel="stylesheet" href="./resources/css/CS_notice_selectAll.css">
+
+
 </head>
-<body>
-	<div class="header">
-		<div class="gnb">
-			<div class="logo">
-				<img src="/Img/logo.png">
-			</div>
-			<nav>
-				<ul>
-					<li><a>원데이</a></li>
-					<li><a>소모임</a></li>
-					<li><a>이벤트</a></li>
-					<li><a>커뮤니티</a></li>
-					<li><a>고객센터</a></li>
-				</ul>
-			</nav>
-			<div class="main_search">
-				<input type="search" placeholder="검색">
-			</div>
-			<div class="login">
-				<a href="login.do">로그인</a> <a>로그아웃</a>
-			</div>
+<body >
+	<jsp:include page="../top_menu.jsp"></jsp:include>
+	<jsp:include page="./notice_top_menu.jsp"></jsp:include>
 
-		</div>
 
-	</div>
 
-	<div class="area">
 
-		<div class="CS_FAQ_selection">
-			<ul>
-				<li><a href="notice.do">공지사항</a></li>
-				<li><a href="cs_notice.do">자주 묻는 질문 FAQ</a></li>
-				<li><a href="bug_notice_insert.do">버그 신고</a></li>
-
-			</ul>
-		</div>
-	</div>
 	<hr style="margin-bottom: 50px;">
 <body>
-	<div class="notice_table_board">
-		<div class="notice_List">
-			<c:forEach items="${vos}" var="vo">
+  <div class="notice_table_board" style="height: auto;">
+    <div class="notice_List" style="height: auto;">
+      <c:forEach items="${vos}" var="vo" varStatus="loop">
+        <c:if test="${loop.index < 5}">
+          <div class="noticeOne" style="border-bottom: 1px solid rgb(207, 207, 207);">
+            <div class="about_one">
+              <ul>
+                <li class="notice_item">
+                  <ul class="boarding">
+                    <li>
+                      <div>
+                        <h3>
+                          <a href="#">${vo.title}</a>
+                        </h3>
+                        <h5 style="height: 5px; margin-top: 10px;">${vo.write_date}</h5>
+                      </div>
+                    </li>
+                  </ul>
+                  <li class="notice_img_enter"><a href="#"> <img src="resources/img/rightArrow.png"></a></li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </c:if>
+      </c:forEach>
+      <div class="ajaxLoop">
+      </div>
 
-				<div class="noticeOne"
-					style="border-bottom: 1px solid rgb(207, 207, 207);">
-					<div class="about_one">
-						<ul>
-							<li class="notice_item">
-								<ul class="boarding">
-									<li>
-										<div>
-											<h3>
-												<a href="#">${vo.title}</a>
-											</h3>
-											<h5 style="height: 5px; margin-top: 10px;">${vo.write_date}</h5>
-										</div>
-									</li>
-							</li>
-						</ul>
-						<li class="notice_img_enter"><a href="#">
-						<img src="/img/rightArrow.png"></a>
-						</li>
-						</ul>
-					</div>
-				</div>
-			</c:forEach>
+      <div class="more_but_position">
+        <button class="more_but">더 보기 ></button>
+      </div>
 
+      <c:if test="${user_id eq 'tester'}">
+        <a href="cs_notice_insert.do">Write</a>
+      </c:if>
+    </div>
+  </div>
 
-
-
-
-
-			<div class="more_but_position">
-				<button class="more_but">더 보기 ></button>
-			</div>
-			
-			
-<%-- 			<c:if test="${sessionScope.user_id == 'tester'}"> --%>
-    		<a href="cs_notice_insert.do">Write</a>
-<%-- 			</c:if> --%>
-			
-		</div>
-
-
-	</div>
-
-
+  
 </body>
 
 
 
-<div class="footer">
+
+
+
+
+<div class="footer" >
 	<div>
 		<strong>온앤오프</strong>
 		<ul>
@@ -132,8 +167,4 @@
 	</div>
 
 </div>
-</body>
-</html>
-</body>
-
 </html>

@@ -7,14 +7,14 @@
 
 .notice_table_board {
     width: 1440px;
-    height: 960px;
+    height: auto;
     background-color: white;
     margin: 0 auto;
   }
   
   .notice_List {
     width: 1000px;
-    height: 960px;
+    height: auto;
     margin: 0 auto;
     background-color: white;
   }
@@ -71,7 +71,7 @@
   }
   
   .notice_List li.notice_img_enter {
-    height: 90px; /* 원하는 높이 값으로 변경하세요 */
+    height: 90px; /* �썝�븯�뒗 �넂�씠 媛믪쑝濡� 蹂�寃쏀븯�꽭�슂 */
   }
   
   .notice_List li.notice_img_enter img {

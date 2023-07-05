@@ -14,43 +14,8 @@
 <link rel="stylesheet" href="resources/css//Bug.css">
 </head>
 <body>
-	<div class="header">
-		<div class="gnb">
-			<div class="logo">
-				<img src="/Img/logo.png">
-			</div>
-			<nav>
-				<ul>
-					<li><a>원데이</a></li>
-					<li><a>소모임</a></li>
-					<li><a>이벤트</a></li>
-					<li><a>커뮤니티</a></li>
-					<li><a>고객센터</a></li>
-				</ul>
-			</nav>
-			<div class="main_search">
-				<input type="search" placeholder="검색">
-			</div>
-			<div class="login">
-				<a href="login.do">로그인</a> <a>로그아웃</a>
-			</div>
-
-		</div>
-
-	</div>
-
-	<div class="area">
-
-		<div class="CS_FAQ_selection">
-			<ul>
-				<li><a href="notice.do">공지사항</a></li>
-				<li><a href="cs_notice.do">자주 묻는 질문 FAQ</a></li>
-				<li><a href="bug_notice_insert.do">버그 신고</a></li>
-
-
-			</ul>
-		</div>
-	</div>
+	  <jsp:include page="../top_menu.jsp"></jsp:include>
+	    <jsp:include page="./notice_top_menu.jsp"></jsp:include>
 	<hr>
 <body>
 	<div class="bug_total">
