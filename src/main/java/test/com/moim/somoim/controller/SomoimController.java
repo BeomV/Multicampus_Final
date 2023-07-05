@@ -39,11 +39,6 @@ public class SomoimController {
 		log.info("-------");
 
 		List<SomoimVO> vos = service.selectAll(vo);
-		for (SomoimVO vo2 : vos) {
-			log.info(vo2.getCategory());
-			log.info(vo2.getSom_title());
-			log.info(vo2.getArea());
-		}
 
 		model.addAttribute("vos",vos);
 

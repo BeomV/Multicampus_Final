@@ -12,11 +12,9 @@
 <link rel="stylesheet" href="resources/css/min.css">
 <link rel="stylesheet" href="resources/css/board.css">
 <link rel="stylesheet" href="resources/css/board_min.css">
-<script src="https://kit.fontawesome.com/1652357a48.js"
-	crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
 <script src="resources/js/board.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 </head>
 <body>
@@ -78,7 +76,7 @@
 					<option value="아웃도어">아웃도어</option>
 					<option value="반려동물">반려동물</option>
 					<option value="문화/공연">문화/공연</option>
-					<option value="키페/맛집">카페/맛집</option>
+					<option value="카페/맛집">카페/맛집</option>
 					<option value="공예">공예</option>
 					<option value="사진/영상">사진/영상</option>
 					<option value="사교/인맥">사교/인맥</option>
@@ -91,6 +89,7 @@
 				<h1>대표 사진</h1> <input type="file" id="moim_profile" name="file">
 			</span>
 			<button type="submit" id="moim_btn">모임 만들기</button>
+<!-- 			<a href="som_insertOK.do" enctype="multipart/form-data" method="get">개설하기</a> -->
 
 
 		</div>

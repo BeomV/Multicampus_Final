@@ -1,7 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	language="java"%>
-<%@ page session="false"%>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -12,85 +11,23 @@
 <link rel="stylesheet" href="resources/css/min.css">
 <link rel="stylesheet" href="resources/css/board.css">
 <link rel="stylesheet" href="resources/css/board_min.css">
-<script src="https://kit.fontawesome.com/1652357a48.js"
-	crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/1652357a48.js"
-	crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
 <script src="resources/js/board.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 <script type="text/javascript">
-	$(function() {
-		$(".button").on('click', function(category) {
-			console.log("onload...");
-				var category = $(this).val();
-				console.log($(this).val());
-			$.ajax({
-				url : 'som_selectAll.do',
-				method:'GET',
-				data : {
-					'category':category
-				},
-				success : function(data){
-					console.log('이게 데이터', data);
-					console.log('category', category);
-
-					$('body').html(data);
-				},
-				error : function(xhr, status, error){
-					console.log('xhr.status : ', xhr.status);
-				}
-				
-				
-				
-			});//end ajax
-		});//end click
-
-	});//end ready
-	
-// 	function som_searchList(){
-		
-		
-		
-// 	}
 	
 	
 </script>
+
 </head>
 <body>
 	<jsp:include page="../top_menu.jsp"></jsp:include>
 
 
-
 	<div class="board_section">
-		<div class="board_category">
-			<ul class="board_grid">
-				<li><input type="button" name="category" value="여행" class="button"></li>
-				<li><input type="button" name="category" value="운동" class="button"></li>
-				<li><input type="button" name="category" value="야구" class="button"></li>
-				<li><input type="button" name="category" value="게임/오락" class="button"></li>
-				<li><input type="button" name="category" value="아웃도어" class="button"></li>
-				<li><input type="button" name="category" value="반려동물" class="button"></li>
-				<li><input type="button" name="category" value="문화/공연" class="button"></li>
-				<li><input type="button" name="category" value="카페/맛집" class="button"></li>
-				<li><input type="button" name="category" value="공예" class="button"></li>
-				<li><input type="button" name="category" value="도서" class="button"></li>
-				<li><input type="button" name="category" value="사진/영상" class="button"></li>
-				<li><input type="button" name="category" value="사교/인맥" class="button"></li>
-				<li><input type="button" name="category" value="음악/악기" class="button"></li>
-				<li><input type="button" name="category" value="업종/직무" class="button"></li>
-				<li><input type="button" name="category" value="해외/언어" class="button"></li>
-				<li><input type="button" name="category" value="요리" class="button"></li>
-				<li><input type="button" name="category" value="베이커리" class="button"></li>
-				<li><input type="button" name="category" value="자유주제" class="button"></li>
-
-
-			</ul>
-		</div>
-		<div class="category_more">
-			<a>카테고리 더보기</a>
-		</div>
+		
 
 		<div class="rec_list">
 			<div class="rec_list_top">
