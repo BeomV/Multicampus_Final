@@ -89,7 +89,6 @@ function join_insertOK() {
         dataType: 'text',
         success: function(response) {
             console.log('ajax....success', response);
-            alert("tjdrhd");
             location.href="join_selectAll.do?somoim_num="+$('#insert_num').val();
 
         },
@@ -101,7 +100,6 @@ function join_insertOK() {
 
 function join_updateOK() {
     console.log("join_updateOK....");
-
 
     $.ajax({
         url: "join_updateOK.do",
@@ -115,7 +113,7 @@ function join_updateOK() {
         dataType: 'text',
         success: function(response) {
             console.log('ajax....success', response);
-            location.href="join_selectAll.do";
+            location.href="join_selectAll.do?somoim_num="+$('#somoim_num').val();
 
         },
         error:function(xhr,status,error){

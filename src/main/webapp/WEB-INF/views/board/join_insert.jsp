@@ -40,9 +40,10 @@
 
                 <h2>제목</h2>
                 <input type="text" placeholder="제목을 입력하세요" id="insert_title">
-                <h3>내용</h3>
-                <input type="text" placeholder="내용을 입력하세요" id="insert_content">
-                <h3>작성자</h3>
+                <h2>내용</h2>
+                <textarea style="width: 100%; height: 620px; border-radius:5px; padding: 8px; border: #ccc solid 1px; outline: none; resize: none; text-align: left;margin-top: 20px;" id="insert_content" ></textarea>
+
+                <h2>작성자</h2>
                 <input type="text" style="background-color: #ccc;" value="${user_id}" id="insert_id" readonly/>
                 <input type="hidden" value="${num}" id="insert_num">
 

@@ -177,7 +177,8 @@ public class BoardController {
         int result = service.update(vo);
 
         if (result==1){
-            return "redirect:join_selectAll.do";
+
+            return "redirect:join_selectAll.do?somoim_num="+vo.getSomoim_num();
         }else{
             return "redirect:join_update.do?num="+vo.getNum();
         }

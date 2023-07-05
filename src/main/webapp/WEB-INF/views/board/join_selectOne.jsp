@@ -16,7 +16,7 @@
 <body>
 
 
-    < <jsp:include page="../top_menu.jsp"></jsp:include>
+    <jsp:include page="../top_menu.jsp"></jsp:include>
 
     <div class="join_section">
         <jsp:include page="./som_top_menu.jsp"></jsp:include>
