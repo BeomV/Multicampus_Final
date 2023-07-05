@@ -26,7 +26,7 @@
         </div> 
         <div class="view_content">
             <ul>
-                <c:forEach var="vo" items="${vos}" end="3">
+                <c:forEach var="vo" items="${vos}">
                     <li>
                         <input type="hidden" value="${vo.somoim_num}">
                         <a href="/join_selectOne.do?num=${vo.num}">
@@ -64,6 +64,7 @@
             </ul>
 
         </div>
+
 
 
     </div>

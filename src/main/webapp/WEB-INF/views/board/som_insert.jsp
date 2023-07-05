@@ -54,7 +54,8 @@
             <h1>모임 이름</h1>
             <input type="text" placeholder="모임 이름" id="som_title", name="som_title">
             <h1>모임 소개</h1>
-            <input type="text" placeholder="모임 내용" id="moim_content" name="som_content">
+            <textarea style="width: 100%; height:500px; border: solid 1px #ccc; border-radius: 5px; resize: none; outline: none;" rows="4"></textarea>
+
             <span>
             <h1>모임 정원</h1>
             <input type="text" placeholder="모임 최대 정원을 입력하세요" id="moim_max">

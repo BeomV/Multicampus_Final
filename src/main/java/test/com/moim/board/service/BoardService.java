@@ -33,8 +33,8 @@ public class BoardService {
         return dao.selectOne(vo);
     }
 
-    public List<Somoim_BoardVO> selectList() {
-        return dao.selectList();
+    public List<Somoim_BoardVO> selectList(Somoim_BoardVO vo) {
+        return dao.selectList(vo);
     }
 
     public Somoim_BoardVO selectJoin(Somoim_BoardVO vo) {

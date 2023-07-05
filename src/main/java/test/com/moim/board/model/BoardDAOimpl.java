@@ -36,10 +36,13 @@ public class BoardDAOimpl implements BoardDAO{
         return sqlSession.selectOne("B_SELECT_ONE",vo);
     }
 
-    @Override
-    public List<Somoim_BoardVO> selectList() {
 
-        return sqlSession.selectList("SOMOIM_SELECT_ALL");
+
+    @Override
+    public List<Somoim_BoardVO> selectList(Somoim_BoardVO vo) {
+
+
+        return sqlSession.selectList("SOMOIM_SELECT_ALL",vo);
     }
 
     @Override

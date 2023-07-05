@@ -9,7 +9,9 @@ public interface BoardDAO {
 
     public BoardVO selectOne(BoardVO vo);
 
-    public List<Somoim_BoardVO> selectList();
+
+
+    List<Somoim_BoardVO> selectList(Somoim_BoardVO vo);
 
     Somoim_BoardVO selectJoin(Somoim_BoardVO vo);
 

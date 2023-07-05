@@ -9,6 +9,10 @@
 		select * from somoim_board b
 		INNER JOIN somoim_member m
 		on b.som_member_num = m.num
+		where b.somoim_num = #{somoim_num}
+		ORDER BY b.num desc
+
+
 
 
 	</select>

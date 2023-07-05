@@ -63,7 +63,7 @@
                             <input type="hidden" value="${vo.create_date}">
                             <div class="moim_img">
                                 <div class="img_box">
-                                    <img src="resources/img/0112.png">
+                                    <img src="resources/uploadimg/0112.png">
                                 </div>
                                 <span>
                                     <p class="hashtag">${vo.category}</p>
@@ -92,7 +92,7 @@
                 <ul class="list_grid">
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -102,7 +102,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -112,7 +112,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -122,7 +122,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -132,7 +132,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -142,7 +142,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -152,7 +152,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -162,7 +162,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -172,7 +172,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -182,7 +182,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -192,7 +192,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>
@@ -202,7 +202,7 @@
                     </li>
                     <li>
                         <div class="list_box">
-                            <img src="resources/img/0112.png">
+                            <img src="resources/uploadimg/0112.png">
                             <span>
                                 <h1>title</h1>
                                 <p>모임개설일: </p>

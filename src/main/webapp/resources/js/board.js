@@ -89,7 +89,8 @@ function join_insertOK() {
         dataType: 'text',
         success: function(response) {
             console.log('ajax....success', response);
-            location.href="join_selectAll.do";
+            alert("tjdrhd");
+            location.href="join_selectAll.do?somoim_num="+$('#insert_num').val();
 
         },
         error:function(xhr,status,error){

@@ -84,13 +84,13 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/join_selectAll.do", method = RequestMethod.GET)
-	public String join_selectAll(Model model) {
+	public String join_selectAll(Model model,Somoim_BoardVO vo) {
 		log.info("join_selectAll().....");
 
-		List<Somoim_BoardVO> vos = service.selectList();
+		List<Somoim_BoardVO> vos = service.selectList(vo);
 
-		for (Somoim_BoardVO vo : vos) {
-			log.info(vo.toString());
+		for (Somoim_BoardVO vo2 : vos) {
+			log.info(vo2.toString());
 		}
 		model.addAttribute("vos",vos);
 
@@ -129,11 +129,19 @@ public class BoardController {
     }
 	@RequestMapping(value = "/join_insertOK.do", method = RequestMethod.POST)
 	public String join_insertOK(Somoim_BoardVO vo) {
-		log.info("join_insert.do().....");
+		log.info("join_insert.do().....{}",vo);
 
         int result = service.join_insert(vo);
 
-		return "board/join_insert";
+		if(result==1){
+			log.info("됐냐?");
+			return "redirect:join_selectAll.do?somoim_num="+vo.getSomoim_num();
+
+		}else{
+			return "redirect:join_insert.do";
+		}
+
+
 	}
 
 	@RequestMapping(value = "/join_schedule.do", method = RequestMethod.GET)
