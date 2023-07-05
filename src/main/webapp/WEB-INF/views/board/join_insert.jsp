@@ -36,9 +36,10 @@
     <div class="join_insert_secction">
             <span>
                 <h2>제목</h2>
-                <input type="text" placeholder="제목을 입력하세요">
+                <input type="text" placeholder="제목을 입력하세요" id="insert_id">
                 <h3>내용</h3>
                 <input type="text" placeholder="내용을 입력하세요" id="insert_content">
+
 
             </span>
         <button type="button">작성완료</button>

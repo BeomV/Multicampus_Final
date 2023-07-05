@@ -34,6 +34,7 @@
 				<value>classpath:jdbc/sqlMapper_somoim.xml</value>
 				<value>classpath:jdbc/sqlMapper_member.xml</value>
 				<value>classpath:jdbc/sqlMapper_userinfo.xml</value>
+
 			</list>
 		</property>
 	</bean>
