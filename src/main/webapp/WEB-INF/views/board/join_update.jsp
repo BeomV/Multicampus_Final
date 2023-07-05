@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<%@ page session="false" %>
+<%@ page session="true" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,10 +38,12 @@
              <span>
 
                  <input type="hidden" value="${vo2.num}" id="update_num">
+                 <input type="text" value="${num}" id="somoim_num">
                 <h2>제목</h2>
                 <input type="text" placeholder="제목을 입력하세요" value="${vo2.title}" id="update_title">
                 <h3>내용</h3>
-                <input type="text" placeholder="내용을 입력하세요" id="insert_content" value="${vo2.content}">
+<%--                <input type="text" placeholder="내용을 입력하세요" id="insert_content" value="${vo2.content}">--%>
+                 <textarea style="width: 100%; height: 620px; border-radius:5px; padding: 8px; border: #ccc solid 1px; outline: none; resize: none; text-align: left;margin-top: 20px;" id="insert_content">${vo2.content}</textarea>
                 <h2>작성자</h2>
                 <input type="text" placeholder="작성자" style="background-color: #ccc;" value="${vo2.user_id}" id="update_user_id" readonly>
                 <h2>작성 날짜</h2>

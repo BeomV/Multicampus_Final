@@ -27,7 +27,7 @@
 	<interceptors>
 		<interceptor>
 			<mapping path="/*.do" />
-			<beans:bean class="test.com.moim.Interceptor.LoginInterceptor"></beans:bean>
+			<beans:bean class="test.com.moim.Interceptor.LoginInterceptor"/>
 		</interceptor>
 	</interceptors>
 

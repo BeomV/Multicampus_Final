@@ -117,6 +117,14 @@ public class UserinfoController {
 
 		return "userinfo/login";
 	}
+	@RequestMapping(value = "/logout.do", method = RequestMethod.GET)
+	public String logout(String message, Model model) {
+		log.info("/logout.do....{}", message);
+
+		session.invalidate();
+
+		return "redirect/home.do";
+	}
 
 	// loginOK
 

@@ -385,11 +385,10 @@ ul{
 
 .login_section{
     display: flex;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     text-align: center;
-    justify-content: center; /* 수평 정렐 */
-    align-items: center; /* 수직 정렬 */
     height: 700px;
 
 
@@ -406,6 +405,7 @@ form{
     font-size: 14px;
     font-weight: 400;
     justify-content: space-between;
+
 
 }
 

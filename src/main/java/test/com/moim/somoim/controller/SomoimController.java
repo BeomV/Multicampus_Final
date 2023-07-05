@@ -1,5 +1,6 @@
 package test.com.moim.somoim.controller;
 
+
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -8,6 +9,7 @@ import java.util.List;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,6 +32,9 @@ public class SomoimController {
 	@Autowired
 	ServletContext sContext;
 
+	@Autowired
+	HttpSession session;
+
 
 	@RequestMapping(value = "/som_selectAll.do", method = RequestMethod.GET)
 	public String som_selectAll(SomoimVO vo, Model model) {
@@ -48,7 +53,8 @@ public class SomoimController {
 		log.info("som_selectOne.do().....{}", vo);
 		
 		SomoimVO vo2 = service.selectOne(vo);
-		
+
+		session.setAttribute("num",vo.getNum());
 		model.addAttribute("vo2", vo2);
 		
 		return "board/som_selectOne";

@@ -27,28 +27,29 @@
 
         <div class="schedule_insert_section" style="margin-top: 50px;">
             <div class="schedule_insert_section_box">
+                <input type="hidden" value="${vo2.num}" id="update_num">
                 <h2>제목</h2>
-                <input type="text" placeholder="모임 제목을 입력하세요." id="sch_insert_title">
+                <input type="text" placeholder="모임 제목을 입력하세요." id="sch_insert_title" value="${vo2.schedule_title}">
                 <h2>날짜</h2>
-                <input type="date" id="shc_insert_date">
+                <input type="date" id="shc_insert_date" value="${vo2.schedule_date}">
                 <h2>시간</h2>
-                <input type="time"  id="shc_insert_time">
+                <input type="time"  id="shc_insert_time" value="${vo2.schedule_time}">
                 <h2>장소</h2>
-                <input type="text"  id="sch_insert_place">
+                <input type="text"  id="sch_insert_place" value="${vo2.place}">
                 <h2>회비</h2>
-                <input type="text" placeholder="회비" id="sch_insert_money">
+                <input type="text" placeholder="회비" id="sch_insert_money" value="${vo2.money}" }>
                 <h2>참여 인원</h2>
-                <input type="range" value="150" min="1" max="300" id="sch_insert_max_member">
+                <input type="range" value="${vo2.max_participant}" min="1" max="300" id="sch_insert_max_member">
 
-                <input type="hidden" value="${user_id}" id="user_id">
+<%--                <input type="hidden" value="${user_id}" id="user_id">--%>
                 <span>
                 <p>0명</p>
-                <p id="range_text">100명</p>
+                <p id="range_text">${vo2.max_participant}명</p>
                 <p>300명</p>
                 </span>
 
             </div>
-            <button type="button" id="btn_shcedule_insert" onclick="join_schedule_insertOK()">작성 완료</button>
+            <button type="button" id="btn_shcedule_insert" onclick="join_schedule_updateOK()">수정 완료</button>
 
         </div>
 

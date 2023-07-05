@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<%@ page session="false" %>
+<%@ page session="true" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="resources/css/board.css">
     <link rel="stylesheet" href="resources/css/board_min.css">
     <script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="resources/js/board.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -35,14 +37,18 @@
     </div>
     <div class="join_insert_secction">
             <span>
-                <h2>제목</h2>
-                <input type="text" placeholder="제목을 입력하세요" id="insert_id">
-                <h3>내용</h3>
-                <input type="text" placeholder="내용을 입력하세요" id="insert_content">
 
+                <h2>제목</h2>
+                <input type="text" placeholder="제목을 입력하세요" id="insert_title">
+                <h2>내용</h2>
+                <textarea style="width: 100%; height: 620px; border-radius:5px; padding: 8px; border: #ccc solid 1px; outline: none; resize: none; text-align: left;margin-top: 20px;" id="insert_content" ></textarea>
+
+                <h2>작성자</h2>
+                <input type="text" style="background-color: #ccc;" value="${user_id}" id="insert_id" readonly/>
+                <input type="hidden" value="${num}" id="insert_num">
 
             </span>
-        <button type="button">작성완료</button>
+        <button type="button" onclick="join_insertOK()">작성완료</button>
 
 
     </div>

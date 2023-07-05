@@ -6,7 +6,7 @@
 <div class="header">
         <div class="gnb">
             <div class="logo">
-                <a href="home.do"><img src="resources/img/logo.png"></a>
+                <a href="home.do"><img src="/resources/uploadimg/logo.png"></a>
             </div>
             <nav>
                 <ul>
@@ -21,8 +21,23 @@
                 <input type="search" placeholder="검색">
             </div>
             <div class="login">
+
+                <%
+                    String user_id = (String) session.getAttribute("user_id");
+                    if (user_id == null) {
+                %>
+                <a>${user_id}</a>
                 <a href="login.do">로그인</a>
+                <a href="logout.do">회원가입</a>
+                <%
+                } else {
+                %>
+                <a>${user_id}</a>
+                <a href="mypage.do">마이페이지</a>
                 <a href="logout.do">로그아웃</a>
+                <%
+                    }
+                %>
             </div>
 
         </div>

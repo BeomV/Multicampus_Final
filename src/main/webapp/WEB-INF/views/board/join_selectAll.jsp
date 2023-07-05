@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<%@ page session="false" %>
+<%@ page session="true" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,10 +26,11 @@
         </div> 
         <div class="view_content">
             <ul>
-                <c:forEach var="vo" items="${vos}" end="3">
+                <c:forEach var="vo" items="${vos}">
                     <li>
+                        <input type="hidden" value="${vo.somoim_num}">
                         <a href="/join_selectOne.do?num=${vo.num}">
-                            <input type="hidden" value="${vo.num}">
+                            <input type="hidden" value="${vo.somoim_num}">
                             <div class="join_top">
                                 <div class="user_info">
                                     <div class="profile">
@@ -63,6 +64,7 @@
             </ul>
 
         </div>
+
 
 
     </div>

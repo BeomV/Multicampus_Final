@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page session="false" %>
 <!DOCTYPE html>
@@ -34,15 +35,20 @@
                                 <button type="button">취소</button>
                             </span>
                         <span>
-                                <button type="button"><i class="fas fa-edit"></i></button>
-                                <button type="button"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button">
+                                    <a href="join_schedule_update.do?num=${vo.num}"><i class="fas fa-edit"></i></a>
+                                </button>
+                                <button type="button">
+                                    <a href="join_schedule_delete.do?num=${vo.num}"><i class="fas fa-trash-alt"></i></a>
+                                </button>
                             </span>
 
                     </div>
                     <div class="sch_content">
                         <div class="sch_info" style="text-align: left">
+                            <input type="hidden" value="${vo.num}">
                             <h2>${vo.schedule_date}</h2>
-                            <strong>${vo.schedule_title}</strong>
+                            <strong style="font-size: 20px;" >${vo.schedule_title}</strong>
                             <p>일시: ${vo.schedule_date}</p>
                             <p>장소: ${vo.place}</p>
                             <p>회비: ${vo.money}</p>
@@ -50,14 +56,12 @@
 
                         </div>
                         <div class="sch_member">
-                            <h2>참석 멤버</h2>
+                            <h2 style="padding-bottom: 10px">참석 멤버</h2>
                             <ul class="schm_grid">
-                                <c:forEach var="schedule" items="${part}">
-                                    <c:forEach var="dataPart" items="${schedule}">
-                                        <li>
-                                            <i class="far fa-user"></i> <input type="hidden" value="${dataPart}">
-                                        </li>
-                                    </c:forEach>
+                                <c:forEach var="participant" items="${fn:split(vo.participant, '/')}" varStatus="status">
+                                    <li>
+                                        <i class="far fa-user"></i> <input type="hidden" value="${participant}">
+                                    </li>
                                 </c:forEach>
                             </ul>
 

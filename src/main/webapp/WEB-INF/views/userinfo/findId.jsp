@@ -23,7 +23,7 @@
         <div class="header">
         <div class="gnb">
             <div class="logo">
-                <img src="resouces/img/logo.png">
+                <img src="resouces/uploadimg/logo.png">
             </div>
             <nav>
                 <ul>
