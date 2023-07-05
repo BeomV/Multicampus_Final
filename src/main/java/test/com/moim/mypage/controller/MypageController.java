@@ -21,5 +21,13 @@ public class MypageController {
 
 		return "mypage/mypage";
 	}
+	@RequestMapping(value = "/mypage_myactivity_good.do", method = RequestMethod.GET)
+	public String mypage_myactivity_good() {
+		log.info("mypage_myactivity_good.do().....");
+		
+		
+		
+		return "mypage/mypage_myactivity_good";
+	}
 	
 }

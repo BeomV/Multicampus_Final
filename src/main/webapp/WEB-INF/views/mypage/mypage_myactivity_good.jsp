@@ -1,14 +1,18 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+	language="java"%>
+<%@ page session="false"%>
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="UTF-8">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/min.css">
-    <link rel="stylesheet" href="../css/myfeed.css">
-    <link rel="stylesheet" href="../css/mypage_myactivity.css">
-    <link rel="stylesheet" href="../css/board.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/min.css">
+    <link rel="stylesheet" href="resources/css/myfeed.css">
+    <link rel="stylesheet" href="resources/css/mypage_myactivity.css">
+    <link rel="stylesheet" href="resources/css/board.css">
     <script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
 </head>
 <body>
