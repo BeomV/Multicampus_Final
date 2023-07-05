@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/community.css">
+    <link rel="stylesheet" href="../css/toolbar.css">
+
+
+    <script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
+    <title>community_insert</title>
+
+    
+
+</head>
+<body>
+    <div class="header">
+        <div class="gnb">
+            <div class="logo">
+                <img src="/Img/logo.png">
+            </div>
+            <nav>
+                <ul>
+                    <li><a>원데이</a></li>
+                    <li><a>소모임</a></li>
+                    <li><a>이벤트</a></li>
+                    <li><a>커뮤니티</a></li>
+                    <li><a>고객센터</a></li>
+                </ul>
+            </nav>
+            <div class="main_search">
+                <input type="search" placeholder="검색">
+            </div>
+            <div class="login">
+                <a href="/login.html">로그인</a>
+                <a>로그아웃</a>
+            </div>
+
+        </div>
+
+    </div>
+    
+        
+    <div class="editor-menu">
+        <button id="btn-bold">
+            <b>B</b>
+        </button>
+        <button id="btn-italic">
+            <i>I</i>
+        </button>
+        <button id="btn-underline">
+            <u>U</u>
+        </button>
+        <button id="btn-strike">
+            <s>S</s>
+        </button>
+        <button id="btn-ordered-list">
+            OL
+        </button>
+        <button id="btn-unordered-list">
+            UL
+        </button>
+        <button id="btn-image">
+            IMG
+        </button>
+    </div>
+    <div id="editor" contenteditable="true"></div>
+    <input id="img-selector" type="file" accept="image/*"/>
+
+    
+    
+    <script>
+        const editor = document.getElementById('editor');
+        const btnBold = document.getElementById('btn-bold');
+        const btnItalic = document.getElementById('btn-italic');
+        const btnUnderline = document.getElementById('btn-underline');
+        const btnStrike = document.getElementById('btn-strike');
+        const btnOrderedList = document.getElementById('btn-ordered-list');
+        const btnUnorderedList = document.getElementById('btn-unordered-list');
+    
+        btnBold.addEventListener('click', function () {
+            setStyle('bold');
+        });
+    
+        btnItalic.addEventListener('click', function () {
+            setStyle('italic');
+        });
+    
+        btnUnderline.addEventListener('click', function () {
+            setStyle('underline');
+        });
+    
+        btnStrike.addEventListener('click', function () {
+            setStyle('strikeThrough')
+        });
+    
+        btnOrderedList.addEventListener('click', function () {
+            setStyle('insertOrderedList');
+        });
+    
+        btnUnorderedList.addEventListener('click', function () {
+            setStyle('insertUnorderedList');
+        });
+    
+        function setStyle(style) {
+            document.execCommand(style);
+            focusEditor();
+        }
+    
+        // 버튼 클릭 시 에디터가 포커스를 잃기 때문에 다시 에디터에 포커스를 해줌
+        function focusEditor() {
+            editor.focus({preventScroll: true});
+        }
+    </script>
+
+<script>
+        
+    const btnImage = document.getElementById('btn-image');
+    const imageSelector = document.getElementById('img-selector');
+
+    btnImage.addEventListener('click', function () {
+        imageSelector.click();
+    });
+
+    imageSelector.addEventListener('change', function (e) {
+        const files = e.target.files;
+        if (!!files) {
+            insertImageDate(files[0]);
+        }
+    });
+    
+    function insertImageDate(file) {
+        const reader = new FileReader();
+        reader.addEventListener('load', function (e) {
+            focusEditor();
+            document.execCommand('insertImage', false, `${reader.result}`);
+        });
+        reader.readAsDataURL(file);
+    }
+</script>
+
+<script>
+
+    editor.addEventListener('keydown', function () {
+        checkStyle();
+    });
+
+    editor.addEventListener('mousedown', function () {
+        checkStyle();
+    });
+    
+
+    
+    function setStyle(style) {
+        document.execCommand(style);
+        focusEditor();
+        checkStyle();
+    }
+    
+
+    
+    function checkStyle() {
+        if (isStyle('bold')) {
+            btnBold.classList.add('active');
+        } else {
+            btnBold.classList.remove('active');
+        }
+        if (isStyle('italic')) {
+            btnItalic.classList.add('active');
+        } else {
+            btnItalic.classList.remove('active');
+        }
+        if (isStyle('underline')) {
+            btnUnderline.classList.add('active');
+        } else {
+            btnUnderline.classList.remove('active');
+        }
+        if (isStyle('strikeThrough')) {
+            btnStrike.classList.add('active');
+        } else {
+            btnStrike.classList.remove('active');
+        }
+        if (isStyle('insertOrderedList')) {
+            btnOrderedList.classList.add('active');
+        } else {
+            btnOrderedList.classList.remove('active');
+        }
+        if (isStyle('insertUnorderedList')) {
+            btnUnorderedList.classList.add('active');
+        } else {
+            btnUnorderedList.classList.remove('active');
+        }
+    }
+
+    function isStyle(style) {
+        return document.queryCommandState(style);
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer">
+        
+        <div>
+            <strong>온앤오프</strong>
+            <ul>
+                <li>공지사항</li>
+                <li>이벤트</li>
+                <li>자주 믿는 질문</li>
+            </ul>
+        </div>
+        <div>
+            <strong>소셜 미디어</strong>
+            <ul>
+                <li>인스타그램</li>
+                <li>네이버 블로그</li>
+                
+            </ul>
+        </div>
+        <div class="footer_company">
+            <strong>온앤오프</strong>
+            <ul>
+                <li>대표: 팀404 개인정보관리책임자: 팀404</li>
+                <li>이메일: Team404@Team404.com 대표번호: 123-1234-1234</li>
+                <li>주소: 서울시 강남구 태헤란로 ~~~~~</li>
+            </ul>
+        </div>
+       
+    </div>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+div#editor {
+  padding: 16px 24px;
+    border: 1px solid #D6D6D6;
+    border-radius: 4px;
+}
+
+#img-selector {
+  display: none;
+}
+
+#editor img {
+  max-width: 100%;
+}
+
+button.active {
+  background-color: purple;
+  color: #FFF;
+}
