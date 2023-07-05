@@ -65,6 +65,7 @@
 <!-- 			<input type="text" placeholder="모임 내용" id="moim_content" name="som_content"> <span> -->
 			<textarea style="width: 100%; height:500px; border: solid 1px #ccc; border-radius: 5px; resize: none; outline: none;"
 			 rows="4" name="som_content" placeholder="모임 내용" id="moim_content"></textarea>
+			<span>
 				<h1>모임 정원</h1>
 				<input type="text" placeholder="모임 최대 정원" id="moim_max" name="max_member">
 				<h1>카테고리</h1>
