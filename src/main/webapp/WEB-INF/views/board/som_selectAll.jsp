@@ -181,6 +181,25 @@
 					</a>
 					</li>
 					</c:if>
+					<c:if test="${param.category eq ''}">
+					<li>
+					<a href="som_selectOne.do?num=${vo.num}">
+						<input type="hidden" value="${vo.num}">
+						<input type="hidden" value="${vo.create_date}">
+						<input type="hidden" value="${vo.category}">
+							<div class="moim_img">
+								<div class="img_box">
+								<img src="resources/img/${vo.save_name}"></div>
+								<span>
+									<h1>${vo.som_title}</h1>
+									<p class="sub_tit">소셜링 📌 ${vo.area}</p>
+									<p class="sub_tit">⏱ ${vo.create_date }</p>
+								</span>
+
+							</div>
+					</a>
+					</li>
+					</c:if>
 				</c:forEach>
 
 

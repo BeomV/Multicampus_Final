@@ -1,6 +1,8 @@
 package test.com.moim.somoim.model;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,11 +33,24 @@ public class SomoimDAOimpl implements SomoimDAO {
 		log.info("searchList()...{}, {}", searchKey, searchWord);
 		log.info("searchList()...category : {}", category);
 		
-		if(searchKey.equals("소모임 이름"))
-			return session.selectList("SOMOIM_SEARCH_LIST_TITLE", "%"+searchWord+"%");
+		log.info("====이거확인{}", category=="");
 		
-		else 
-			return session.selectList("SOMOIM_SEARCH_LIST_AREA", "%"+searchWord+"%");
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("searchWord",  "%"+searchWord+"%");
+		map.put("category", category);
+		
+		if(searchKey.equals("소모임 이름")) {
+			if(category=="") {			
+				return session.selectList("SOMOIM_SEARCH_LIST_TITLE2", "%"+searchWord+"%");
+			}
+			return session.selectList("SOMOIM_SEARCH_LIST_TITLE",map);
+		}
+		else {
+			if(category=="")
+				return session.selectList("SOMOIM_SEARCH_LIST_AREA2", "%"+searchWord+"%");
+			return session.selectList("SOMOIM_SEARCH_LIST_AREA",map);
+		}
 	}
 
 	@Override

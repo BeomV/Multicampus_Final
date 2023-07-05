@@ -13,12 +13,19 @@
 		select * from somoim where num = #{num}
 	</select>
 	
-	<select id="SOMOIM_SEARCH_LIST_TITLE" resultType="test.com.moim.somoim.model.SomoimVO">
+	<select id="SOMOIM_SEARCH_LIST_TITLE" resultType="test.com.moim.somoim.model.SomoimVO" parameterType="HashMap">
 		select * from somoim where som_title like #{searchWord} and category=#{category}
 	</select>
 	
-	<select id="SOMOIM_SEARCH_LIST_AREA" resultType="test.com.moim.somoim.model.SomoimVO">
+	<select id="SOMOIM_SEARCH_LIST_TITLE2" resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim where som_title like #{searchWord}
+	</select>
+	
+	<select id="SOMOIM_SEARCH_LIST_AREA" resultType="test.com.moim.somoim.model.SomoimVO" parameterType="HashMap">
 		select * from somoim where area like #{searchWord} and category=#{category}
+	</select>
+	<select id="SOMOIM_SEARCH_LIST_AREA2" resultType="test.com.moim.somoim.model.SomoimVO">
+		select * from somoim where area like #{searchWord}
 	</select>
 	
 	<insert id="SOMOIM_INSERT" parameterType="test.com.moim.somoim.model.SomoimVO">
