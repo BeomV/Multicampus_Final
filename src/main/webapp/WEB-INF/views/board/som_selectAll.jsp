@@ -12,10 +12,8 @@
 <link rel="stylesheet" href="resources/css/min.css">
 <link rel="stylesheet" href="resources/css/board.css">
 <link rel="stylesheet" href="resources/css/board_min.css">
-<script src="https://kit.fontawesome.com/1652357a48.js"
-	crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/1652357a48.js"
-	crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1652357a48.js" crossorigin="anonymous"></script>
+
 <script src="resources/js/board.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
