@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>인스타그램 피드 작성</title>
+  <style>
+    /* CSS 스타일링 */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>인스타그램 피드 작성</h1>
+    <form id="feedForm">
+      <div class="form-group">
+        <label for="caption">캡션:</label>
+        <textarea id="caption" name="caption" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="image">이미지 URL:</label>
+        <input type="text" id="image" name="image" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="피드 작성">
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript 코드
+    document.getElementById("feedForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // 폼 제출 이벤트 중단
+      
+      // 입력된 캡션과 이미지 URL 가져오기
+      var caption = document.getElementById("caption").value;
+      var image = document.getElementById("image").value;
+      
+      // 작성한 피드 정보를 서버로 보내는 Ajax 요청 등의 코드를 추가할 수 있습니다.
+      // 이 예시에서는 단순히 콘솔에 피드 정보를 출력하는 코드를 사용합니다.
+      console.log("캡션: " + caption);
+      console.log("이미지 URL: " + image);
+      
+      // 피드 작성 후 폼 초기화
+      document.getElementById("feedForm").reset();
+    });
+  </script>
+</body>
+</html>
